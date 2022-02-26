@@ -31,7 +31,8 @@
 										@error="imgError(siteIndex, cartIndex)" mode="aspectFill"></image>
 								</view> -->
 								<view class="goods-info">
-									<view @click="toGoodsDetail(item)" class="goods-name">{{ item.goods_name }}</view>
+									<view @click="toGoodsDetail(item)" class="goods-name">
+									<text style="font-size: 35rpx;font-weight: bold;">{{ item.goods_name }}</text></view>
 									<view class="sku" v-if="item.sku_spec_format">
 										<view class="goods-spec">
 											<block v-for="(x, i) in item.sku_spec_format" :key="i"
@@ -40,11 +41,11 @@
 												{{ i < item.sku_spec_format.length - 1 ? ';' : '' }}
 											</block>
 											<view class="parameter_detail"
-												style="font-size: 12rpx;line-height: 10rpx;margin-bottom: 20rpx;">
-												<view class="parameter_box">
+												style="font-size: 3vw;font-weight: bold;line-height: 10rpx;margin-bottom: 20rpx;">
+												<view class="parameter_box" style="background: #f8f8f8;border-radius: 10rpx;">
 													<view class="" v-for="(it,itindex) in item.remarks" :key="itindex"
 														v-if="item.remarks.length">
-														<text v-if="it.eye">
+														<text v-if="it.eye" style="margin-right: 15rpx;">
 															{{it.eye=="左眼"?" L":" R"}}</text>
 														<text style="color: rgb(160,160,160);"
 															v-if="it.ball_mirror">{{" S：" }}</text>
@@ -69,7 +70,7 @@
 															{{it.a_dd}}</text>
 													</view>
 													<view class="" style="font-weight: bold;">
-														<text style="font-weight:500;" v-if="item.eye">
+														<text style="font-weight:500;margin-right: 15rpx;" v-if="item.eye">
 															{{item.eye=="左眼"?" L":" R"}}</text>
 														<text style="color: rgb(160,160,160);"
 															v-if="item.ball_mirror&&!item.remarks.length">{{" S："}}</text>
@@ -99,10 +100,6 @@
 													</view>
 
 												</view>
-												<!-- <view class="parameter_btn"
-													style="margin-left: auto;width: 120rpx;height: 50rpx;background-color: red;color: #fff;border-radius: 10rpx;display: flex;align-items: center;justify-content: center;font-size: 25rpx;">
-													查看明细
-												</view> -->
 											</view>
 										</view>
 									</view>
@@ -344,6 +341,8 @@
 						if (this.$refs.loadingCover) this.$refs.loadingCover.hide();
 					}
 				});
+				
+				console.log(this.cartData,"this.cartData");
 			},
 			/**
 			 * 处理购物车数据结构
@@ -792,7 +791,7 @@
 		}
 
 		.cart-goods {
-			margin: 0 $margin-both;
+			margin: 10rpx $margin-both;
 			background: #fff;
 			box-sizing: border-box;
 			position: relative;

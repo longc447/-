@@ -189,6 +189,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/photo/photo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "拍照下单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 

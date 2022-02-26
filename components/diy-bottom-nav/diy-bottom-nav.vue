@@ -18,6 +18,7 @@
 </template>
 
 <script>
+	import diyBottomNav from '@/components/diy-bottom-nav/diy-bottom-nav.vue';
 export default {
 	name: 'diy-bottom-nav',
 	props: {
@@ -117,6 +118,7 @@ export default {
 				url: url,
 				data: data,
 				success: res => {
+					console.log(res,"tabbar")
 					let data = res.data;
 					if (data && data.value && data.value.length) {
 						var value = JSON.parse(data.value);

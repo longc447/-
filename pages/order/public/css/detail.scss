@@ -279,7 +279,7 @@ view {
 			margin-bottom: 20rpx;
 			display: flex;
 			position: relative;
-
+			border-bottom:2rpx solid #F1F1F1 ;
 			&:last-of-type {
 				margin-bottom: 0;
 			}
@@ -298,7 +298,8 @@ view {
 
 			.goods-info {
 				flex: 1;
-				max-width: 450rpx;
+				margin-bottom: 20rpx;
+				// max-width: 450rpx;
 				position: relative;
 				display: flex;
 				flex-direction: column;

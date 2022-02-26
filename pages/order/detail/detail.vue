@@ -42,11 +42,11 @@
 			</view>
 			<view class="site-body">
 				<view class="goods-wrap" v-for="(goodsItem, goodsIndex) in orderData.order_goods" :key="goodsIndex">
-					<view class="goods-img" @click="goDetail(goodsItem.sku_id)">
+					<!-- <view class="goods-img" @click="goDetail(goodsItem.sku_id)">
 						<image :src="$util.img(goodsItem.sku_image, { size: 'mid' })" @error="imgError(goodsIndex)" mode="aspectFill"></image>
-					</view>
+					</view> -->
 					<view class="goods-info">
-						<view @click="goDetail(goodsItem.sku_id)" class="goods-name">{{ goodsItem.sku_name }}</view>
+						<view @click="goDetail(goodsItem.sku_id)" class="goods-name" style="font-size: 35rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
 						<view class="sku" v-if="goodsItem.sku_spec_format">
 							<view class="goods-spec">
 								<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
@@ -56,6 +56,38 @@
 								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">柱镜：{{goodsItem.cylinder_mirror}}</text>
 								<text style="font-size: 3vw;color: rgb(160,160,160);">轴位：{{goodsItem.axis}}</text>
 								 -->
+								
+								
+								<view class="">
+									<view class="" v-for="(it,itindex) in goodsItem.remarks" :key="itindex"
+										v-if="goodsItem.rimless!=0">
+										<text v-if="it.eye" style="margin-right: 15rpx;">
+											{{it.eye=="左眼"?" L":" R"}}</text>
+										<text style="color: rgb(160,160,160);"
+											v-if="it.ball_mirror">{{" S：" }}</text>
+										<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
+									
+										<text style="color: rgb(160,160,160);"
+											v-if="it.cylinder_mirror">{{" C："}}</text>
+										<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
+									
+										<text style="color: rgb(160,160,160);" v-if="it.axis">
+											{{" 轴位："}}</text>
+										<text v-if="it.axis">
+											{{it.axis}}</text>
+									
+										<text style="color: rgb(160,160,160);" v-if="it.passage">
+											{{" 通道："}}</text>
+										<text v-if="it.passage">
+											{{it.passage}}</text>
+										<text style="color: rgb(160,160,160);" v-if="it.a_dd">
+											{{" ADD："}}</text>
+										<text v-if="it.a_dd">
+											{{it.a_dd}}</text>
+									</view>
+									
+								</view>
+								
 								
 								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;" v-if="goodsItem.eye" >{{" 球镜："}}{{goodsItem.ball_mirror | doller }}</text>
 								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;" v-if="goodsItem.eye">{{" 柱镜："}}{{goodsItem.cylinder_mirror | doller}}</text>

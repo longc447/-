@@ -413,7 +413,7 @@ export default {
 		}
 		return cloneObj
 	},
-	refreshBottomNav() {
+	refreshBottomNav() {debugger
 		var bottomNav = uni.getStorageSync("bottom_nav");
 		bottomNav = JSON.parse(bottomNav);
 		for (var i = 0; i < bottomNav.list.length; i++) {
@@ -431,6 +431,7 @@ export default {
 			} else if (bottomNav.type == 3) {
 				// 文字
 			}
+			console.error(obj,"tabar");
 			uni.setTabBarItem(obj);
 		}
 	},

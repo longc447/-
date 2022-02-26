@@ -121,6 +121,7 @@ export default {
 							}
 						}
 						this.orderPaymentData = res.data;
+						console.error(this.orderPaymentData,"商品数据111111111111");
 						this.orderPaymentData.timestamp = res.timestamp;
 						this.handlePaymentData();
 						if (this.$refs.loadingCover) this.$refs.loadingCover.hide();

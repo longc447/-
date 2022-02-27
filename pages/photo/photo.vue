@@ -72,24 +72,18 @@
 			getAddressInfomation() {
 
 				this.$api.sendRequest({
-					url: '/api/ordercreate/payment',
-					data: {
-						"cart_ids": "909",
-						"shop_goods_list": [1,2]
-					},
+					url: '/api/memberaddress/defaultInfo',
 					success: res => {
+							console.log(res,"数据");
+						this.is_virtual=res.code
 						if (res.code >= 0) {
-							let {
-								is_virtual,
-								member_address
-							} = res.data
 							let {
 								name,
 								mobile,
 								full_address,
 								address,
 								id
-							} = member_address
+							} = res.data
 							this.addressInfo = {
 								name,
 								mobile,
@@ -97,11 +91,7 @@
 								address,
 								id
 							};
-							this.is_virtual = is_virtual
-							console.log(res.data.is_virtual, "is_virtual参数：", is_virtual)
-							uni.showToast({
-								title: is_virtual
-							})
+							console.log(this.addressInfo,"info");
 						}
 					}
 				})

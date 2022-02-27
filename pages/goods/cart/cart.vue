@@ -197,8 +197,7 @@
 			</view>
 			<view class="settlement-info" :style="{ visibility: isAction ? 'hidden' : 'visible' }">
 				{{ $lang('total') }}：
-				<text class="color-base-text font-size-toolbar">{{ $lang('common.currencySymbol') }}
-					{{ totalPrice }}</text>
+				<text class="color-base-text font-size-toolbar">{{ $lang('common.currencySymbol') }}{{ totalPrice }}</text>
 			</view>
 			<view class="action-btn" v-if="isAction">
 				<button type="primary" size="mini" @click="deleteCart('all')" plain

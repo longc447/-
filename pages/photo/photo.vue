@@ -75,7 +75,7 @@
 					url: '/api/ordercreate/payment',
 					data: {
 						"cart_ids": "909",
-						"shop_goods_list": []
+						"shop_goods_list": [1,2]
 					},
 					success: res => {
 						if (res.code >= 0) {

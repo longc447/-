@@ -70,7 +70,7 @@
   margin: 0 30rpx;
 }
 .cart-wrap .cart-goods {
-  margin: 0 30rpx;
+  margin: 10rpx 30rpx;
   background: #fff;
   box-sizing: border-box;
   position: relative;
@@ -112,8 +112,8 @@
   opacity: 0;
 }
 .cart-wrap .cart-goods .goods-wrap .goods-img {
-  width: 180rpx;
-  height: 180rpx;
+  width: 90rpx;
+  height: 90rpx;
   margin-right: 20rpx;
   border-radius: 10rpx;
 }
@@ -134,6 +134,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  font-size: 20rpx;
   line-height: 1.5;
   font-size: 28rpx;
 }

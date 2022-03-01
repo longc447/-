@@ -88,7 +88,7 @@
 							</view>
 							<view class="goods-spec" v-if="goodsItem.ball_mirror!=='0.00'&&goodsItem.ball_mirror!==0">
 								
-								<text style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;"
+								<text style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;margin-right: 15rpx;"
 									v-if="goodsItem.eye">
 									{{goodsItem.eye == '右眼'? 'R ' : goodsItem.eye == '左眼' ? 'L ' : ''}}</text>
 								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">S：<text
@@ -764,17 +764,20 @@
 	@import './../../../common/css/order_parment.scss';
 </style>
 <style lang="scss" scoped>
-	/deep/ .uni-popup__wrapper.uni-custom .uni-popup__wrapper-box {
+	// /deep/
+	 .uni-popup__wrapper.uni-custom .uni-popup__wrapper-box {
 		background: none;
 		max-height: unset !important;
 		overflow-y: hidden !important;
 	}
 
-	>>>.uni-popup__wrapper {
+	// >>>
+	.uni-popup__wrapper {
 		border-radius: 20rpx 20rpx 0 0;
 	}
 
-	>>>.uni-popup {
+	// >>>
+	.uni-popup {
 		z-index: 8;
 	}
 

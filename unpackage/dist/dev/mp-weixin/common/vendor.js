@@ -947,7 +947,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"镜片一站式采购平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"云易眼镜批发城","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2249,7 +2249,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1079:
+/***/ 108:
+/*!****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/order/payment.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '待付款订单' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1087:
 /*!***************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/shop/public/js/introduce.js ***!
   \***************************************************************************/
@@ -2311,21 +2325,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 108:
-/*!****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/order/payment.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '待付款订单' };exports.lang = lang;
-
-/***/ }),
-
-/***/ 1080:
+/***/ 1088:
 /*!*************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/common/js/map/openMap.js ***!
   \*************************************************************/
@@ -2333,7 +2333,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _transformCoordinate = _interopRequireDefault(__webpack_require__(/*! ./transformCoordinate.js */ 1081));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _transformCoordinate = _interopRequireDefault(__webpack_require__(/*! ./transformCoordinate.js */ 1089));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 function openMapByDefault(latitude, longitude, name) {
   uni.openLocation({
@@ -2443,7 +2443,7 @@ function getCoordByType(longitude, latitude, coord_type) {
 
 /***/ }),
 
-/***/ 1081:
+/***/ 1089:
 /*!*************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/common/js/map/transformCoordinate.js ***!
   \*************************************************************************/
@@ -2591,7 +2591,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1098:
+/***/ 110:
+/*!**********************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/order/refund_detail.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '退款详情' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1106:
 /*!************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/shop/public/js/street.js ***!
   \************************************************************************/
@@ -2771,20 +2785,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 110:
-/*!**********************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/order/refund_detail.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '退款详情' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 111:
 /*!*************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/pay/result.js ***!
@@ -2825,7 +2825,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1124:
+/***/ 113:
+/*!***************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/pintuan/list.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '拼团专区' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1132:
 /*!**********************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/shop/public/js/list.js ***!
   \**********************************************************************/
@@ -3098,20 +3112,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 113:
-/*!***************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/pintuan/list.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '拼团专区' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 114:
 /*!*******************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/pintuan/my_spell.js ***!
@@ -3304,7 +3304,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1268:
+/***/ 127:
+/*!****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/category.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '店内分类' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1276:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/fenxiao/public/js/goods_list.js ***!
   \*******************************************************************************/
@@ -3597,21 +3611,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 127:
-/*!****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/category.js ***!
-  \****************************************************************/
+/***/ 128:
+/*!*************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/index.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  title: '店内分类' };exports.lang = lang;
+  title: '店铺首页' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 1277:
+/***/ 1285:
 /*!***************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/mescroll/mescroll-mixins.js ***!
   \***************************************************************************/
@@ -3679,20 +3693,6 @@ var MescrollMixin = {
 
 
 MescrollMixin;exports.default = _default;
-
-/***/ }),
-
-/***/ 128:
-/*!*************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '店铺首页' };exports.lang = lang;
 
 /***/ }),
 
@@ -3853,7 +3853,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1302:
+/***/ 131:
+/*!**************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/search.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '店铺搜索' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1310:
 /*!************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/common/js/socketTest.js ***!
   \************************************************************/
@@ -4104,7 +4118,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1303:
+/***/ 1311:
 /*!*******************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/common/js/emjoy.js ***!
   \*******************************************************/
@@ -4168,20 +4182,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 131:
-/*!**************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/search.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '店铺搜索' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 132:
 /*!********************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/shop/store_detail.js ***!
@@ -4217,7 +4217,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1336:
+/***/ 134:
+/*!**************************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/store_notes/note_detail.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '笔记详情' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1344:
 /*!************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/mescroll/mescroll-uni.js ***!
   \************************************************************************/
@@ -5070,7 +5084,7 @@ MeScroll.prototype.setBounce = function (isBounce) {
 
 /***/ }),
 
-/***/ 1337:
+/***/ 1345:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/mescroll/mescroll-uni-option.js ***!
   \*******************************************************************************/
@@ -5113,20 +5127,6 @@ var GlobalOption = {
 
 
 GlobalOption;exports.default = _default;
-
-/***/ }),
-
-/***/ 134:
-/*!**************************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/store_notes/note_detail.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '笔记详情' };exports.lang = lang;
 
 /***/ }),
 
@@ -5479,7 +5479,30 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 1438:
+/***/ 144:
+/*!*******************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/wholesale/detail.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '商品详情',
+  stock: '库存不足，剩余',
+  num: '件',
+  shopNum: '购买数量',
+  price: '套餐价',
+  saveThePrice: '为您节省',
+  shopping: '立即购买',
+  share: '分享',
+  like: '关注',
+  service: '服务' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 1446:
 /*!*************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/u-parse/libs/html2json.js ***!
   \*************************************************************************/
@@ -5501,8 +5524,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _wxDiscode = _interopRequireDefault(__webpack_require__(/*! ./wxDiscode */ 1439));
-var _htmlparser = _interopRequireDefault(__webpack_require__(/*! ./htmlparser */ 1440));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+var _wxDiscode = _interopRequireDefault(__webpack_require__(/*! ./wxDiscode */ 1447));
+var _htmlparser = _interopRequireDefault(__webpack_require__(/*! ./htmlparser */ 1448));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
                                                                                                                                                                  * html2Json 改造来自: https://github.com/Jxck/html2json
                                                                                                                                                                  *
                                                                                                                                                                  *
@@ -5751,7 +5774,7 @@ html2json;exports.default = _default;
 
 /***/ }),
 
-/***/ 1439:
+/***/ 1447:
 /*!*************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/u-parse/libs/wxDiscode.js ***!
   \*************************************************************************/
@@ -5956,30 +5979,7 @@ function urlToHttpUrl(url, domain) {
 
 /***/ }),
 
-/***/ 144:
-/*!*******************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/wholesale/detail.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '商品详情',
-  stock: '库存不足，剩余',
-  num: '件',
-  shopNum: '购买数量',
-  price: '套餐价',
-  saveThePrice: '为您节省',
-  shopping: '立即购买',
-  share: '分享',
-  like: '关注',
-  service: '服务' };exports.lang = lang;
-
-/***/ }),
-
-/***/ 1440:
+/***/ 1448:
 /*!**************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/u-parse/libs/htmlparser.js ***!
   \**************************************************************************/
@@ -7432,7 +7432,7 @@ module.exports = index_cjs;
 
 /***/ }),
 
-/***/ 1502:
+/***/ 1510:
 /*!*************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/pick-regions/regions.json ***!
   \*************************************************************************/
@@ -7443,7 +7443,7 @@ module.exports = JSON.parse("[{\"code\":\"11\",\"name\":\"北京市\",\"childs\"
 
 /***/ }),
 
-/***/ 1515:
+/***/ 1523:
 /*!*****************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/components/l-time/time.js ***!
   \*****************************************************************************/
@@ -8857,7 +8857,19 @@ var Weixin = function Weixin() {
 
 /***/ }),
 
-/***/ 1549:
+/***/ 155:
+/*!*****************************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/node_modules/jweixin-module/lib/index.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}!function (e, n) { true ? !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {return n(e);}).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;}(window, function (o, e) {if (!o.jWeixin) {var _w;var n,c = { config: "preVerifyJSAPI", onMenuShareTimeline: "menu:share:timeline", onMenuShareAppMessage: "menu:share:appmessage", onMenuShareQQ: "menu:share:qq", onMenuShareWeibo: "menu:share:weiboApp", onMenuShareQZone: "menu:share:QZone", previewImage: "imagePreview", getLocation: "geoLocation", openProductSpecificView: "openProductViewWithPid", addCard: "batchAddCard", openCard: "batchViewCard", chooseWXPay: "getBrandWCPayRequest", openEnterpriseRedPacket: "getRecevieBizHongBaoRequest", startSearchBeacons: "startMonitoringBeacons", stopSearchBeacons: "stopMonitoringBeacons", onSearchBeacons: "onBeaconsInRange", consumeAndShareCard: "consumedShareCard", openAddress: "editAddress" },a = function () {var e = {};for (var n in c) {e[c[n]] = n;}return e;}(),i = o.document,t = i.title,r = navigator.userAgent.toLowerCase(),s = navigator.platform.toLowerCase(),d = !(!s.match("mac") && !s.match("win")),u = -1 != r.indexOf("wxdebugger"),l = -1 != r.indexOf("micromessenger"),p = -1 != r.indexOf("android"),f = -1 != r.indexOf("iphone") || -1 != r.indexOf("ipad"),m = (n = r.match(/micromessenger\/(\d+\.\d+\.\d+)/) || r.match(/micromessenger\/(\d+\.\d+)/)) ? n[1] : "",g = { initStartTime: L(), initEndTime: 0, preVerifyStartTime: 0, preVerifyEndTime: 0 },h = { version: 1, appId: "", initTime: 0, preVerifyTime: 0, networkType: "", isPreVerifyOk: 1, systemType: f ? 1 : p ? 2 : -1, clientVersion: m, url: encodeURIComponent(location.href) },v = {},S = { _completes: [] },y = { state: 0, data: {} };O(function () {g.initEndTime = L();});var I = !1,_ = [],w = (_w = { config: function config(e) {B("config", v = e);var t = !1 !== v.check;O(function () {if (t) M(c.config, { verifyJsApiList: C(v.jsApiList), verifyOpenTagList: C(v.openTagList) }, function () {S._complete = function (e) {g.preVerifyEndTime = L(), y.state = 1, y.data = e;}, S.success = function (e) {h.isPreVerifyOk = 0;}, S.fail = function (e) {S._fail ? S._fail(e) : y.state = -1;};var t = S._completes;return t.push(function () {!function () {if (!(d || u || v.debug || m < "6.0.2" || h.systemType < 0)) {var i = new Image();h.appId = v.appId, h.initTime = g.initEndTime - g.initStartTime, h.preVerifyTime = g.preVerifyEndTime - g.preVerifyStartTime, w.getNetworkType({ isInnerInvoke: !0, success: function success(e) {h.networkType = e.networkType;var n = "https://open.weixin.qq.com/sdk/report?v=" + h.version + "&o=" + h.isPreVerifyOk + "&s=" + h.systemType + "&c=" + h.clientVersion + "&a=" + h.appId + "&n=" + h.networkType + "&i=" + h.initTime + "&p=" + h.preVerifyTime + "&u=" + h.url;i.src = n;} });}}();}), S.complete = function (e) {for (var n = 0, i = t.length; n < i; ++n) {t[n]();}S._completes = [];}, S;}()), g.preVerifyStartTime = L();else {y.state = 1;for (var e = S._completes, n = 0, i = e.length; n < i; ++n) {e[n]();}S._completes = [];}}), w.invoke || (w.invoke = function (e, n, i) {o.WeixinJSBridge && WeixinJSBridge.invoke(e, x(n), i);}, w.on = function (e, n) {o.WeixinJSBridge && WeixinJSBridge.on(e, n);});}, ready: function ready(e) {0 != y.state ? e() : (S._completes.push(e), !l && v.debug && e());}, error: function error(e) {m < "6.0.2" || (-1 == y.state ? e(y.data) : S._fail = e);}, checkJsApi: function checkJsApi(e) {M("checkJsApi", { jsApiList: C(e.jsApiList) }, (e._complete = function (e) {if (p) {var n = e.checkResult;n && (e.checkResult = JSON.parse(n));}e = function (e) {var n = e.checkResult;for (var i in n) {var t = a[i];t && (n[t] = n[i], delete n[i]);}return e;}(e);}, e));}, onMenuShareTimeline: function onMenuShareTimeline(e) {P(c.onMenuShareTimeline, { complete: function complete() {M("shareTimeline", { title: e.title || t, desc: e.title || t, img_url: e.imgUrl || "", link: e.link || location.href, type: e.type || "link", data_url: e.dataUrl || "" }, e);} }, e);}, onMenuShareAppMessage: function onMenuShareAppMessage(n) {P(c.onMenuShareAppMessage, { complete: function complete(e) {"favorite" === e.scene ? M("sendAppMessage", { title: n.title || t, desc: n.desc || "", link: n.link || location.href, img_url: n.imgUrl || "", type: n.type || "link", data_url: n.dataUrl || "" }) : M("sendAppMessage", { title: n.title || t, desc: n.desc || "", link: n.link || location.href, img_url: n.imgUrl || "", type: n.type || "link", data_url: n.dataUrl || "" }, n);} }, n);}, onMenuShareQQ: function onMenuShareQQ(e) {P(c.onMenuShareQQ, { complete: function complete() {M("shareQQ", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, onMenuShareWeibo: function onMenuShareWeibo(e) {P(c.onMenuShareWeibo, { complete: function complete() {M("shareWeiboApp", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, onMenuShareQZone: function onMenuShareQZone(e) {P(c.onMenuShareQZone, { complete: function complete() {M("shareQZone", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, updateTimelineShareData: function updateTimelineShareData(e) {M("updateTimelineShareData", { title: e.title, link: e.link, imgUrl: e.imgUrl }, e);}, updateAppMessageShareData: function updateAppMessageShareData(e) {M("updateAppMessageShareData", { title: e.title, desc: e.desc, link: e.link, imgUrl: e.imgUrl }, e);}, startRecord: function startRecord(e) {M("startRecord", {}, e);}, stopRecord: function stopRecord(e) {M("stopRecord", {}, e);}, onVoiceRecordEnd: function onVoiceRecordEnd(e) {P("onVoiceRecordEnd", e);}, playVoice: function playVoice(e) {M("playVoice", { localId: e.localId }, e);}, pauseVoice: function pauseVoice(e) {M("pauseVoice", { localId: e.localId }, e);}, stopVoice: function stopVoice(e) {M("stopVoice", { localId: e.localId }, e);}, onVoicePlayEnd: function onVoicePlayEnd(e) {P("onVoicePlayEnd", e);}, uploadVoice: function uploadVoice(e) {M("uploadVoice", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, downloadVoice: function downloadVoice(e) {M("downloadVoice", { serverId: e.serverId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, translateVoice: function translateVoice(e) {M("translateVoice", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, chooseImage: function chooseImage(e) {M("chooseImage", { scene: "1|2", count: e.count || 9, sizeType: e.sizeType || ["original", "compressed"], sourceType: e.sourceType || ["album", "camera"] }, (e._complete = function (e) {if (p) {var n = e.localIds;try {n && (e.localIds = JSON.parse(n));} catch (e) {}}}, e));}, getLocation: function getLocation(e) {}, previewImage: function previewImage(e) {M(c.previewImage, { current: e.current, urls: e.urls }, e);}, uploadImage: function uploadImage(e) {M("uploadImage", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, downloadImage: function downloadImage(e) {M("downloadImage", { serverId: e.serverId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, getLocalImgData: function getLocalImgData(e) {!1 === I ? (I = !0, M("getLocalImgData", { localId: e.localId }, (e._complete = function (e) {if (I = !1, 0 < _.length) {var n = _.shift();wx.getLocalImgData(n);}}, e))) : _.push(e);}, getNetworkType: function getNetworkType(e) {M("getNetworkType", {}, (e._complete = function (e) {e = function (e) {var n = e.errMsg;e.errMsg = "getNetworkType:ok";var i = e.subtype;if (delete e.subtype, i) e.networkType = i;else {var t = n.indexOf(":"),o = n.substring(t + 1);switch (o) {case "wifi":case "edge":case "wwan":e.networkType = o;break;default:e.errMsg = "getNetworkType:fail";}}return e;}(e);}, e));}, openLocation: function openLocation(e) {M("openLocation", { latitude: e.latitude, longitude: e.longitude, name: e.name || "", address: e.address || "", scale: e.scale || 28, infoUrl: e.infoUrl || "" }, e);} }, _defineProperty(_w, "getLocation", function getLocation(e) {M(c.getLocation, { type: (e = e || {}).type || "wgs84" }, (e._complete = function (e) {delete e.type;}, e));}), _defineProperty(_w, "hideOptionMenu", function hideOptionMenu(e) {M("hideOptionMenu", {}, e);}), _defineProperty(_w, "showOptionMenu", function showOptionMenu(e) {M("showOptionMenu", {}, e);}), _defineProperty(_w, "closeWindow", function closeWindow(e) {M("closeWindow", {}, e = e || {});}), _defineProperty(_w, "hideMenuItems", function hideMenuItems(e) {M("hideMenuItems", { menuList: e.menuList }, e);}), _defineProperty(_w, "showMenuItems", function showMenuItems(e) {M("showMenuItems", { menuList: e.menuList }, e);}), _defineProperty(_w, "hideAllNonBaseMenuItem", function hideAllNonBaseMenuItem(e) {M("hideAllNonBaseMenuItem", {}, e);}), _defineProperty(_w, "showAllNonBaseMenuItem", function showAllNonBaseMenuItem(e) {M("showAllNonBaseMenuItem", {}, e);}), _defineProperty(_w, "scanQRCode", function scanQRCode(e) {M("scanQRCode", { needResult: (e = e || {}).needResult || 0, scanType: e.scanType || ["qrCode", "barCode"] }, (e._complete = function (e) {if (f) {var n = e.resultStr;if (n) {var i = JSON.parse(n);e.resultStr = i && i.scan_code && i.scan_code.scan_result;}}}, e));}), _defineProperty(_w, "openAddress", function openAddress(e) {M(c.openAddress, {}, (e._complete = function (e) {e = function (e) {return e.postalCode = e.addressPostalCode, delete e.addressPostalCode, e.provinceName = e.proviceFirstStageName, delete e.proviceFirstStageName, e.cityName = e.addressCitySecondStageName, delete e.addressCitySecondStageName, e.countryName = e.addressCountiesThirdStageName, delete e.addressCountiesThirdStageName, e.detailInfo = e.addressDetailInfo, delete e.addressDetailInfo, e;}(e);}, e));}), _defineProperty(_w, "openProductSpecificView", function openProductSpecificView(e) {M(c.openProductSpecificView, { pid: e.productId, view_type: e.viewType || 0, ext_info: e.extInfo }, e);}), _defineProperty(_w, "addCard", function addCard(e) {for (var n = e.cardList, i = [], t = 0, o = n.length; t < o; ++t) {var r = n[t],a = { card_id: r.cardId, card_ext: r.cardExt };i.push(a);}M(c.addCard, { card_list: i }, (e._complete = function (e) {var n = e.card_list;if (n) {for (var i = 0, t = (n = JSON.parse(n)).length; i < t; ++i) {var o = n[i];o.cardId = o.card_id, o.cardExt = o.card_ext, o.isSuccess = !!o.is_succ, delete o.card_id, delete o.card_ext, delete o.is_succ;}e.cardList = n, delete e.card_list;}}, e));}), _defineProperty(_w, "chooseCard", function chooseCard(e) {M("chooseCard", { app_id: v.appId, location_id: e.shopId || "", sign_type: e.signType || "SHA1", card_id: e.cardId || "", card_type: e.cardType || "", card_sign: e.cardSign, time_stamp: e.timestamp + "", nonce_str: e.nonceStr }, (e._complete = function (e) {e.cardList = e.choose_card_info, delete e.choose_card_info;}, e));}), _defineProperty(_w, "openCard", function openCard(e) {for (var n = e.cardList, i = [], t = 0, o = n.length; t < o; ++t) {var r = n[t],a = { card_id: r.cardId, code: r.code };i.push(a);}M(c.openCard, { card_list: i }, e);}), _defineProperty(_w, "consumeAndShareCard", function consumeAndShareCard(e) {M(c.consumeAndShareCard, { consumedCardId: e.cardId, consumedCode: e.code }, e);}), _defineProperty(_w, "chooseWXPay", function chooseWXPay(e) {M(c.chooseWXPay, V(e), e);}), _defineProperty(_w, "openEnterpriseRedPacket", function openEnterpriseRedPacket(e) {M(c.openEnterpriseRedPacket, V(e), e);}), _defineProperty(_w, "startSearchBeacons", function startSearchBeacons(e) {M(c.startSearchBeacons, { ticket: e.ticket }, e);}), _defineProperty(_w, "stopSearchBeacons", function stopSearchBeacons(e) {M(c.stopSearchBeacons, {}, e);}), _defineProperty(_w, "onSearchBeacons", function onSearchBeacons(e) {P(c.onSearchBeacons, e);}), _defineProperty(_w, "openEnterpriseChat", function openEnterpriseChat(e) {M("openEnterpriseChat", { useridlist: e.userIds, chatname: e.groupName }, e);}), _defineProperty(_w, "launchMiniProgram", function launchMiniProgram(e) {M("launchMiniProgram", { targetAppId: e.targetAppId, path: function (e) {if ("string" == typeof e && 0 < e.length) {var n = e.split("?")[0],i = e.split("?")[1];return n += ".html", void 0 !== i ? n + "?" + i : n;}}(e.path), envVersion: e.envVersion }, e);}), _defineProperty(_w, "openBusinessView", function openBusinessView(e) {M("openBusinessView", { businessType: e.businessType, queryString: e.queryString || "", envVersion: e.envVersion }, (e._complete = function (n) {if (p) {var e = n.extraData;if (e) try {n.extraData = JSON.parse(e);} catch (e) {n.extraData = {};}}}, e));}), _defineProperty(_w, "miniProgram", { navigateBack: function navigateBack(e) {e = e || {}, O(function () {M("invokeMiniProgramAPI", { name: "navigateBack", arg: { delta: e.delta || 1 } }, e);});}, navigateTo: function navigateTo(e) {O(function () {M("invokeMiniProgramAPI", { name: "navigateTo", arg: { url: e.url } }, e);});}, redirectTo: function redirectTo(e) {O(function () {M("invokeMiniProgramAPI", { name: "redirectTo", arg: { url: e.url } }, e);});}, switchTab: function switchTab(e) {O(function () {M("invokeMiniProgramAPI", { name: "switchTab", arg: { url: e.url } }, e);});}, reLaunch: function reLaunch(e) {O(function () {M("invokeMiniProgramAPI", { name: "reLaunch", arg: { url: e.url } }, e);});}, postMessage: function postMessage(e) {O(function () {M("invokeMiniProgramAPI", { name: "postMessage", arg: e.data || {} }, e);});}, getEnv: function getEnv(e) {O(function () {e({ miniprogram: "miniprogram" === o.__wxjs_environment });});} }), _w),T = 1,k = {};return i.addEventListener("error", function (e) {if (!p) {var n = e.target,i = n.tagName,t = n.src;if ("IMG" == i || "VIDEO" == i || "AUDIO" == i || "SOURCE" == i) if (-1 != t.indexOf("wxlocalresource://")) {e.preventDefault(), e.stopPropagation();var o = n["wx-id"];if (o || (o = T++, n["wx-id"] = o), k[o]) return;k[o] = !0, wx.ready(function () {wx.getLocalImgData({ localId: t, success: function success(e) {n.src = e.localData;} });});}}}, !0), i.addEventListener("load", function (e) {if (!p) {var n = e.target,i = n.tagName;n.src;if ("IMG" == i || "VIDEO" == i || "AUDIO" == i || "SOURCE" == i) {var t = n["wx-id"];t && (k[t] = !1);}}}, !0), e && (o.wx = o.jWeixin = w), w;}function M(n, e, i) {o.WeixinJSBridge ? WeixinJSBridge.invoke(n, x(e), function (e) {A(n, e, i);}) : B(n, i);}function P(n, i, t) {o.WeixinJSBridge ? WeixinJSBridge.on(n, function (e) {t && t.trigger && t.trigger(e), A(n, e, i);}) : B(n, t || i);}function x(e) {return (e = e || {}).appId = v.appId, e.verifyAppId = v.appId, e.verifySignType = "sha1", e.verifyTimestamp = v.timestamp + "", e.verifyNonceStr = v.nonceStr, e.verifySignature = v.signature, e;}function V(e) {return { timeStamp: e.timestamp + "", nonceStr: e.nonceStr, package: e.package, paySign: e.paySign, signType: e.signType || "SHA1" };}function A(e, n, i) {"openEnterpriseChat" != e && "openBusinessView" !== e || (n.errCode = n.err_code), delete n.err_code, delete n.err_desc, delete n.err_detail;var t = n.errMsg;t || (t = n.err_msg, delete n.err_msg, t = function (e, n) {var i = e,t = a[i];t && (i = t);var o = "ok";if (n) {var r = n.indexOf(":");"confirm" == (o = n.substring(r + 1)) && (o = "ok"), "failed" == o && (o = "fail"), -1 != o.indexOf("failed_") && (o = o.substring(7)), -1 != o.indexOf("fail_") && (o = o.substring(5)), "access denied" != (o = (o = o.replace(/_/g, " ")).toLowerCase()) && "no permission to execute" != o || (o = "permission denied"), "config" == i && "function not exist" == o && (o = "ok"), "" == o && (o = "fail");}return n = i + ":" + o;}(e, t), n.errMsg = t), (i = i || {})._complete && (i._complete(n), delete i._complete), t = n.errMsg || "", v.debug && !i.isInnerInvoke && alert(JSON.stringify(n));var o = t.indexOf(":");switch (t.substring(o + 1)) {case "ok":i.success && i.success(n);break;case "cancel":i.cancel && i.cancel(n);break;default:i.fail && i.fail(n);}i.complete && i.complete(n);}function C(e) {if (e) {for (var n = 0, i = e.length; n < i; ++n) {var t = e[n],o = c[t];o && (e[n] = o);}return e;}}function B(e, n) {if (!(!v.debug || n && n.isInnerInvoke)) {var i = a[e];i && (e = i), n && n._complete && delete n._complete, console.log('"' + e + '",', n || "");}}function L() {return new Date().getTime();}function O(e) {l && (o.WeixinJSBridge ? e() : i.addEventListener && i.addEventListener("WeixinJSBridgeReady", e, !1));}});
+
+/***/ }),
+
+/***/ 1557:
 /*!****************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/components/sx-rate/common.js ***!
   \****************************************************************************/
@@ -8875,19 +8887,43 @@ var Weixin = function Weixin() {
 
 /***/ }),
 
-/***/ 155:
-/*!*****************************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/node_modules/jweixin-module/lib/index.js ***!
-  \*****************************************************************************/
+/***/ 156:
+/*!**************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/common/js/golbalConfig.js ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}!function (e, n) { true ? !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {return n(e);}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;}(window, function (o, e) {if (!o.jWeixin) {var _w;var n,c = { config: "preVerifyJSAPI", onMenuShareTimeline: "menu:share:timeline", onMenuShareAppMessage: "menu:share:appmessage", onMenuShareQQ: "menu:share:qq", onMenuShareWeibo: "menu:share:weiboApp", onMenuShareQZone: "menu:share:QZone", previewImage: "imagePreview", getLocation: "geoLocation", openProductSpecificView: "openProductViewWithPid", addCard: "batchAddCard", openCard: "batchViewCard", chooseWXPay: "getBrandWCPayRequest", openEnterpriseRedPacket: "getRecevieBizHongBaoRequest", startSearchBeacons: "startMonitoringBeacons", stopSearchBeacons: "stopMonitoringBeacons", onSearchBeacons: "onBeaconsInRange", consumeAndShareCard: "consumedShareCard", openAddress: "editAddress" },a = function () {var e = {};for (var n in c) {e[c[n]] = n;}return e;}(),i = o.document,t = i.title,r = navigator.userAgent.toLowerCase(),s = navigator.platform.toLowerCase(),d = !(!s.match("mac") && !s.match("win")),u = -1 != r.indexOf("wxdebugger"),l = -1 != r.indexOf("micromessenger"),p = -1 != r.indexOf("android"),f = -1 != r.indexOf("iphone") || -1 != r.indexOf("ipad"),m = (n = r.match(/micromessenger\/(\d+\.\d+\.\d+)/) || r.match(/micromessenger\/(\d+\.\d+)/)) ? n[1] : "",g = { initStartTime: L(), initEndTime: 0, preVerifyStartTime: 0, preVerifyEndTime: 0 },h = { version: 1, appId: "", initTime: 0, preVerifyTime: 0, networkType: "", isPreVerifyOk: 1, systemType: f ? 1 : p ? 2 : -1, clientVersion: m, url: encodeURIComponent(location.href) },v = {},S = { _completes: [] },y = { state: 0, data: {} };O(function () {g.initEndTime = L();});var I = !1,_ = [],w = (_w = { config: function config(e) {B("config", v = e);var t = !1 !== v.check;O(function () {if (t) M(c.config, { verifyJsApiList: C(v.jsApiList), verifyOpenTagList: C(v.openTagList) }, function () {S._complete = function (e) {g.preVerifyEndTime = L(), y.state = 1, y.data = e;}, S.success = function (e) {h.isPreVerifyOk = 0;}, S.fail = function (e) {S._fail ? S._fail(e) : y.state = -1;};var t = S._completes;return t.push(function () {!function () {if (!(d || u || v.debug || m < "6.0.2" || h.systemType < 0)) {var i = new Image();h.appId = v.appId, h.initTime = g.initEndTime - g.initStartTime, h.preVerifyTime = g.preVerifyEndTime - g.preVerifyStartTime, w.getNetworkType({ isInnerInvoke: !0, success: function success(e) {h.networkType = e.networkType;var n = "https://open.weixin.qq.com/sdk/report?v=" + h.version + "&o=" + h.isPreVerifyOk + "&s=" + h.systemType + "&c=" + h.clientVersion + "&a=" + h.appId + "&n=" + h.networkType + "&i=" + h.initTime + "&p=" + h.preVerifyTime + "&u=" + h.url;i.src = n;} });}}();}), S.complete = function (e) {for (var n = 0, i = t.length; n < i; ++n) {t[n]();}S._completes = [];}, S;}()), g.preVerifyStartTime = L();else {y.state = 1;for (var e = S._completes, n = 0, i = e.length; n < i; ++n) {e[n]();}S._completes = [];}}), w.invoke || (w.invoke = function (e, n, i) {o.WeixinJSBridge && WeixinJSBridge.invoke(e, x(n), i);}, w.on = function (e, n) {o.WeixinJSBridge && WeixinJSBridge.on(e, n);});}, ready: function ready(e) {0 != y.state ? e() : (S._completes.push(e), !l && v.debug && e());}, error: function error(e) {m < "6.0.2" || (-1 == y.state ? e(y.data) : S._fail = e);}, checkJsApi: function checkJsApi(e) {M("checkJsApi", { jsApiList: C(e.jsApiList) }, (e._complete = function (e) {if (p) {var n = e.checkResult;n && (e.checkResult = JSON.parse(n));}e = function (e) {var n = e.checkResult;for (var i in n) {var t = a[i];t && (n[t] = n[i], delete n[i]);}return e;}(e);}, e));}, onMenuShareTimeline: function onMenuShareTimeline(e) {P(c.onMenuShareTimeline, { complete: function complete() {M("shareTimeline", { title: e.title || t, desc: e.title || t, img_url: e.imgUrl || "", link: e.link || location.href, type: e.type || "link", data_url: e.dataUrl || "" }, e);} }, e);}, onMenuShareAppMessage: function onMenuShareAppMessage(n) {P(c.onMenuShareAppMessage, { complete: function complete(e) {"favorite" === e.scene ? M("sendAppMessage", { title: n.title || t, desc: n.desc || "", link: n.link || location.href, img_url: n.imgUrl || "", type: n.type || "link", data_url: n.dataUrl || "" }) : M("sendAppMessage", { title: n.title || t, desc: n.desc || "", link: n.link || location.href, img_url: n.imgUrl || "", type: n.type || "link", data_url: n.dataUrl || "" }, n);} }, n);}, onMenuShareQQ: function onMenuShareQQ(e) {P(c.onMenuShareQQ, { complete: function complete() {M("shareQQ", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, onMenuShareWeibo: function onMenuShareWeibo(e) {P(c.onMenuShareWeibo, { complete: function complete() {M("shareWeiboApp", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, onMenuShareQZone: function onMenuShareQZone(e) {P(c.onMenuShareQZone, { complete: function complete() {M("shareQZone", { title: e.title || t, desc: e.desc || "", img_url: e.imgUrl || "", link: e.link || location.href }, e);} }, e);}, updateTimelineShareData: function updateTimelineShareData(e) {M("updateTimelineShareData", { title: e.title, link: e.link, imgUrl: e.imgUrl }, e);}, updateAppMessageShareData: function updateAppMessageShareData(e) {M("updateAppMessageShareData", { title: e.title, desc: e.desc, link: e.link, imgUrl: e.imgUrl }, e);}, startRecord: function startRecord(e) {M("startRecord", {}, e);}, stopRecord: function stopRecord(e) {M("stopRecord", {}, e);}, onVoiceRecordEnd: function onVoiceRecordEnd(e) {P("onVoiceRecordEnd", e);}, playVoice: function playVoice(e) {M("playVoice", { localId: e.localId }, e);}, pauseVoice: function pauseVoice(e) {M("pauseVoice", { localId: e.localId }, e);}, stopVoice: function stopVoice(e) {M("stopVoice", { localId: e.localId }, e);}, onVoicePlayEnd: function onVoicePlayEnd(e) {P("onVoicePlayEnd", e);}, uploadVoice: function uploadVoice(e) {M("uploadVoice", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, downloadVoice: function downloadVoice(e) {M("downloadVoice", { serverId: e.serverId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, translateVoice: function translateVoice(e) {M("translateVoice", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, chooseImage: function chooseImage(e) {M("chooseImage", { scene: "1|2", count: e.count || 9, sizeType: e.sizeType || ["original", "compressed"], sourceType: e.sourceType || ["album", "camera"] }, (e._complete = function (e) {if (p) {var n = e.localIds;try {n && (e.localIds = JSON.parse(n));} catch (e) {}}}, e));}, getLocation: function getLocation(e) {}, previewImage: function previewImage(e) {M(c.previewImage, { current: e.current, urls: e.urls }, e);}, uploadImage: function uploadImage(e) {M("uploadImage", { localId: e.localId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, downloadImage: function downloadImage(e) {M("downloadImage", { serverId: e.serverId, isShowProgressTips: 0 == e.isShowProgressTips ? 0 : 1 }, e);}, getLocalImgData: function getLocalImgData(e) {!1 === I ? (I = !0, M("getLocalImgData", { localId: e.localId }, (e._complete = function (e) {if (I = !1, 0 < _.length) {var n = _.shift();wx.getLocalImgData(n);}}, e))) : _.push(e);}, getNetworkType: function getNetworkType(e) {M("getNetworkType", {}, (e._complete = function (e) {e = function (e) {var n = e.errMsg;e.errMsg = "getNetworkType:ok";var i = e.subtype;if (delete e.subtype, i) e.networkType = i;else {var t = n.indexOf(":"),o = n.substring(t + 1);switch (o) {case "wifi":case "edge":case "wwan":e.networkType = o;break;default:e.errMsg = "getNetworkType:fail";}}return e;}(e);}, e));}, openLocation: function openLocation(e) {M("openLocation", { latitude: e.latitude, longitude: e.longitude, name: e.name || "", address: e.address || "", scale: e.scale || 28, infoUrl: e.infoUrl || "" }, e);} }, _defineProperty(_w, "getLocation", function getLocation(e) {M(c.getLocation, { type: (e = e || {}).type || "wgs84" }, (e._complete = function (e) {delete e.type;}, e));}), _defineProperty(_w, "hideOptionMenu", function hideOptionMenu(e) {M("hideOptionMenu", {}, e);}), _defineProperty(_w, "showOptionMenu", function showOptionMenu(e) {M("showOptionMenu", {}, e);}), _defineProperty(_w, "closeWindow", function closeWindow(e) {M("closeWindow", {}, e = e || {});}), _defineProperty(_w, "hideMenuItems", function hideMenuItems(e) {M("hideMenuItems", { menuList: e.menuList }, e);}), _defineProperty(_w, "showMenuItems", function showMenuItems(e) {M("showMenuItems", { menuList: e.menuList }, e);}), _defineProperty(_w, "hideAllNonBaseMenuItem", function hideAllNonBaseMenuItem(e) {M("hideAllNonBaseMenuItem", {}, e);}), _defineProperty(_w, "showAllNonBaseMenuItem", function showAllNonBaseMenuItem(e) {M("showAllNonBaseMenuItem", {}, e);}), _defineProperty(_w, "scanQRCode", function scanQRCode(e) {M("scanQRCode", { needResult: (e = e || {}).needResult || 0, scanType: e.scanType || ["qrCode", "barCode"] }, (e._complete = function (e) {if (f) {var n = e.resultStr;if (n) {var i = JSON.parse(n);e.resultStr = i && i.scan_code && i.scan_code.scan_result;}}}, e));}), _defineProperty(_w, "openAddress", function openAddress(e) {M(c.openAddress, {}, (e._complete = function (e) {e = function (e) {return e.postalCode = e.addressPostalCode, delete e.addressPostalCode, e.provinceName = e.proviceFirstStageName, delete e.proviceFirstStageName, e.cityName = e.addressCitySecondStageName, delete e.addressCitySecondStageName, e.countryName = e.addressCountiesThirdStageName, delete e.addressCountiesThirdStageName, e.detailInfo = e.addressDetailInfo, delete e.addressDetailInfo, e;}(e);}, e));}), _defineProperty(_w, "openProductSpecificView", function openProductSpecificView(e) {M(c.openProductSpecificView, { pid: e.productId, view_type: e.viewType || 0, ext_info: e.extInfo }, e);}), _defineProperty(_w, "addCard", function addCard(e) {for (var n = e.cardList, i = [], t = 0, o = n.length; t < o; ++t) {var r = n[t],a = { card_id: r.cardId, card_ext: r.cardExt };i.push(a);}M(c.addCard, { card_list: i }, (e._complete = function (e) {var n = e.card_list;if (n) {for (var i = 0, t = (n = JSON.parse(n)).length; i < t; ++i) {var o = n[i];o.cardId = o.card_id, o.cardExt = o.card_ext, o.isSuccess = !!o.is_succ, delete o.card_id, delete o.card_ext, delete o.is_succ;}e.cardList = n, delete e.card_list;}}, e));}), _defineProperty(_w, "chooseCard", function chooseCard(e) {M("chooseCard", { app_id: v.appId, location_id: e.shopId || "", sign_type: e.signType || "SHA1", card_id: e.cardId || "", card_type: e.cardType || "", card_sign: e.cardSign, time_stamp: e.timestamp + "", nonce_str: e.nonceStr }, (e._complete = function (e) {e.cardList = e.choose_card_info, delete e.choose_card_info;}, e));}), _defineProperty(_w, "openCard", function openCard(e) {for (var n = e.cardList, i = [], t = 0, o = n.length; t < o; ++t) {var r = n[t],a = { card_id: r.cardId, code: r.code };i.push(a);}M(c.openCard, { card_list: i }, e);}), _defineProperty(_w, "consumeAndShareCard", function consumeAndShareCard(e) {M(c.consumeAndShareCard, { consumedCardId: e.cardId, consumedCode: e.code }, e);}), _defineProperty(_w, "chooseWXPay", function chooseWXPay(e) {M(c.chooseWXPay, V(e), e);}), _defineProperty(_w, "openEnterpriseRedPacket", function openEnterpriseRedPacket(e) {M(c.openEnterpriseRedPacket, V(e), e);}), _defineProperty(_w, "startSearchBeacons", function startSearchBeacons(e) {M(c.startSearchBeacons, { ticket: e.ticket }, e);}), _defineProperty(_w, "stopSearchBeacons", function stopSearchBeacons(e) {M(c.stopSearchBeacons, {}, e);}), _defineProperty(_w, "onSearchBeacons", function onSearchBeacons(e) {P(c.onSearchBeacons, e);}), _defineProperty(_w, "openEnterpriseChat", function openEnterpriseChat(e) {M("openEnterpriseChat", { useridlist: e.userIds, chatname: e.groupName }, e);}), _defineProperty(_w, "launchMiniProgram", function launchMiniProgram(e) {M("launchMiniProgram", { targetAppId: e.targetAppId, path: function (e) {if ("string" == typeof e && 0 < e.length) {var n = e.split("?")[0],i = e.split("?")[1];return n += ".html", void 0 !== i ? n + "?" + i : n;}}(e.path), envVersion: e.envVersion }, e);}), _defineProperty(_w, "openBusinessView", function openBusinessView(e) {M("openBusinessView", { businessType: e.businessType, queryString: e.queryString || "", envVersion: e.envVersion }, (e._complete = function (n) {if (p) {var e = n.extraData;if (e) try {n.extraData = JSON.parse(e);} catch (e) {n.extraData = {};}}}, e));}), _defineProperty(_w, "miniProgram", { navigateBack: function navigateBack(e) {e = e || {}, O(function () {M("invokeMiniProgramAPI", { name: "navigateBack", arg: { delta: e.delta || 1 } }, e);});}, navigateTo: function navigateTo(e) {O(function () {M("invokeMiniProgramAPI", { name: "navigateTo", arg: { url: e.url } }, e);});}, redirectTo: function redirectTo(e) {O(function () {M("invokeMiniProgramAPI", { name: "redirectTo", arg: { url: e.url } }, e);});}, switchTab: function switchTab(e) {O(function () {M("invokeMiniProgramAPI", { name: "switchTab", arg: { url: e.url } }, e);});}, reLaunch: function reLaunch(e) {O(function () {M("invokeMiniProgramAPI", { name: "reLaunch", arg: { url: e.url } }, e);});}, postMessage: function postMessage(e) {O(function () {M("invokeMiniProgramAPI", { name: "postMessage", arg: e.data || {} }, e);});}, getEnv: function getEnv(e) {O(function () {e({ miniprogram: "miniprogram" === o.__wxjs_environment });});} }), _w),T = 1,k = {};return i.addEventListener("error", function (e) {if (!p) {var n = e.target,i = n.tagName,t = n.src;if ("IMG" == i || "VIDEO" == i || "AUDIO" == i || "SOURCE" == i) if (-1 != t.indexOf("wxlocalresource://")) {e.preventDefault(), e.stopPropagation();var o = n["wx-id"];if (o || (o = T++, n["wx-id"] = o), k[o]) return;k[o] = !0, wx.ready(function () {wx.getLocalImgData({ localId: t, success: function success(e) {n.src = e.localData;} });});}}}, !0), i.addEventListener("load", function (e) {if (!p) {var n = e.target,i = n.tagName;n.src;if ("IMG" == i || "VIDEO" == i || "AUDIO" == i || "SOURCE" == i) {var t = n["wx-id"];t && (k[t] = !1);}}}, !0), e && (o.wx = o.jWeixin = w), w;}function M(n, e, i) {o.WeixinJSBridge ? WeixinJSBridge.invoke(n, x(e), function (e) {A(n, e, i);}) : B(n, i);}function P(n, i, t) {o.WeixinJSBridge ? WeixinJSBridge.on(n, function (e) {t && t.trigger && t.trigger(e), A(n, e, i);}) : B(n, t || i);}function x(e) {return (e = e || {}).appId = v.appId, e.verifyAppId = v.appId, e.verifySignType = "sha1", e.verifyTimestamp = v.timestamp + "", e.verifyNonceStr = v.nonceStr, e.verifySignature = v.signature, e;}function V(e) {return { timeStamp: e.timestamp + "", nonceStr: e.nonceStr, package: e.package, paySign: e.paySign, signType: e.signType || "SHA1" };}function A(e, n, i) {"openEnterpriseChat" != e && "openBusinessView" !== e || (n.errCode = n.err_code), delete n.err_code, delete n.err_desc, delete n.err_detail;var t = n.errMsg;t || (t = n.err_msg, delete n.err_msg, t = function (e, n) {var i = e,t = a[i];t && (i = t);var o = "ok";if (n) {var r = n.indexOf(":");"confirm" == (o = n.substring(r + 1)) && (o = "ok"), "failed" == o && (o = "fail"), -1 != o.indexOf("failed_") && (o = o.substring(7)), -1 != o.indexOf("fail_") && (o = o.substring(5)), "access denied" != (o = (o = o.replace(/_/g, " ")).toLowerCase()) && "no permission to execute" != o || (o = "permission denied"), "config" == i && "function not exist" == o && (o = "ok"), "" == o && (o = "fail");}return n = i + ":" + o;}(e, t), n.errMsg = t), (i = i || {})._complete && (i._complete(n), delete i._complete), t = n.errMsg || "", v.debug && !i.isInnerInvoke && alert(JSON.stringify(n));var o = t.indexOf(":");switch (t.substring(o + 1)) {case "ok":i.success && i.success(n);break;case "cancel":i.cancel && i.cancel(n);break;default:i.fail && i.fail(n);}i.complete && i.complete(n);}function C(e) {if (e) {for (var n = 0, i = e.length; n < i; ++n) {var t = e[n],o = c[t];o && (e[n] = o);}return e;}}function B(e, n) {if (!(!v.debug || n && n.isInnerInvoke)) {var i = a[e];i && (e = i), n && n._complete && delete n._complete, console.log('"' + e + '",', n || "");}}function L() {return new Date().getTime();}function O(e) {l && (o.WeixinJSBridge ? e() : i.addEventListener && i.addEventListener("WeixinJSBridgeReady", e, !1));}});
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  computed: {
+    Development: function Development() {
+      return this.$store.state.Development;
+    },
+    //全局主题样式
+    themeStyleScore: function themeStyleScore() {
+      return this.$store.state.themeStyle;
+    },
+    themeStyle: function themeStyle() {
+      return 'theme-' + this.$store.state.themeStyle;
+    },
+    //插件是否存在
+    addonIsExit: function addonIsExit() {
+      return this.$store.state.addonIsExit;
+    },
+    wholeSaleNumber: function wholeSaleNumber() {
+      return this.$store.state.wholeSaleNumber;
+    },
+    showToastValue: function showToastValue() {
+      return this.$store.state.showToastValue;
+    },
+    diySeckillInterval: function diySeckillInterval() {
+      return this.$store.state.diySeckillInterval;
+    } } };exports.default = _default;
 
 /***/ }),
 
-/***/ 1559:
+/***/ 1567:
 /*!************************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/components/city-select/citySelect.js ***!
   \************************************************************************************/
@@ -8931,42 +8967,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 citySelect;exports.default = _default;
-
-/***/ }),
-
-/***/ 156:
-/*!**************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/common/js/golbalConfig.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  computed: {
-    Development: function Development() {
-      return this.$store.state.Development;
-    },
-    //全局主题样式
-    themeStyleScore: function themeStyleScore() {
-      return this.$store.state.themeStyle;
-    },
-    themeStyle: function themeStyle() {
-      return 'theme-' + this.$store.state.themeStyle;
-    },
-    //插件是否存在
-    addonIsExit: function addonIsExit() {
-      return this.$store.state.addonIsExit;
-    },
-    wholeSaleNumber: function wholeSaleNumber() {
-      return this.$store.state.wholeSaleNumber;
-    },
-    showToastValue: function showToastValue() {
-      return this.$store.state.showToastValue;
-    },
-    diySeckillInterval: function diySeckillInterval() {
-      return this.$store.state.diySeckillInterval;
-    } } };exports.default = _default;
 
 /***/ }),
 
@@ -9118,7 +9118,7 @@ var app_type_name = '微信小程序';var _default =
 
 /***/ }),
 
-/***/ 1609:
+/***/ 1617:
 /*!****************************************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/components/diy-goods-level-category/diy-goods-level-category.js ***!
   \****************************************************************************************************/
@@ -9985,7 +9985,7 @@ var _http = _interopRequireDefault(__webpack_require__(/*! ./http.js */ 16));fun
     }
     return cloneObj;
   },
-  refreshBottomNav: function refreshBottomNav() {
+  refreshBottomNav: function refreshBottomNav() {debugger;
     var bottomNav = uni.getStorageSync("bottom_nav");
     bottomNav = JSON.parse(bottomNav);
     for (var i = 0; i < bottomNav.list.length; i++) {
@@ -10003,6 +10003,7 @@ var _http = _interopRequireDefault(__webpack_require__(/*! ./http.js */ 16));fun
       } else if (bottomNav.type == 3) {
         // 文字
       }
+      console.error(obj, "tabar");
       uni.setTabBarItem(obj);
     }
   },
@@ -19518,6 +19519,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
               }
             }
             _this.orderPaymentData = res.data;
+            console.error(_this.orderPaymentData, "商品数据111111111111");
             _this.orderPaymentData.timestamp = res.timestamp;
             _this.handlePaymentData();
             if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();
@@ -26162,7 +26164,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"镜片一站式采购平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"云易眼镜批发城","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -26183,14 +26185,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"镜片一站式采购平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"云易眼镜批发城","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"镜片一站式采购平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"云易眼镜批发城","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -26276,7 +26278,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"镜片一站式采购平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"云易眼镜批发城","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -26811,7 +26813,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 358:
+/***/ 36:
+/*!***************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/bill.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '账单' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 366:
 /*!******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/combo/public/js/payment.js ***!
   \******************************************************************************/
@@ -27656,20 +27672,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 36:
-/*!***************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/bill.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '账单' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 37:
 /*!*****************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/follow.js ***!
@@ -27699,7 +27701,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 385:
+/***/ 39:
+/*!****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/index.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  // title: '分销中心',
+  title: '' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 393:
 /*!******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/topics/public/js/detail.js ***!
   \******************************************************************************/
@@ -28462,9 +28479,473 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 39:
+/***/ 4:
+/*!*************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
+var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
+var defaultDelimiters = ['{', '}'];var
+BaseFormatter = /*#__PURE__*/function () {
+  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
+    this._caches = Object.create(null);
+  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
+    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
+      if (!values) {
+        return [message];
+      }
+      var tokens = this._caches[message];
+      if (!tokens) {
+        tokens = parse(message, delimiters);
+        this._caches[message] = tokens;
+      }
+      return compile(tokens, values);
+    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
+  var tokens = [];
+  var position = 0;
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === startDelimiter) {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== endDelimiter) {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === endDelimiter;
+      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
+      'list' :
+      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
+      'named' :
+      'unknown';
+      tokens.push({ value: sub, type: type });
+    }
+    //  else if (char === '%') {
+    //   // when found rails i18n syntax, skip text capture
+    //   if (format[position] !== '{') {
+    //     text += char
+    //   }
+    // }
+    else {
+        text += char;
+      }
+  }
+  text && tokens.push({ type: 'text', value: text });
+  return tokens;
+}
+function compile(tokens, values) {
+  var compiled = [];
+  var index = 0;
+  var mode = isArray(values) ?
+  'list' :
+  isObject(values) ?
+  'named' :
+  'unknown';
+  if (mode === 'unknown') {
+    return compiled;
+  }
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break;
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break;
+      case 'named':
+        if (mode === 'named') {
+          compiled.push(values[token.value]);
+        } else
+        {
+          if (true) {
+            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
+          }
+        }
+        break;
+      case 'unknown':
+        if (true) {
+          console.warn("Detect 'unknown' type of token!");
+        }
+        break;}
+
+    index++;
+  }
+  return compiled;
+}
+
+var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
+var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
+var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
+var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
+var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
+var defaultFormatter = new BaseFormatter();
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}var
+I18n = /*#__PURE__*/function () {
+  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
+    this.locale = LOCALE_EN;
+    this.fallbackLocale = LOCALE_EN;
+    this.message = {};
+    this.messages = {};
+    this.watchers = [];
+    if (fallbackLocale) {
+      this.fallbackLocale = fallbackLocale;
+    }
+    this.formater = formater || defaultFormatter;
+    this.messages = messages || {};
+    this.setLocale(locale || LOCALE_EN);
+    if (watcher) {
+      this.watchLocale(watcher);
+    }
+  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
+    locale) {var _this = this;
+      var oldLocale = this.locale;
+      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
+      if (!this.messages[this.locale]) {
+        // 可能初始化时不存在
+        this.messages[this.locale] = {};
+      }
+      this.message = this.messages[this.locale];
+      // 仅发生变化时，通知
+      if (oldLocale !== this.locale) {
+        this.watchers.forEach(function (watcher) {
+          watcher(_this.locale, oldLocale);
+        });
+      }
+    } }, { key: "getLocale", value: function getLocale()
+    {
+      return this.locale;
+    } }, { key: "watchLocale", value: function watchLocale(
+    fn) {var _this2 = this;
+      var index = this.watchers.push(fn) - 1;
+      return function () {
+        _this2.watchers.splice(index, 1);
+      };
+    } }, { key: "add", value: function add(
+    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var curMessages = this.messages[locale];
+      if (curMessages) {
+        if (override) {
+          Object.assign(curMessages, message);
+        } else
+        {
+          Object.keys(message).forEach(function (key) {
+            if (!hasOwn(curMessages, key)) {
+              curMessages[key] = message[key];
+            }
+          });
+        }
+      } else
+      {
+        this.messages[locale] = message;
+      }
+    } }, { key: "f", value: function f(
+    message, values, delimiters) {
+      return this.formater.interpolate(message, values, delimiters).join('');
+    } }, { key: "t", value: function t(
+    key, locale, values) {
+      var message = this.message;
+      if (typeof locale === 'string') {
+        locale = normalizeLocale(locale, this.messages);
+        locale && (message = this.messages[locale]);
+      } else
+      {
+        values = locale;
+      }
+      if (!hasOwn(message, key)) {
+        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
+        return key;
+      }
+      return this.formater.interpolate(message[key], values).join('');
+    } }]);return I18n;}();exports.I18n = I18n;
+
+
+function watchAppLocale(appVm, i18n) {
+  // 需要保证 watch 的触发在组件渲染之前
+  if (appVm.$watchLocale) {
+    // vue2
+    appVm.$watchLocale(function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  } else
+  {
+    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  }
+}
+function getDefaultLocale() {
+  if (typeof uni !== 'undefined' && uni.getLocale) {
+    return uni.getLocale();
+  }
+  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
+  if (typeof global !== 'undefined' && global.getLocale) {
+    return global.getLocale();
+  }
+  return LOCALE_EN;
+}
+function initVueI18n(locale) {var messages = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var fallbackLocale = arguments.length > 2 ? arguments[2] : undefined;var watcher = arguments.length > 3 ? arguments[3] : undefined;
+  // 兼容旧版本入参
+  if (typeof locale !== 'string') {var _ref4 =
+    [
+    messages,
+    locale];locale = _ref4[0];messages = _ref4[1];
+
+  }
+  if (typeof locale !== 'string') {
+    // 因为小程序平台，uni-i18n 和 uni 互相引用，导致此时访问 uni 时，为 undefined
+    locale = getDefaultLocale();
+  }
+  if (typeof fallbackLocale !== 'string') {
+    fallbackLocale =
+    typeof __uniConfig !== 'undefined' && __uniConfig.fallbackLocale ||
+    LOCALE_EN;
+  }
+  var i18n = new I18n({
+    locale: locale,
+    fallbackLocale: fallbackLocale,
+    messages: messages,
+    watcher: watcher });
+
+  var _t = function t(key, values) {
+    if (typeof getApp !== 'function') {
+      // app view
+      /* eslint-disable no-func-assign */
+      _t = function t(key, values) {
+        return i18n.t(key, values);
+      };
+    } else
+    {
+      var isWatchedAppLocale = false;
+      _t = function t(key, values) {
+        var appVm = getApp().$vm;
+        // 可能$vm还不存在，比如在支付宝小程序中，组件定义较早，在props的default里使用了t()函数（如uni-goods-nav），此时app还未初始化
+        // options: {
+        // 	type: Array,
+        // 	default () {
+        // 		return [{
+        // 			icon: 'shop',
+        // 			text: t("uni-goods-nav.options.shop"),
+        // 		}, {
+        // 			icon: 'cart',
+        // 			text: t("uni-goods-nav.options.cart")
+        // 		}]
+        // 	}
+        // },
+        if (appVm) {
+          // 触发响应式
+          appVm.$locale;
+          if (!isWatchedAppLocale) {
+            isWatchedAppLocale = true;
+            watchAppLocale(appVm, i18n);
+          }
+        }
+        return i18n.t(key, values);
+      };
+    }
+    return _t(key, values);
+  };
+  return {
+    i18n: i18n,
+    f: function f(message, values, delimiters) {
+      return i18n.f(message, values, delimiters);
+    },
+    t: function t(key, values) {
+      return _t(key, values);
+    },
+    add: function add(locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      return i18n.add(locale, message, override);
+    },
+    watch: function watch(fn) {
+      return i18n.watchLocale(fn);
+    },
+    getLocale: function getLocale() {
+      return i18n.getLocale();
+    },
+    setLocale: function setLocale(newLocale) {
+      return i18n.setLocale(newLocale);
+    } };
+
+}
+
+var isString = function isString(val) {return typeof val === 'string';};exports.isString = isString;
+var formater;
+function hasI18nJson(jsonObj, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  return walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        return true;
+      }
+    } else
+    {
+      return hasI18nJson(value, delimiters);
+    }
+  });
+}
+function parseI18nJson(jsonObj, values, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        jsonObj[key] = compileStr(value, values, delimiters);
+      }
+    } else
+    {
+      parseI18nJson(value, values, delimiters);
+    }
+  });
+  return jsonObj;
+}
+function compileI18nJsonStr(jsonStr, _ref5) {var locale = _ref5.locale,locales = _ref5.locales,delimiters = _ref5.delimiters;
+  if (!isI18nStr(jsonStr, delimiters)) {
+    return jsonStr;
+  }
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  var localeValues = [];
+  Object.keys(locales).forEach(function (name) {
+    if (name !== locale) {
+      localeValues.push({
+        locale: name,
+        values: locales[name] });
+
+    }
+  });
+  localeValues.unshift({ locale: locale, values: locales[locale] });
+  try {
+    return JSON.stringify(compileJsonObj(JSON.parse(jsonStr), localeValues, delimiters), null, 2);
+  }
+  catch (e) {}
+  return jsonStr;
+}
+function isI18nStr(value, delimiters) {
+  return value.indexOf(delimiters[0]) > -1;
+}
+function compileStr(value, values, delimiters) {
+  return formater.interpolate(value, values, delimiters).join('');
+}
+function compileValue(jsonObj, key, localeValues, delimiters) {
+  var value = jsonObj[key];
+  if (isString(value)) {
+    // 存在国际化
+    if (isI18nStr(value, delimiters)) {
+      jsonObj[key] = compileStr(value, localeValues[0].values, delimiters);
+      if (localeValues.length > 1) {
+        // 格式化国际化语言
+        var valueLocales = jsonObj[key + 'Locales'] = {};
+        localeValues.forEach(function (localValue) {
+          valueLocales[localValue.locale] = compileStr(value, localValue.values, delimiters);
+        });
+      }
+    }
+  } else
+  {
+    compileJsonObj(value, localeValues, delimiters);
+  }
+}
+function compileJsonObj(jsonObj, localeValues, delimiters) {
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    compileValue(jsonObj, key, localeValues, delimiters);
+  });
+  return jsonObj;
+}
+function walkJsonObj(jsonObj, walk) {
+  if (isArray(jsonObj)) {
+    for (var i = 0; i < jsonObj.length; i++) {
+      if (walk(jsonObj, i)) {
+        return true;
+      }
+    }
+  } else
+  if (isObject(jsonObj)) {
+    for (var key in jsonObj) {
+      if (walk(jsonObj, key)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function resolveLocale(locales) {
+  return function (locale) {
+    if (!locale) {
+      return locale;
+    }
+    locale = normalizeLocale(locale) || locale;
+    return resolveLocaleChain(locale).find(function (locale) {return locales.indexOf(locale) > -1;});
+  };
+}
+function resolveLocaleChain(locale) {
+  var chain = [];
+  var tokens = locale.split('-');
+  while (tokens.length) {
+    chain.push(tokens.join('-'));
+    tokens.pop();
+  }
+  return chain;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+
+/***/ 40:
 /*!****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/index.js ***!
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/level.js ***!
   \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -28472,12 +28953,12 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  // title: '分销中心',
+  // title: '分销商等级',
   title: '' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 396:
+/***/ 404:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/topics/public/js/payment.js ***!
   \*******************************************************************************/
@@ -29218,473 +29699,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 4:
-/*!*************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
-var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
-var defaultDelimiters = ['{', '}'];var
-BaseFormatter = /*#__PURE__*/function () {
-  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
-    this._caches = Object.create(null);
-  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
-    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
-      if (!values) {
-        return [message];
-      }
-      var tokens = this._caches[message];
-      if (!tokens) {
-        tokens = parse(message, delimiters);
-        this._caches[message] = tokens;
-      }
-      return compile(tokens, values);
-    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
-
-var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
-var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
-function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
-  var tokens = [];
-  var position = 0;
-  var text = '';
-  while (position < format.length) {
-    var char = format[position++];
-    if (char === startDelimiter) {
-      if (text) {
-        tokens.push({ type: 'text', value: text });
-      }
-      text = '';
-      var sub = '';
-      char = format[position++];
-      while (char !== undefined && char !== endDelimiter) {
-        sub += char;
-        char = format[position++];
-      }
-      var isClosed = char === endDelimiter;
-      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
-      'list' :
-      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
-      'named' :
-      'unknown';
-      tokens.push({ value: sub, type: type });
-    }
-    //  else if (char === '%') {
-    //   // when found rails i18n syntax, skip text capture
-    //   if (format[position] !== '{') {
-    //     text += char
-    //   }
-    // }
-    else {
-        text += char;
-      }
-  }
-  text && tokens.push({ type: 'text', value: text });
-  return tokens;
-}
-function compile(tokens, values) {
-  var compiled = [];
-  var index = 0;
-  var mode = isArray(values) ?
-  'list' :
-  isObject(values) ?
-  'named' :
-  'unknown';
-  if (mode === 'unknown') {
-    return compiled;
-  }
-  while (index < tokens.length) {
-    var token = tokens[index];
-    switch (token.type) {
-      case 'text':
-        compiled.push(token.value);
-        break;
-      case 'list':
-        compiled.push(values[parseInt(token.value, 10)]);
-        break;
-      case 'named':
-        if (mode === 'named') {
-          compiled.push(values[token.value]);
-        } else
-        {
-          if (true) {
-            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
-          }
-        }
-        break;
-      case 'unknown':
-        if (true) {
-          console.warn("Detect 'unknown' type of token!");
-        }
-        break;}
-
-    index++;
-  }
-  return compiled;
-}
-
-var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
-var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
-var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
-var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
-var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
-var defaultFormatter = new BaseFormatter();
-function include(str, parts) {
-  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
-}
-function startsWith(str, parts) {
-  return parts.find(function (part) {return str.indexOf(part) === 0;});
-}
-function normalizeLocale(locale, messages) {
-  if (!locale) {
-    return;
-  }
-  locale = locale.trim().replace(/_/g, '-');
-  if (messages && messages[locale]) {
-    return locale;
-  }
-  locale = locale.toLowerCase();
-  if (locale.indexOf('zh') === 0) {
-    if (locale.indexOf('-hans') > -1) {
-      return LOCALE_ZH_HANS;
-    }
-    if (locale.indexOf('-hant') > -1) {
-      return LOCALE_ZH_HANT;
-    }
-    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
-      return LOCALE_ZH_HANT;
-    }
-    return LOCALE_ZH_HANS;
-  }
-  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
-  if (lang) {
-    return lang;
-  }
-}var
-I18n = /*#__PURE__*/function () {
-  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
-    this.locale = LOCALE_EN;
-    this.fallbackLocale = LOCALE_EN;
-    this.message = {};
-    this.messages = {};
-    this.watchers = [];
-    if (fallbackLocale) {
-      this.fallbackLocale = fallbackLocale;
-    }
-    this.formater = formater || defaultFormatter;
-    this.messages = messages || {};
-    this.setLocale(locale || LOCALE_EN);
-    if (watcher) {
-      this.watchLocale(watcher);
-    }
-  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
-    locale) {var _this = this;
-      var oldLocale = this.locale;
-      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
-      if (!this.messages[this.locale]) {
-        // 可能初始化时不存在
-        this.messages[this.locale] = {};
-      }
-      this.message = this.messages[this.locale];
-      // 仅发生变化时，通知
-      if (oldLocale !== this.locale) {
-        this.watchers.forEach(function (watcher) {
-          watcher(_this.locale, oldLocale);
-        });
-      }
-    } }, { key: "getLocale", value: function getLocale()
-    {
-      return this.locale;
-    } }, { key: "watchLocale", value: function watchLocale(
-    fn) {var _this2 = this;
-      var index = this.watchers.push(fn) - 1;
-      return function () {
-        _this2.watchers.splice(index, 1);
-      };
-    } }, { key: "add", value: function add(
-    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-      var curMessages = this.messages[locale];
-      if (curMessages) {
-        if (override) {
-          Object.assign(curMessages, message);
-        } else
-        {
-          Object.keys(message).forEach(function (key) {
-            if (!hasOwn(curMessages, key)) {
-              curMessages[key] = message[key];
-            }
-          });
-        }
-      } else
-      {
-        this.messages[locale] = message;
-      }
-    } }, { key: "f", value: function f(
-    message, values, delimiters) {
-      return this.formater.interpolate(message, values, delimiters).join('');
-    } }, { key: "t", value: function t(
-    key, locale, values) {
-      var message = this.message;
-      if (typeof locale === 'string') {
-        locale = normalizeLocale(locale, this.messages);
-        locale && (message = this.messages[locale]);
-      } else
-      {
-        values = locale;
-      }
-      if (!hasOwn(message, key)) {
-        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
-        return key;
-      }
-      return this.formater.interpolate(message[key], values).join('');
-    } }]);return I18n;}();exports.I18n = I18n;
-
-
-function watchAppLocale(appVm, i18n) {
-  // 需要保证 watch 的触发在组件渲染之前
-  if (appVm.$watchLocale) {
-    // vue2
-    appVm.$watchLocale(function (newLocale) {
-      i18n.setLocale(newLocale);
-    });
-  } else
-  {
-    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
-      i18n.setLocale(newLocale);
-    });
-  }
-}
-function getDefaultLocale() {
-  if (typeof uni !== 'undefined' && uni.getLocale) {
-    return uni.getLocale();
-  }
-  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
-  if (typeof global !== 'undefined' && global.getLocale) {
-    return global.getLocale();
-  }
-  return LOCALE_EN;
-}
-function initVueI18n(locale) {var messages = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var fallbackLocale = arguments.length > 2 ? arguments[2] : undefined;var watcher = arguments.length > 3 ? arguments[3] : undefined;
-  // 兼容旧版本入参
-  if (typeof locale !== 'string') {var _ref4 =
-    [
-    messages,
-    locale];locale = _ref4[0];messages = _ref4[1];
-
-  }
-  if (typeof locale !== 'string') {
-    // 因为小程序平台，uni-i18n 和 uni 互相引用，导致此时访问 uni 时，为 undefined
-    locale = getDefaultLocale();
-  }
-  if (typeof fallbackLocale !== 'string') {
-    fallbackLocale =
-    typeof __uniConfig !== 'undefined' && __uniConfig.fallbackLocale ||
-    LOCALE_EN;
-  }
-  var i18n = new I18n({
-    locale: locale,
-    fallbackLocale: fallbackLocale,
-    messages: messages,
-    watcher: watcher });
-
-  var _t = function t(key, values) {
-    if (typeof getApp !== 'function') {
-      // app view
-      /* eslint-disable no-func-assign */
-      _t = function t(key, values) {
-        return i18n.t(key, values);
-      };
-    } else
-    {
-      var isWatchedAppLocale = false;
-      _t = function t(key, values) {
-        var appVm = getApp().$vm;
-        // 可能$vm还不存在，比如在支付宝小程序中，组件定义较早，在props的default里使用了t()函数（如uni-goods-nav），此时app还未初始化
-        // options: {
-        // 	type: Array,
-        // 	default () {
-        // 		return [{
-        // 			icon: 'shop',
-        // 			text: t("uni-goods-nav.options.shop"),
-        // 		}, {
-        // 			icon: 'cart',
-        // 			text: t("uni-goods-nav.options.cart")
-        // 		}]
-        // 	}
-        // },
-        if (appVm) {
-          // 触发响应式
-          appVm.$locale;
-          if (!isWatchedAppLocale) {
-            isWatchedAppLocale = true;
-            watchAppLocale(appVm, i18n);
-          }
-        }
-        return i18n.t(key, values);
-      };
-    }
-    return _t(key, values);
-  };
-  return {
-    i18n: i18n,
-    f: function f(message, values, delimiters) {
-      return i18n.f(message, values, delimiters);
-    },
-    t: function t(key, values) {
-      return _t(key, values);
-    },
-    add: function add(locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-      return i18n.add(locale, message, override);
-    },
-    watch: function watch(fn) {
-      return i18n.watchLocale(fn);
-    },
-    getLocale: function getLocale() {
-      return i18n.getLocale();
-    },
-    setLocale: function setLocale(newLocale) {
-      return i18n.setLocale(newLocale);
-    } };
-
-}
-
-var isString = function isString(val) {return typeof val === 'string';};exports.isString = isString;
-var formater;
-function hasI18nJson(jsonObj, delimiters) {
-  if (!formater) {
-    formater = new BaseFormatter();
-  }
-  return walkJsonObj(jsonObj, function (jsonObj, key) {
-    var value = jsonObj[key];
-    if (isString(value)) {
-      if (isI18nStr(value, delimiters)) {
-        return true;
-      }
-    } else
-    {
-      return hasI18nJson(value, delimiters);
-    }
-  });
-}
-function parseI18nJson(jsonObj, values, delimiters) {
-  if (!formater) {
-    formater = new BaseFormatter();
-  }
-  walkJsonObj(jsonObj, function (jsonObj, key) {
-    var value = jsonObj[key];
-    if (isString(value)) {
-      if (isI18nStr(value, delimiters)) {
-        jsonObj[key] = compileStr(value, values, delimiters);
-      }
-    } else
-    {
-      parseI18nJson(value, values, delimiters);
-    }
-  });
-  return jsonObj;
-}
-function compileI18nJsonStr(jsonStr, _ref5) {var locale = _ref5.locale,locales = _ref5.locales,delimiters = _ref5.delimiters;
-  if (!isI18nStr(jsonStr, delimiters)) {
-    return jsonStr;
-  }
-  if (!formater) {
-    formater = new BaseFormatter();
-  }
-  var localeValues = [];
-  Object.keys(locales).forEach(function (name) {
-    if (name !== locale) {
-      localeValues.push({
-        locale: name,
-        values: locales[name] });
-
-    }
-  });
-  localeValues.unshift({ locale: locale, values: locales[locale] });
-  try {
-    return JSON.stringify(compileJsonObj(JSON.parse(jsonStr), localeValues, delimiters), null, 2);
-  }
-  catch (e) {}
-  return jsonStr;
-}
-function isI18nStr(value, delimiters) {
-  return value.indexOf(delimiters[0]) > -1;
-}
-function compileStr(value, values, delimiters) {
-  return formater.interpolate(value, values, delimiters).join('');
-}
-function compileValue(jsonObj, key, localeValues, delimiters) {
-  var value = jsonObj[key];
-  if (isString(value)) {
-    // 存在国际化
-    if (isI18nStr(value, delimiters)) {
-      jsonObj[key] = compileStr(value, localeValues[0].values, delimiters);
-      if (localeValues.length > 1) {
-        // 格式化国际化语言
-        var valueLocales = jsonObj[key + 'Locales'] = {};
-        localeValues.forEach(function (localValue) {
-          valueLocales[localValue.locale] = compileStr(value, localValue.values, delimiters);
-        });
-      }
-    }
-  } else
-  {
-    compileJsonObj(value, localeValues, delimiters);
-  }
-}
-function compileJsonObj(jsonObj, localeValues, delimiters) {
-  walkJsonObj(jsonObj, function (jsonObj, key) {
-    compileValue(jsonObj, key, localeValues, delimiters);
-  });
-  return jsonObj;
-}
-function walkJsonObj(jsonObj, walk) {
-  if (isArray(jsonObj)) {
-    for (var i = 0; i < jsonObj.length; i++) {
-      if (walk(jsonObj, i)) {
-        return true;
-      }
-    }
-  } else
-  if (isObject(jsonObj)) {
-    for (var key in jsonObj) {
-      if (walk(jsonObj, key)) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-function resolveLocale(locales) {
-  return function (locale) {
-    if (!locale) {
-      return locale;
-    }
-    locale = normalizeLocale(locale) || locale;
-    return resolveLocaleChain(locale).find(function (locale) {return locales.indexOf(locale) > -1;});
-  };
-}
-function resolveLocaleChain(locale) {
-  var chain = [];
-  var tokens = locale.split('-');
-  while (tokens.length) {
-    chain.push(tokens.join('-'));
-    tokens.pop();
-  }
-  return chain;
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
-
-/***/ }),
-
-/***/ 40:
+/***/ 41:
 /*!****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/level.js ***!
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/order.js ***!
   \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -29692,12 +29709,12 @@ function resolveLocaleChain(locale) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  // title: '分销商等级',
+  // title: '分销订单',
   title: '' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 407:
+/***/ 415:
 /*!*****************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/seckill/public/js/list.js ***!
   \*****************************************************************************/
@@ -29989,22 +30006,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 41:
-/*!****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/order.js ***!
-  \****************************************************************/
+/***/ 42:
+/*!***********************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/order_detail.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  // title: '分销订单',
-  title: '' };exports.lang = lang;
+  title: '订单详情' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 416:
+/***/ 424:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/seckill/public/js/detail.js ***!
   \*******************************************************************************/
@@ -30780,9 +30796,9 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 42:
+/***/ 43:
 /*!***********************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/order_detail.js ***!
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/promote_code.js ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -30790,11 +30806,11 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  title: '订单详情' };exports.lang = lang;
+  title: '推广海报' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 427:
+/***/ 435:
 /*!********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/seckill/public/js/payment.js ***!
   \********************************************************************************/
@@ -31537,20 +31553,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 43:
-/*!***********************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/promote_code.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '推广海报' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 44:
 /*!***************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/team.js ***!
@@ -31566,7 +31568,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 446:
+/***/ 45:
+/*!*************************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/withdraw_apply.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  // title: '提现申请'
+  title: '' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 454:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/pintuan/public/js/detail.js ***!
   \*******************************************************************************/
@@ -32443,21 +32460,6 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 45:
-/*!*************************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/withdraw_apply.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  // title: '提现申请'
-  title: '' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 46:
 /*!************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/fenxiao/withdraw_list.js ***!
@@ -32487,7 +32489,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 475:
+/***/ 48:
+/*!**************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/game/record.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '中奖纪录' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 483:
 /*!********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/pintuan/public/js/payment.js ***!
   \********************************************************************************/
@@ -33235,20 +33251,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 48:
-/*!**************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/game/record.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '中奖纪录' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 49:
 /*!******************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/game/smash_eggs.js ***!
@@ -33263,7 +33265,32 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 496:
+/***/ 5:
+/*!***********************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/pages.json ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 50:
+/*!*****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/game/turntable.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '大转盘' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 504:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/bargain/public/js/detail.js ***!
   \*******************************************************************************/
@@ -34052,31 +34079,6 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 5:
-/*!***********************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/pages.json ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 50:
-/*!*****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/game/turntable.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '大转盘' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 51:
 /*!**************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/brand.js ***!
@@ -34114,7 +34116,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 527:
+/***/ 53:
+/*!*****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/category.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '商品分类' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 535:
 /*!********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/bargain/public/js/payment.js ***!
   \********************************************************************************/
@@ -34862,20 +34878,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 53:
-/*!*****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/category.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '商品分类' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 54:
 /*!***************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/coupon.js ***!
@@ -34890,7 +34892,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 546:
+/***/ 55:
+/*!***********************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/coupon_receive.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '领取优惠券' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 554:
 /*!********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/groupbuy/public/js/detail.js ***!
   \********************************************************************************/
@@ -35671,20 +35687,6 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 55:
-/*!***********************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/coupon_receive.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '领取优惠券' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 56:
 /*!***************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/detail.js ***!
@@ -35705,7 +35707,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 564:
+/***/ 57:
+/*!*****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/evaluate.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '商品评价' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 572:
 /*!*********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/groupbuy/public/js/payment.js ***!
   \*********************************************************************************/
@@ -36453,20 +36469,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 57:
-/*!*****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/evaluate.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '商品评价' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 58:
 /*!*************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/goods/list.js ***!
@@ -36500,7 +36502,27 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 593:
+/***/ 60:
+/*!******************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/groupbuy/detail.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '商品详情',
+  select: '选择',
+  params: '参数',
+  service: '商品服务',
+  allGoods: '全部商品',
+  image: '图片',
+  video: '视频' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 601:
 /*!******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/point/public/js/payment.js ***!
   \******************************************************************************/
@@ -36699,26 +36721,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 60:
-/*!******************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/groupbuy/detail.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '商品详情',
-  select: '选择',
-  params: '参数',
-  service: '商品服务',
-  allGoods: '全部商品',
-  image: '图片',
-  video: '视频' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 61:
 /*!****************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/groupbuy/list.js ***!
@@ -36761,7 +36763,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 637:
+/***/ 64:
+/*!************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/help/list.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '帮助中心',
+  emptyText: "当前暂无帮助信息" };exports.lang = lang;
+
+/***/ }),
+
+/***/ 645:
 /*!*********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/wholesale/public/js/detail.js ***!
   \*********************************************************************************/
@@ -37521,22 +37538,21 @@ var _wxJssdk = __webpack_require__(/*! @/common/js/wx-jssdk.js */ 154);function 
 
 /***/ }),
 
-/***/ 64:
-/*!************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/help/list.js ***!
-  \************************************************************/
+/***/ 65:
+/*!*************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/index/city.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  title: '帮助中心',
-  emptyText: "当前暂无帮助信息" };exports.lang = lang;
+  title: '城市选择' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 648:
+/***/ 656:
 /*!**********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/promotionpages/wholesale/public/js/payment.js ***!
   \**********************************************************************************/
@@ -38284,20 +38300,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 65:
-/*!*************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/index/city.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '城市选择' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 66:
 /*!**************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/index/index.js ***!
@@ -38428,7 +38430,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 717:
+/***/ 72:
+/*!**********************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/account_edit.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '编辑账户',
+  name: '姓名',
+  namePlaceholder: '请输入真实姓名',
+  mobilePhone: '手机号码',
+  mobilePhonePlaceholder: '请输入手机号',
+  accountType: '账号类型',
+  bankInfo: '支行信息',
+  bankInfoPlaceholder: '请输入支行信息',
+  withdrawalAccount: '提现账号',
+  withdrawalAccountPlaceholder: '请输入提现账号',
+  save: '保存' };exports.lang = lang;
+
+/***/ }),
+
+/***/ 725:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/order/public/js/refundMethod.js ***!
   \*******************************************************************************/
@@ -38467,31 +38493,26 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 72:
-/*!**********************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/account_edit.js ***!
-  \**********************************************************************/
+/***/ 73:
+/*!*****************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/address.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
   //title为每个页面的标题
-  title: '编辑账户',
-  name: '姓名',
-  namePlaceholder: '请输入真实姓名',
-  mobilePhone: '手机号码',
-  mobilePhonePlaceholder: '请输入手机号',
-  accountType: '账号类型',
-  bankInfo: '支行信息',
-  bankInfoPlaceholder: '请输入支行信息',
-  withdrawalAccount: '提现账号',
-  withdrawalAccountPlaceholder: '请输入提现账号',
-  save: '保存' };exports.lang = lang;
+  title: '收货地址',
+  newAddAddress: '新增地址',
+  getAddress: '一键获取地址',
+  is_default: '默认',
+  modify: '编辑',
+  del: '删除' };exports.lang = lang;
 
 /***/ }),
 
-/***/ 726:
+/***/ 734:
 /*!***************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/order/public/js/evaluate.js ***!
   \***************************************************************************/
@@ -38749,25 +38770,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 73:
-/*!*****************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/address.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '收货地址',
-  newAddAddress: '新增地址',
-  getAddress: '一键获取地址',
-  is_default: '默认',
-  modify: '编辑',
-  del: '删除' };exports.lang = lang;
-
-/***/ }),
-
 /***/ 74:
 /*!**********************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/address_edit.js ***!
@@ -38908,7 +38910,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 821:
+/***/ 829:
 /*!******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/member/public/js/collection.js ***!
   \******************************************************************************/
@@ -39151,7 +39153,54 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 
 /***/ }),
 
-/***/ 878:
+/***/ 88:
+/*!***************************************************************!*\
+  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
+  //title为每个页面的标题
+  title: '会员中心',
+  login: '立即登录',
+  loginTpis: '登录体验更多功能',
+  memberLevel: '会员等级',
+  moreAuthority: '更多权限',
+  allOrders: '全部订单',
+  seeAllOrders: '查看全部订单',
+  waitPay: '待付款',
+  readyDelivery: '待发货',
+  waitDelivery: '待收货',
+  waitEvaluate: '待评价',
+  refunding: '退款',
+  // 会员中心入口
+  sign: '签到',
+  personInfo: '个人资料',
+  receivingAddress: '收货地址',
+  accountList: '账户列表',
+  couponList: '优惠券',
+  mySpellList: '我的拼单',
+  myBargain: '我的砍价',
+  virtualCode: '虚拟码',
+  winningRecord: '我的礼品',
+  myCollection: '我的关注',
+  myTracks: '我的足迹',
+  pintuanOrder: '拼团订单',
+  yushouOrder: '预售订单',
+  verification: '核销台',
+  message: '我的消息',
+  exchangeOrder: '积分兑换',
+  // 推广中心
+  balance: '余额',
+  point: '积分',
+  coupon: '优惠券',
+  Service: "客服" };exports.lang = lang;
+
+/***/ }),
+
+/***/ 886:
 /*!**************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/member/public/js/signin.js ***!
   \**************************************************************************/
@@ -39159,7 +39208,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.lang = voi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _util = _interopRequireDefault(__webpack_require__(/*! @/otherpages/components/uni-calendar/util.js */ 879));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _util = _interopRequireDefault(__webpack_require__(/*! @/otherpages/components/uni-calendar/util.js */ 887));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   data: function data() {
     return {
@@ -39346,7 +39395,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 879:
+/***/ 887:
 /*!*******************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/components/uni-calendar/util.js ***!
   \*******************************************************************************/
@@ -39354,7 +39403,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 880));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 888));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
 
 Calendar = /*#__PURE__*/function () {
   function Calendar()
@@ -39709,54 +39758,7 @@ Calendar;exports.default = _default;
 
 /***/ }),
 
-/***/ 88:
-/*!***************************************************************!*\
-  !*** /Users/longchu/Documents/镜惠购/lang/zh-cn/member/index.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.lang = void 0;var lang = {
-  //title为每个页面的标题
-  title: '会员中心',
-  login: '立即登录',
-  loginTpis: '登录体验更多功能',
-  memberLevel: '会员等级',
-  moreAuthority: '更多权限',
-  allOrders: '全部订单',
-  seeAllOrders: '查看全部订单',
-  waitPay: '待付款',
-  readyDelivery: '待发货',
-  waitDelivery: '待收货',
-  waitEvaluate: '待评价',
-  refunding: '退款',
-  // 会员中心入口
-  sign: '签到',
-  personInfo: '个人资料',
-  receivingAddress: '收货地址',
-  accountList: '账户列表',
-  couponList: '优惠券',
-  mySpellList: '我的拼单',
-  myBargain: '我的砍价',
-  virtualCode: '虚拟码',
-  winningRecord: '我的礼品',
-  myCollection: '我的关注',
-  myTracks: '我的足迹',
-  pintuanOrder: '拼团订单',
-  yushouOrder: '预售订单',
-  verification: '核销台',
-  message: '我的消息',
-  exchangeOrder: '积分兑换',
-  // 推广中心
-  balance: '余额',
-  point: '积分',
-  coupon: '优惠券',
-  Service: "客服" };exports.lang = lang;
-
-/***/ }),
-
-/***/ 880:
+/***/ 888:
 /*!***********************************************************************************!*\
   !*** /Users/longchu/Documents/镜惠购/otherpages/components/uni-calendar/calendar.js ***!
   \***********************************************************************************/

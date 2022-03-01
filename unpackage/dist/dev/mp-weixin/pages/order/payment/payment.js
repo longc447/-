@@ -98,10 +98,10 @@ var components
 try {
   components = {
     uniPopup: function() {
-      return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1195))
+      return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1203))
     },
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1312))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
     }
   }
 } catch (e) {
@@ -138,9 +138,6 @@ var render = function() {
     var l0 = _vm.__map(siteItem.goods_list, function(goodsItem, goodsIndex) {
       var $orig = _vm.__get_orig(goodsItem)
 
-      var g0 = _vm.$util.img(goodsItem.sku_image, {
-        size: "mid"
-      })
       var f0 =
         goodsItem.sku_spec_format &&
         goodsItem.ball_mirror !== "0.00" &&
@@ -155,7 +152,6 @@ var render = function() {
           : null
       return {
         $orig: $orig,
-        g0: g0,
         f0: f0,
         f1: f1
       }
@@ -174,7 +170,7 @@ var render = function() {
     var f3 = siteItem.promotionExits
       ? _vm._f("promotion")(siteItem.promotion)
       : null
-    var g1 = Array.isArray(siteItem.invoice_config)
+    var g0 = Array.isArray(siteItem.invoice_config)
     var f4 =
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_config.invoice_rate)
@@ -213,7 +209,7 @@ var render = function() {
       m1: m1,
       f2: f2,
       f3: f3,
-      g1: g1,
+      g0: g0,
       f4: f4,
       m2: m2,
       f5: f5,
@@ -297,7 +293,7 @@ var render = function() {
 
   var f17 = _vm._f("moneyFormat")(_vm.orderPaymentData.pay_money)
 
-  var g2 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
+  var g1 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
 
   var l2 = _vm.__map(_vm.presentCoupon, function(couponItem, couponIndex) {
     var $orig = _vm.__get_orig(couponItem)
@@ -309,17 +305,17 @@ var render = function() {
       !(couponItem.type == "reward") && couponItem.type == "discount"
         ? parseFloat(couponItem.discount)
         : null
-    var g3 = _vm.$util.timeStampTurnTime(couponItem.end_time)
+    var g2 = _vm.$util.timeStampTurnTime(couponItem.end_time)
     return {
       $orig: $orig,
       m15: m15,
       m16: m16,
       m17: m17,
-      g3: g3
+      g2: g2
     }
   })
 
-  var g4 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
+  var g3 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
 
   var l3 = _vm.__map(_vm.siteCoupon.data, function(couponItem, couponIndex) {
     var $orig = _vm.__get_orig(couponItem)
@@ -331,17 +327,17 @@ var render = function() {
       !(couponItem.type == "reward") && couponItem.type == "discount"
         ? parseFloat(couponItem.discount)
         : null
-    var g5 = _vm.$util.timeStampTurnTime(couponItem.end_time)
+    var g4 = _vm.$util.timeStampTurnTime(couponItem.end_time)
     return {
       $orig: $orig,
       m18: m18,
       m19: m19,
       m20: m20,
-      g5: g5
+      g4: g4
     }
   })
 
-  var g6 =
+  var g5 =
     _vm.orderPaymentData && _vm.orderPaymentData.platform_coupon_list
       ? _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
       : null
@@ -360,14 +356,14 @@ var render = function() {
       _vm.orderPaymentData && _vm.orderPaymentData.platform_coupon_list
         ? parseFloat(couponItem.money)
         : null
-    var g7 =
+    var g6 =
       _vm.orderPaymentData && _vm.orderPaymentData.platform_coupon_list
         ? _vm.$util.timeStampTurnTime(couponItem.end_time)
         : null
     return {
       $orig: $orig,
       m22: m22,
-      g7: g7
+      g6: g6
     }
   })
 
@@ -395,11 +391,11 @@ var render = function() {
         f16: f16,
         m14: m14,
         f17: f17,
-        g2: g2,
+        g1: g1,
         l2: l2,
-        g4: g4,
+        g3: g3,
         l3: l3,
-        g6: g6,
+        g5: g5,
         m21: m21,
         l4: l4
       }
@@ -439,6 +435,64 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1819,7 +1873,65 @@ var _tool = _interopRequireDefault(__webpack_require__(/*! @/pages/order/public/
 //
 //
 //
-var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1195));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1490));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default, _tool.default] };exports.default = _default;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1203));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1498));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default, _tool.default] };exports.default = _default;
 
 /***/ }),
 

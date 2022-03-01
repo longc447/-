@@ -96,7 +96,7 @@ var components
 try {
   components = {
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1312))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
     }
   }
 } catch (e) {
@@ -130,9 +130,6 @@ var render = function() {
   ) {
     var $orig = _vm.__get_orig(goodsItem)
 
-    var g2 = _vm.$util.img(goodsItem.sku_image, {
-      size: "mid"
-    })
     var f0 =
       goodsItem.sku_spec_format && goodsItem.eye
         ? _vm._f("doller")(goodsItem.ball_mirror)
@@ -143,18 +140,17 @@ var render = function() {
         : null
     return {
       $orig: $orig,
-      g2: g2,
       f0: f0,
       f1: f1
     }
   })
 
-  var g3 = _vm.$util.timeStampTurnTime(_vm.orderData.create_time)
-  var g4 =
+  var g2 = _vm.$util.timeStampTurnTime(_vm.orderData.create_time)
+  var g3 =
     _vm.orderData.close_time > 0
       ? _vm.$util.timeStampTurnTime(_vm.orderData.close_time)
       : null
-  var g5 =
+  var g4 =
     _vm.orderData.pay_status > 0
       ? _vm.$util.timeStampTurnTime(_vm.orderData.pay_time)
       : null
@@ -200,9 +196,9 @@ var render = function() {
         g1: g1,
         m0: m0,
         l0: l0,
+        g2: g2,
         g3: g3,
         g4: g4,
-        g5: g5,
         m1: m1,
         m2: m2,
         m3: m3,
@@ -251,6 +247,38 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -840,7 +868,39 @@ var _tool = _interopRequireDefault(__webpack_require__(/*! ../public/js/tool.js 
 //
 //
 //
-var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1490));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { isIphoneX: false, orderId: 0, orderData: { action: [] }, action: { icon: '' }, kefuConfig: { weapp: '', system: '', open: '', open_url: '' }, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 } };}, mixins: [_golbalConfig.default, _orderMethod.default, _tool.default], components: { nsPayment: nsPayment }, onLoad: function onLoad(option) {if (option.order_id) this.orderId = option.order_id;}, onShow: function onShow() {// 刷新多语言
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1498));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { isIphoneX: false, orderId: 0, orderData: { action: [] }, action: { icon: '' }, kefuConfig: { weapp: '', system: '', open: '', open_url: '' }, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 } };}, mixins: [_golbalConfig.default, _orderMethod.default, _tool.default], components: { nsPayment: nsPayment }, onLoad: function onLoad(option) {if (option.order_id) this.orderId = option.order_id;}, onShow: function onShow() {// 刷新多语言
     this.$langConfig.refresh();this.isIphoneX = this.$util.uniappIsIPhoneX();if (uni.getStorageSync('token')) {this.getEvaluateConfig();this.getOrderData();} else {this.$util.redirectTo('/pages/login/login/login', { back: '/pages/order/detail/detail?order_id=' + this.orderId });}this.getKekuConfig();}, methods: { //联系客服
     goConnect: function goConnect() {if (uni.getStorageSync('token')) {var data = { order_id: this.orderId, site_id: this.orderData.site_id };this.$util.redirectTo('/otherpages/chat/room/room', data);return false;} else {this.$refs.login.open('/pages/goods/detail/detail?sku_id=' + this.orderData.sku_id);return;}}, getKekuConfig: function getKekuConfig() {var _this = this;this.$api.sendRequest({ url: '/api/config/servicer', success: function success(res) {if (res.code == 0) {_this.kefuConfig = res.data;if (_this.kefuConfig.system && !_this.addonIsExit.servicer) _this.kefuConfig.system = 0;}} });}, goDetail: function goDetail(id) {this.$util.redirectTo('/pages/goods/detail/detail', { sku_id: id });}, goRefund: function goRefund(id) {this.$util.redirectTo('/otherpages/order/refund/refund', { order_goods_id: id });}, goRefundDetail: function goRefundDetail(id) {this.$util.redirectTo('/otherpages/order/refund_detail/refund_detail', { order_goods_id: id });}, getOrderData: function getOrderData() {var _this2 = this;this.$api.sendRequest({ url: '/api/order/detail', data: { order_id: this.orderId }, success: function success(res) {uni.stopPullDownRefresh();if (res.code >= 0) {_this2.orderData = res.data;_this2.orderData.order_goods.forEach(function (v) {if (v.sku_spec_format) {v.sku_spec_format = JSON.parse(v.sku_spec_format);} else {v.sku_spec_format = [];}});if (res.data.order_status == 3) res.data.take_delivery_execute_time = _this2.$util.countDown(res.data.take_delivery_execute_time - res.timestamp);_this2.action = JSON.parse(res.data.order_status_action);if (_this2.$refs.loadingCover) _this2.$refs.loadingCover.hide();} else {_this2.$util.showToast({ title: '未获取到订单信息！' });setTimeout(function () {_this2.$util.redirectTo('/pages/order/list/list');}, 1000);}}, fail: function fail(res) {uni.stopPullDownRefresh();if (_this2.$refs.loadingCover) _this2.$refs.loadingCover.hide();} });}, /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * 下拉刷新

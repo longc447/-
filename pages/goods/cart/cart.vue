@@ -260,6 +260,8 @@
 		onLoad() {
 			let _this = this
 			uni.hideTabBar();
+			this.token = uni.getStorageSync('token');
+							console.log(this.token,"token");
 			uni.getSystemInfo({
 				success(res) {
 					if (res.model.substring(0, 9) == "iPhone 12") {
@@ -328,7 +330,6 @@
 					url: '/api/cart/goodslists',
 					success: res => {
 						if (res.code >= 0) {
-							this.token = uni.getStorageSync('token');
 							if (res.data.length) this.handleCartData(res.data);
 							else this.cartData = [];
 						} else {

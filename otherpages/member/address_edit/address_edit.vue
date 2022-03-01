@@ -344,7 +344,7 @@ export default {
 				return false;
 			}
 		},
-		saveAddress() {
+		saveAddress() {debugger
 			if (this.flag) return;
 			this.flag = true;
 			if (this.vertify()) {

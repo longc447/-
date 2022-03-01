@@ -31,17 +31,17 @@ _vue.default.prototype.$config = _config.default;
 _App.default.mpType = 'app';
 
 //常用组件
-var loadingCover = function loadingCover() {__webpack_require__.e(/*! require.ensure | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then((function () {return resolve(__webpack_require__(/*! @/components/loading-cover/loading-cover.vue */ 1312));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
-_vue.default.component('loading-cover', loadingCover);var nsEmpty = function nsEmpty() {__webpack_require__.e(/*! require.ensure | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then((function () {return resolve(__webpack_require__(/*! @/components/ns-empty/ns-empty.vue */ 1319));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var loadingCover = function loadingCover() {__webpack_require__.e(/*! require.ensure | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then((function () {return resolve(__webpack_require__(/*! @/components/loading-cover/loading-cover.vue */ 1320));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+_vue.default.component('loading-cover', loadingCover);var nsEmpty = function nsEmpty() {__webpack_require__.e(/*! require.ensure | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then((function () {return resolve(__webpack_require__(/*! @/components/ns-empty/ns-empty.vue */ 1327));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
-_vue.default.component('ns-empty', nsEmpty);var MescrollUni = function MescrollUni() {__webpack_require__.e(/*! require.ensure | components/mescroll/my-list-mescroll */ "components/mescroll/my-list-mescroll").then((function () {return resolve(__webpack_require__(/*! @/components/mescroll/my-list-mescroll.vue */ 1326));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+_vue.default.component('ns-empty', nsEmpty);var MescrollUni = function MescrollUni() {__webpack_require__.e(/*! require.ensure | components/mescroll/my-list-mescroll */ "components/mescroll/my-list-mescroll").then((function () {return resolve(__webpack_require__(/*! @/components/mescroll/my-list-mescroll.vue */ 1334));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 _vue.default.component("mescroll-uni", MescrollUni); //上拉加载,下拉刷新组件
-var MescrollBody = function MescrollBody() {Promise.all(/*! require.ensure | components/mescroll/mescroll-body */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/mescroll/mescroll-body")]).then((function () {return resolve(__webpack_require__(/*! @/components/mescroll/mescroll-body.vue */ 1331));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var MescrollBody = function MescrollBody() {Promise.all(/*! require.ensure | components/mescroll/mescroll-body */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/mescroll/mescroll-body")]).then((function () {return resolve(__webpack_require__(/*! @/components/mescroll/mescroll-body.vue */ 1339));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
-_vue.default.component('mescroll-body', MescrollBody);var NsLogin = function NsLogin() {Promise.all(/*! require.ensure | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-login/ns-login.vue */ 1340));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+_vue.default.component('mescroll-body', MescrollBody);var NsLogin = function NsLogin() {Promise.all(/*! require.ensure | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-login/ns-login.vue */ 1348));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 _vue.default.component('ns-login', NsLogin);

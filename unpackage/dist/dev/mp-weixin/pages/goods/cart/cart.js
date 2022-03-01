@@ -98,16 +98,16 @@ var components
 try {
   components = {
     uniNumberBox: function() {
-      return __webpack_require__.e(/*! import() | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/components/uni-number-box/uni-number-box.vue */ 1398))
+      return __webpack_require__.e(/*! import() | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/components/uni-number-box/uni-number-box.vue */ 1406))
     },
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1312))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
     },
     diyBottomNav: function() {
-      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1375))
+      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1383))
     },
     nsLogin: function() {
-      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1340))
+      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1348))
     }
   }
 } catch (e) {
@@ -142,12 +142,9 @@ var render = function() {
         var l0 = _vm.__map(siteItem.cartList, function(item, cartIndex) {
           var $orig = _vm.__get_orig(item)
 
-          var g0 = _vm.$util.img(item.sku_image, {
-            size: "mid"
-          })
           var m2 =
             item.promotion_type == 1 ? _vm.$lang("common.currencySymbol") : null
-          var g1 =
+          var g0 =
             item.promotion_type == 1
               ? _vm.$util.img("upload/uniapp/index/discount.png")
               : null
@@ -157,9 +154,8 @@ var render = function() {
           var m4 = _vm.initNum(item)
           return {
             $orig: $orig,
-            g0: g0,
             m2: m2,
-            g1: g1,
+            g0: g0,
             m3: m3,
             m4: m4
           }
@@ -178,16 +174,16 @@ var render = function() {
       ? _vm.__map(_vm.invalidGoods, function(goodsItem, goodsIndex) {
           var $orig = _vm.__get_orig(goodsItem)
 
-          var g2 = _vm.$util.img(goodsItem.sku_image, {
+          var g1 = _vm.$util.img(goodsItem.sku_image, {
             size: "mid"
           })
           return {
             $orig: $orig,
-            g2: g2
+            g1: g1
           }
         })
       : null
-  var g3 = !_vm.hasData ? _vm.$util.img("upload/uniapp/common-empty.png") : null
+  var g2 = !_vm.hasData ? _vm.$util.img("upload/uniapp/common-empty.png") : null
   var m7 = !_vm.hasData ? _vm.$lang("emptyTips") : null
   var m8 = _vm.hasData ? _vm.$lang("allElection") : null
   var m9 = _vm.hasData ? _vm.$lang("total") : null
@@ -217,7 +213,7 @@ var render = function() {
         l1: l1,
         m6: m6,
         l2: l2,
-        g3: g3,
+        g2: g2,
         m7: m7,
         m8: m8,
         m9: m9,
@@ -424,8 +420,73 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _scrollView = _interopRequireDefault(__webpack_require__(/*! @/common/js/scroll-view.js */ 188));
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1405));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1398));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1375));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1412));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1413));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1406));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1383));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1420));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
@@ -538,6 +599,8 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
           if (_this3.$refs.loadingCover) _this3.$refs.loadingCover.hide();
         } });
 
+
+      console.log(this.cartData, "this.cartData");
     },
     /**
         * 处理购物车数据结构
@@ -686,7 +749,9 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
         cart_id.push(this.cartData[siteIndex].cartList[cartIndex].cart_id);
       }
       if (cart_id.length == 0) {
-        this.$util.showToast({ title: '请选择要删除的商品' });
+        this.$util.showToast({
+          title: '请选择要删除的商品' });
+
         return;
       }
 
@@ -698,12 +763,15 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
             cart_id = cart_id.toString();
             _this6.$api.sendRequest({
               url: '/api/cart/delete',
-              data: { cart_id: cart_id },
+              data: {
+                cart_id: cart_id },
+
               success: function success(res) {
                 if (res.code >= 0) {
                   if (tag == 'all') {
                     for (var i = 0; i < _this6.cartData.length; i++) {
-                      for (var j = 0; j < _this6.cartData[i].cartList.length; j++) {
+                      for (var j = 0; j < _this6.cartData[i].cartList.
+                      length; j++) {
                         var item = _this6.cartData[i].cartList[j];
                         if (item.checked) {
                           _this6.cartData[i].cartList.splice(j, 1);
@@ -717,12 +785,15 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
                     }
                   } else {
                     _this6.cartData[siteIndex].cartList.splice(cartIndex, 1);
-                    if (_this6.cartData[siteIndex].cartList.length == 0) _this6.cartData.splice(siteIndex, 1);
+                    if (_this6.cartData[siteIndex].cartList.length == 0) _this6.
+                    cartData.splice(siteIndex, 1);
                   }
                   _this6.calculationTotalPrice();
                   _this6.getCartNumber();
                 } else {
-                  _this6.$util.showToast({ title: res.message });
+                  _this6.$util.showToast({
+                    title: res.message });
+
                 }
               } });
 
@@ -755,7 +826,9 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
             _this7.calculationTotalPrice();
             _this7.getCartNumber();
           } else {
-            _this7.$util.showToast({ title: res.message });
+            _this7.$util.showToast({
+              title: res.message });
+
           }
         } });
 
@@ -805,13 +878,17 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
             if (cart_ids.length) {
               _this9.$api.sendRequest({
                 url: '/api/cart/delete',
-                data: { cart_id: cart_ids.toString() },
+                data: {
+                  cart_id: cart_ids.toString() },
+
                 success: function success(res) {
                   if (res.code >= 0) {
                     _this9.invalidGoods = [];
                     _this9.getCartNumber();
                   } else {
-                    _this9.$util.showToast({ title: res.message });
+                    _this9.$util.showToast({
+                      title: res.message });
+
                   }
                 } });
 
@@ -825,7 +902,9 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
       this.$forceUpdate();
     },
     toGoodsDetail: function toGoodsDetail(item) {
-      this.$util.redirectTo('/pages/goods/detail/detail', { sku_id: item.sku_id });
+      this.$util.redirectTo('/pages/goods/detail/detail', {
+        sku_id: item.sku_id });
+
     },
     // 购物车数量
     getCartNumber: function getCartNumber() {
@@ -838,12 +917,18 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
       var data = this.cartData[siteIndex].cartList[index];
       if (event.type == 'plus') {
         if (data.max_buy > 0 && data.max_buy < data.stock) {
-          this.$util.showToast({ title: '该商品每人限购' + data.max_buy + '件' });
+          this.$util.showToast({
+            title: '该商品每人限购' + data.max_buy + '件' });
+
         } else {
-          this.$util.showToast({ title: '库存不足' });
+          this.$util.showToast({
+            title: '库存不足' });
+
         }
       } else {
-        this.$util.showToast({ title: '最少购买' + event.value + '件' });
+        this.$util.showToast({
+          title: '最少购买' + event.value + '件' });
+
       }
     },
     toLogin: function toLogin() {

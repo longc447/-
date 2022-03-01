@@ -19,7 +19,8 @@
     "pages/order/activist/activist",
     "pages/order/complain/complain",
     "pages/pay/result/result",
-    "pages/login/register/wholesale/wholesale"
+    "pages/login/register/wholesale/wholesale",
+    "pages/photo/photo"
   ],
   "subPackages": [
     {

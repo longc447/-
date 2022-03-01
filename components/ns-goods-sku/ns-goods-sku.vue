@@ -335,8 +335,8 @@
 		},
 		data() {
 			return {
-				rimless:'',
-				scrollto:'addbtn0',
+				rimless: '',
+				scrollto: 'addbtn0',
 				isIphoneX: false,
 				systemInfo: {}, //系统信息
 				number: 1,
@@ -378,11 +378,12 @@
 				mirrolist: [],
 				sumPrice: 0,
 				newballlist: [],
-				buyer_message:''
+				buyer_message: ''
 			};
 		},
 		mounted() {
-			console.error(this.goodsDetail,"111111111111this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1");
+			console.error(this.goodsDetail,
+				"111111111111this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1");
 			this.isIphoneX = this.$util.uniappIsIPhoneX();
 			this.systemInfo = uni.getSystemInfoSync();
 			this.getWholesale();
@@ -394,10 +395,6 @@
 			// 		this.getClickGoodsAdd();
 			// 	}
 			// }, 100)
-			if(this.goodsDetail.rimless==1){
-				this.rimless=this.goodsDetail.rimless
-				this.getClickGoodsAdd({},1)
-			}
 		},
 		watch: {
 			// rimless(nval,oval){
@@ -407,8 +404,12 @@
 				this.limitNumber = Number(newNum);
 			},
 			goodsDetail(newData, oldData) {
-				if(newData.rimless!=1){
-					this.goodsDetailChange(newData, oldData)	
+				if (newData.rimless == 1) {
+					this.goodsDetailChange(newData, oldData)
+				}
+				if (this.goodsDetail.rimless == 1) {
+					this.rimless = this.goodsDetail.rimless
+					this.getClickGoodsAdd({}, 1)
 				}
 			},
 			minBuy(newData, oldData) {
@@ -825,7 +826,8 @@
 							} else {
 								goodsSkuDetail.show_price = goodsSkuDetail.price;
 							}
-							if(goodsSkuDetail.goods_spec_format) goodsSkuDetail.goods_spec_format = JSON.parse(goodsSkuDetail.goods_spec_format)
+							if (goodsSkuDetail.goods_spec_format) goodsSkuDetail.goods_spec_format = JSON
+								.parse(goodsSkuDetail.goods_spec_format)
 							_this.btnSwitch = false;
 							_this.$emit('refresh', goodsSkuDetail);
 						} else {
@@ -1167,7 +1169,7 @@
 				});
 			},
 			//点击增加单笔数量
-			getClickGoodsAdd(obj,eyeIndex) {
+			getClickGoodsAdd(obj, eyeIndex) {
 				console.log(this.cylinder_mirrorArray_bk, "sssssssssss");
 				this.myValue.push({
 					objIndex: undefined,
@@ -1176,7 +1178,7 @@
 					axisIndex: undefined,
 					cylinder_mirrorIndex: undefined,
 					ball_mirrorIndex: undefined,
-					leftIndex: eyeIndex||0,
+					leftIndex: eyeIndex || 0,
 					axisValue: 0,
 					cylinder_mirrorArray: this.cylinder_mirrorArray_bk,
 					ball_mirrorArray: this.ball_mirrorArray_bk
@@ -1185,7 +1187,7 @@
 				// console.log(this.myValue)
 				// let gets = this.myValue.slice()
 				this.scrollto = `addbtn${this.myValue.length}`
-				console.log(this.scrollto,"到哪去")
+				console.log(this.scrollto, "到哪去")
 			},
 			//删除选中订单
 			removeTap(index) {
@@ -1551,7 +1553,7 @@
 			 * */
 			checkParam() {
 				let ispost = true;
-				
+
 				if (this.goodsDetail.photometric != 0 || this.goodsDetail.luminosity_status == 1) { //this.photometric != 0
 					this.myValue.forEach(e => {
 						if (e.ball_mirrorArray[e.ball_mirrorIndex] == undefined) {
@@ -1609,8 +1611,8 @@
 					sku_id: this.skuId,
 					site_id: this.goodsDetail.site_id,
 					list: JSON.stringify(LensParam),
-					buyer_message:this.buyer_message,
-					rimless:this.rimless
+					buyer_message: this.buyer_message,
+					rimless: this.rimless
 				} : { //默认参数,未做修改
 					site_id: this.goodsDetail.site_id,
 					sku_id: this.skuId,
@@ -1624,8 +1626,8 @@
 					a_dd_data: this.sumIndex != null ? this.sumIndex[this.sumIndex] : 0,
 					passage_data: this.objIndex != null ? this.objIndex[this.objIndex] : 0,
 					num: number,
-					buyer_message:this.buyer_message,
-					rimless:this.rimless
+					buyer_message: this.buyer_message,
+					rimless: this.rimless
 				}
 				console.log(param, "parammmmmmmmmmm");
 				this.$api.sendRequest({
@@ -1890,14 +1892,14 @@
 		color: #ff0000;
 	}
 
-	.remarkBox{
+	.remarkBox {
 		border: 1rpx solid #DBDBDB;
 		width: calc(100% - 20rpx);
 		height: 150rpx;
 		margin-top: 20rpx;
 		padding: 10rpx 10rpx;
 	}
-	
+
 	.wrap-transverse {
 		display: flex;
 		justify-content: space-between;

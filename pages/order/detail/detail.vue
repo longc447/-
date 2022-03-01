@@ -48,7 +48,7 @@
 					<view class="goods-info">
 						<view @click="goDetail(goodsItem.sku_id)" class="goods-name" style="font-size: 35rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
 						<view class="sku" v-if="goodsItem.sku_spec_format">
-							<view class="goods-spec">
+							<view class="goods-spec"  style="background: #f8f8f8;border-radius: 10rpx;">
 								<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 									{{ x.spec_value_name }} {{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 								</block>
@@ -87,14 +87,34 @@
 									</view>
 									
 								</view>
+								<view v-if="goodsItem.rimless==0">
+									<text
+										style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;margin-right: 15rpx;"
+										v-if="goodsItem.eye">
+										{{goodsItem.eye == '右眼'? 'R ' : goodsItem.eye == '左眼' ? 'L ' : ''}}</text>
+									<text
+										style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">S：<text
+											style="font-weight: bold;color:#000000;">{{goodsItem.ball_mirror | doller }}</text></text>
+									<text
+										style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">C：<text
+											style="font-weight: bold;color:#000000;">{{goodsItem.cylinder_mirror | doller }}</text></text>
+									<text style="font-size: 3vw;color: rgb(160,160,160);">
+										{{" 轴位："}}<text
+											style="font-weight: bold;color:#000000;">{{goodsItem.axis}}</text></text>
+									<text style="font-size: 3vw;color: rgb(160,160,160);"
+										v-if="goodsItem.passage">
+										{{" 通道："}}<text
+											style="font-weight: bold;color:#000000;">{{goodsItem.passage}}</text></text>
+									<text style="font-size: 3vw;color: rgb(160,160,160);"
+										v-if="goodsItem.a_dd">
+										{{" ADD："}}<text
+											style="font-weight: bold;color:#000000;">{{goodsItem.a_dd}}</text></text>
 								
 								
-								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;" v-if="goodsItem.eye" >{{" 球镜："}}{{goodsItem.ball_mirror | doller }}</text>
-								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;" v-if="goodsItem.eye">{{" 柱镜："}}{{goodsItem.cylinder_mirror | doller}}</text>
-								<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.eye"> {{" 轴位："+goodsItem.axis}}</text>
-								<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.eye"> {{" 左右眼："+goodsItem.eye}}</text>
-								<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.eye"> {{" 通道："+goodsItem.passage}}</text>
-								<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.eye"> {{" ADD："+goodsItem.a_dd}}</text>
+								</view>
+								
+								
+								
 							</view>
 						</view>
 						<view class="goods-sub-section">

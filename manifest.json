@@ -1,5 +1,5 @@
 {
-    "name" : "镜片一站式采购平台",
+    "name" : "云易眼镜批发城",
     "appid" : "__UNI__8AECDC0",
     "description" : "",
     "versionName" : "1.6.6",
@@ -136,11 +136,11 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx0f57e059962fab6a",
+        "appid" : "wx0a2bec6faf4d4169",
         "setting" : {
             "urlCheck" : false,
             "postcss" : true,
-            "es6" : false,
+            "es6" : true,
             "minified" : true
         },
         "usingComponents" : true,
@@ -174,7 +174,7 @@
         "sdkConfigs" : {
             "maps" : {
                 "qqmap" : {
-                    "key" : "27DBZ-73E6O-LZCWM-SWHV6-PFXVQ-J7B56"
+                    "key" : "D5YBZ-ZWPWU-SAFVB-BQBT4-Q2A56-LJFRH"
                 }
             }
         },

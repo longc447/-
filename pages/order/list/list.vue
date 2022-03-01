@@ -50,9 +50,9 @@
 													{{ x.spec_value_name }}
 													{{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 												</block>
-												<view style="font-size: 3vw;" v-for="(it,itindex) in goodsItem.remarks"
+												<view  style="background: #f8f8f8;border-radius: 10rpx;" v-for="(it,itindex) in goodsItem.remarks"
 													:key="itindex" v-if="goodsItem.rimless!=0">
-													<text v-if="it.eye">
+													<text v-if="it.eye" style="margin-right: 15rpx;">
 														{{it.eye=="左眼"?" L":" R"}}</text>
 													<text style="color: rgb(160,160,160);"
 														v-if="it.ball_mirror">{{" S：" }}</text>
@@ -76,9 +76,9 @@
 													<text v-if="it.a_dd">
 														{{it.a_dd}}</text>
 												</view>
-												<view v-if="goodsItem.rimless==0">
+												<view v-if="goodsItem.rimless==0"  style="background: #f8f8f8;border-radius: 10rpx;">
 													<text
-														style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;"
+														style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;margin-right: 15rpx;"
 														v-if="goodsItem.eye">
 														{{goodsItem.eye == '右眼'? 'R ' : goodsItem.eye == '左眼' ? 'L ' : ''}}</text>
 													<text

@@ -6,13 +6,13 @@
   "setting": {
     "urlCheck": false,
     "postcss": true,
-    "es6": false,
+    "es6": true,
     "minified": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx0f57e059962fab6a",
-  "projectname": "镜片一站式采购平台",
+  "appid": "wx0a2bec6faf4d4169",
+  "projectname": "云易眼镜批发城",
   "condition": {
     "search": {
       "current": -1,

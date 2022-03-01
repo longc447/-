@@ -198,6 +198,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/photo/tips",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 

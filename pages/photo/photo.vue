@@ -82,6 +82,7 @@
 								mobile,
 								full_address,
 								address,
+								city_id,
 								id
 							} = res.data
 							this.addressInfo = {
@@ -89,6 +90,7 @@
 								mobile,
 								full_address,
 								address,
+								city_id,
 								id
 							};
 							console.log(this.addressInfo,"info");
@@ -97,19 +99,26 @@
 				})
 			},
 			async createOrder() {
+				
 				const {
-					id
+					id,
+					city_id
 				} = this.addressInfo
 				if (!id) return uni.showToast({
 					title: "请选择地址",
 					icon: "none"
 				})
-				if (this.remark === "") return uni.showToast({
-					title: "请填写备注",
-					icon: "none"
+				if(this.fileList.length==0) return uni.showToast({
+					title:"请上传图片",
+					icon:"none"
 				})
+				// if (this.remark === "") return uni.showToast({
+				// 	title: "请填写备注",
+				// 	icon: "none"
+				// })
 				let param = {
 					address_id: id,
+					city_id,
 					remarks: this.remark,
 					images: []
 				}
@@ -139,7 +148,7 @@
 							icon: "none"
 						})
 						setTimeout(() => {
-							this.$util.redirectTo('/pages/order/list/list?status=waitpays');
+							this.$util.redirectTo('/pages/photo/tips');
 						}, 2000)
 					},
 					fail: err => {

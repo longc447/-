@@ -245,6 +245,7 @@ view {
   margin-bottom: 20rpx;
   display: flex;
   position: relative;
+  border-bottom: 2rpx solid #F1F1F1;
 }
 .site-wrap .site-body .goods-wrap:last-of-type {
   margin-bottom: 0;
@@ -261,7 +262,7 @@ view {
 }
 .site-wrap .site-body .goods-wrap .goods-info {
   flex: 1;
-  max-width: 450rpx;
+  margin-bottom: 20rpx;
   position: relative;
   display: flex;
   flex-direction: column;

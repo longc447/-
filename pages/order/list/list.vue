@@ -44,12 +44,13 @@
 											{{luminosity_status==1?goodsItem.goods_name:goodsItem.sku_name }}</view>
 										<view class="sku" v-if="goodsItem.sku_spec_format">
 
-											<view class="goods-spec">
+											<view class="goods-spec" >
 
 												<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 													{{ x.spec_value_name }}
 													{{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 												</block>
+												
 												<view  style="background: #f8f8f8;border-radius: 10rpx;" v-for="(it,itindex) in goodsItem.remarks"
 													:key="itindex" v-if="goodsItem.rimless!=0">
 													<text v-if="it.eye" style="margin-right: 15rpx;">
@@ -105,7 +106,7 @@
 										</view>
 									</view>
 									<view class="goods-sub-section">
-										<text class="goods-price">
+										<text class="goods-price" v-if="goodsItem.price > 0">
 											<text
 												class="unit color-base-text font-size-activity-tag">{{ $lang('common.currencySymbol') }}</text>
 											<text class="color-base-text">{{ goodsItem.price }}</text>
@@ -119,9 +120,13 @@
 									<view class="goods-operation"></view>
 								</view>
 							</view>
+							<view class="" style="margin: 0 40rpx;">
+								<image :src="item" v-for="(item,index) in orderItem.images" mode="" style="width: 100rpx;height:100rpx;margin-right:20rpx;"></image>
+							</view>
 						</view>
+						
 						<view class="order-footer">
-							<view class="order-base-info">
+							<view class="order-base-info" v-if="orderItem.is_photograph!=1">
 								<view class="total">
 									<text class="font-size-sub">共{{ orderItem.goods_num }}件商品</text>
 									<text class="align-right font-size-base">
@@ -187,6 +192,7 @@
 	export default {
 		data() {
 			return {
+				luminosity_status:1,
 				scrollInto: '',
 				orderStatus: 'all',
 				statusList: [],
@@ -235,6 +241,7 @@
 				this.$refs.mescroll.refresh();
 			},
 			getListData(mescroll) {
+				let _this=this
 				this.$api.sendRequest({
 					url: '/api/order/lists',
 					data: {
@@ -257,17 +264,19 @@
 						if (mescroll.num == 1) this.orderList = []; //如果是第一页需手动制空列表
 						this.orderList = this.orderList.concat(newArr); //追加新数据
 						this.orderList.forEach(v => {
-							v.order_goods.forEach(vo => {
-								if (vo.sku_spec_format) {
-									try {
-										vo.sku_spec_format = JSON.parse(vo.sku_spec_format);
-									} catch (e) {
-										vo.sku_spec_format = vo.sku_spec_format;
-									}
-								} else {
-									vo.sku_spec_format = [];
-								}
-							});
+							// v.order_goods.forEach(vo => {
+								console.log(v.images,"vooooooooooo");
+								if(v.images) v.images= JSON.parse(v.images)
+							// 	if (vo.image) {
+							// 		try {
+							// 			vo.image = JSON.parse(vo.image);
+							// 		} catch (e) {
+							// 			vo.image = vo.image;
+							// 		}
+							// 	} else {
+							// 		vo.image = [];
+							// 	}
+							// });
 						});
 						if (this.$refs.loadingCover) this.$refs.loadingCover.hide();
 					},

@@ -231,6 +231,7 @@ export default {
 				}
 			});
 			let data = res.data;
+			debugger
 			if (data.goods_sku_detail != null) {
 				this.goodsSkuDetail = data.goods_sku_detail;
 				this.goodsSkuDetail.preview = this.preview;
@@ -378,7 +379,8 @@ export default {
 		 * @param {Object} goodsSkuDetail
 		 */
 		refreshGoodsSkuDetail(goodsSkuDetail) {
-			console.log(this.goodsSkuDetail, goodsSkuDetail)
+			console.error(this.goodsSkuDetail, goodsSkuDetail)
+			console.log(this.goodsSkuDetail.sku_images,goodsSkuDetail.sku_images,"图片前后");
 			
 			Object.assign(this.goodsSkuDetail, goodsSkuDetail);
 			this.goodsSkuDetail.unit = this.goodsSkuDetail.unit || "件";
@@ -392,13 +394,24 @@ export default {
 					this.swiperAutoplay = false;
 				}, 40);
 			}
+			
+			
+			
+			if (this.goodsSkuDetail.sku_images) this.goodsSkuDetail.sku_images = this.goodsSkuDetail.sku_images.split(",");
+			else this.goodsSkuDetail.sku_images = [];
+			
+			// 多规格时合并主图
+			if (this.goodsSkuDetail.goods_spec_format && this.goodsSkuDetail.goods_image) {
+				this.goodsSkuDetail.goods_image = this.goodsSkuDetail.goods_image.split(",");
+				this.goodsSkuDetail.sku_images = this.goodsSkuDetail.sku_images.concat(this.goodsSkuDetail.goods_image);
+			}
 		},
 		goHome() {
 			if (this.preview) return; // 开启预览，禁止任何操作和跳转
 			// this.$util.redirectTo('/pages/index/index/index', {}, 'reLaunch');
-			this.$util.redirectTo('/otherpages/shop/index/index', {
-				site_id: this.shopInfo.site_id
-			});
+			// this.$util.redirectTo('/otherpages/shop/index/index', {
+			// 	site_id: this.shopInfo.site_id
+			// });
 		},
 		goCart() {
 			if (this.preview) return; // 开启预览，禁止任何操作和跳转

@@ -284,10 +284,18 @@ export default {
 				var _data = data;
 				var imgs = [];
 				for (var i = 0; i < tempFilePaths.length; i++) {
+					uni.showLoading({
+						title: "正在上传图片",
+						mask: true
+					})
 					var path = await _self.upload_file_server(tempFilePaths[i], _data, params.path, url);
+					uni.hideLoading()
 					imgs.push(path);
 				}
 				typeof callback == 'function' && callback(imgs);
+			},
+			fail() {
+				uni.hideLoading()
 			}
 		});
 	},

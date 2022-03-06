@@ -265,7 +265,9 @@
 						<view class="add-sku" @click="getClickGoodsAdd()" :id="scrollto"
 							v-if="goodsDetail.rimless!=1&&(goodsDetail.photometric!=0|| goodsDetail.luminosity_status==1) ">
 							<text>新增</text>
+							<!-- #ifndef MP-->
 							<text v-show="false">{{rimless=goodsDetail.rimless}}</text>
+							<!-- #endif -->
 						</view>
 					</scroll-view>
 					<!-- <textarea placeholder="备注留言" class="remarkBox" v-model="buyer_message"></textarea> -->
@@ -382,13 +384,12 @@
 			};
 		},
 		mounted() {
-			console.error(this.goodsDetail,
-				"111111111111this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1");
+			//console.error(this.goodsDetail,
+				// "111111111111this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1");
 			this.isIphoneX = this.$util.uniappIsIPhoneX();
 			this.systemInfo = uni.getSystemInfoSync();
-			this.getWholesale();
+			this.getWholesale(this.goodsDetail);
 			if (this.goodsDetail.goods_id == 0) this.$emit("error")
-			this.goodsDetailChange(this.goodsDetail)
 			// let t = setInterval(() => {
 			// 	if (this.cylinder_mirrorArray_bk.length > 0) {
 			// 		clearInterval(t);
@@ -398,15 +399,18 @@
 		},
 		watch: {
 			// rimless(nval,oval){
-			// 	console.error(nval,oval,"rimless")
+			// 	//console.error(nval,oval,"rimless")
 			// },
 			pointLimit(newNum, oldNum) {
 				this.limitNumber = Number(newNum);
 			},
 			goodsDetail(newData, oldData) {
-				if (newData.rimless == 1) {
-					this.goodsDetailChange(newData, oldData)
-				}
+					// this.getWholesale(newData);
+				this.goodsDetailChange(newData)
+				// if (newData.rimless == 1) {
+					console.error(this.goodsDetail,"更新了一次");
+				// }
+				
 				if (this.goodsDetail.rimless == 1) {
 					this.rimless = this.goodsDetail.rimless
 					this.getClickGoodsAdd({}, 1)
@@ -420,10 +424,10 @@
 		},
 		methods: {
 			goodsDetailChange(newData, oldData) {
-				console.log(this.goodsDetail, "goodsDetailgoodsDetailgoodsDetailgoodsDetail");
-				console.log(newData.photometric)
+				//console.log(this.goodsDetail, "goodsDetailgoodsDetailgoodsDetailgoodsDetail");
+				//console.log(newData.photometric)
 				this.skuId = newData.sku_id;
-
+				console.error(this.goodsDetail.luminosity_status,"luminosity_status");
 				if (this.goodsDetail.luminosity_status != 1) this.setBalllist()
 				if (newData.photometric != 0 || newData.luminosity_status == 1) { //联合光度
 					//球镜范围
@@ -470,7 +474,7 @@
 					this.cylinder_mirrorArray_bk = cylinder_mirrorArray
 					this.myValue = []
 					this.getClickGoodsAdd();
-					// console.log("柱镜", this.cylinder_mirrorArray_bk, "球镜", this.ball_mirrorArray_bk);
+					// //console.log("柱镜", this.cylinder_mirrorArray_bk, "球镜", this.ball_mirrorArray_bk);
 					this.axisArray = axisArray
 					this.sumArray = sumArray
 					this.objArray = objArray
@@ -480,6 +484,10 @@
 				let max = 0,
 					min = 0,
 					arr = []
+				const {ball_min,ball_max} = this.goodsDetail
+				if(this.mirrolist.length==0){
+					arr=this.getList(ball_min,ball_max)
+				}
 				this.mirrolist.forEach(v => {
 					min = v.ball_min
 					max = v.ball_max
@@ -490,12 +498,13 @@
 				arr.sort((a, b) => {
 					return a - b
 				})
+				
 				this.newballlist = arr
-				// console.log(this.newballlist, "球镜数据")
+				// //console.log(this.newballlist, "球镜数据")
 			},
 			getSumPrice() {
 				let sum = 0
-				// console.log(this.myValue,
+				// //console.log(this.myValue,
 				// 	"this.goodsDetail.goods_spec_formatthis.goodsDetail.goods_spec_formatthis.goodsDetail.goods_spec_format"
 				// )
 				this.myValue.forEach(e => {
@@ -504,7 +513,7 @@
 				this.sumPrice = sum
 			},
 			nomove(e) {
-				// console.log(e);
+				// //console.log(e);
 			},
 			/**
 			 * @param {min}
@@ -515,7 +524,7 @@
 					s = 0.25
 				for (let i = min; i <= max; i += s) {
 					s = i < this.goodsDetail.step && this.goodsDetail.step != 0 ? 0.5 : 0.25
-					console.log(`min=${min},max=${max},s=${s},step=${this.goodsDetail.step},i=${i}`)
+					//console.log(`min=${min},max=${max},s=${s},step=${this.goodsDetail.step},i=${i}`)
 					let num = i > 0 ? '+' + i : i < 0 ? i : i
 					num = parseFloat(num).toFixed(2)
 					if (num > 0) num = `+${num}`
@@ -525,20 +534,20 @@
 				return arr;
 			},
 			setMyPopup(i, name, list, dataitem = null, index) {
+				
 				this.doIndex(i)
 				dataitem = this.myValue[this.nowIndex]
 				let item = dataitem
-				// console.log(`操作的是${name}数据`, item, dataitem)
+				debugger
+				console.error( this.goodsDetail.luminosity_status,"不等于1没法选球镜柱镜");
 				if (this.goodsDetail.luminosity_status == 1) {
 
 					// if (name == 'ball') item.cylinder_mirrorIndex = -1
 					if (!(item.ball_mirrorIndex >= 0) && name === 'cylinder') return this.$util.showToast({
 						title: '先选球镜'
 					})
-					// console.log(name, list, "组件");
 
 					if (name == 'ball') list = this.newballlist
-
 
 					if (name == 'cylinder' && dataitem != null) {
 						let val = dataitem.ball_mirrorArray[dataitem.ball_mirrorIndex],
@@ -548,36 +557,25 @@
 						this.mirrolist.forEach(v => {
 							min = v.cylinder_min
 							max = v.cylinder_max
-							console.log(parseFloat(val), parseFloat(v.ball_min), parseFloat(v.ball_max),
-								"parseFloat(val) >= parseFloat(v.ball_min) && parseFloat(val) <= parseFloat(v.ball_max)",
-								parseFloat(val) >= parseFloat(v.ball_min) && parseFloat(val) <= parseFloat(v
-									.ball_max))
+							
 							if (parseFloat(val) >= parseFloat(v.ball_min) && parseFloat(val) <= parseFloat(v
 									.ball_max)) {
 								// dataitem.discount_price = v.discount_price
 								item.sku_id = v.sku_id
 								let a = this.getList(min, max)
 								arr = arr.concat(a)
-								console.log(v, "cvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", arr)
 							}
-							console.log(
-								`val= ${val},ball_min = ${v.ball_min},ball_max=${v.ball_max},Number(val) > v.ball_min =${Number(val) > v.ball_min } Number(val) <= v.ball_max=${Number(val) <= v.ball_max}`
-							)
 						})
-						console.log(arr, "arr-set")
 						arr = Array.from(new Set(arr))
 						arr.sort((a, b) => {
 							return a - b
 						})
-						// console.log(dataitem.ball_mirrorArray[dataitem.ball_mirrorIndex],"有值" ,dataitem)
-						console.log(arr, "arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
 						dataitem.cylinder_mirrorArray = arr
 						this.$refs[name].list = arr
 						this.$refs[name].open()
 						return
 					}
 				}
-				console.log(list, "list,lillllllllllllllllll", this.newballlist)
 				this.$refs[name].list = list
 				this.$refs[name].open()
 
@@ -591,20 +589,20 @@
 				// }
 
 				this.nowIndex = index;
-				// console.log("当前操作的数组下标修改为" + this.nowIndex);
 			},
-			async getWholesale() {
+			async getWholesale(newData) {
 				var res = await this.$api.sendRequest({
 					url: '/api/member/detail',
 					async: false
 				});
+				
 				if (res.code == 0) {
-					console.log(res)
+					////console.log(res)
 					this.is_wholesaler = res.is_wholesaler
 				}
-				console.log(this.goodsDetail.luminosity_status, "状态码新产品", this.goodsDetail);
-				if (this.goodsDetail.luminosity_status != 1) return
-				console.log("开始插球镜柱镜");
+				////console.log(this.goodsDetail.luminosity_status, "状态码新产品", this.goodsDetail);
+				// if (this.goodsDetail.luminosity_status != 1) return
+				////console.log("开始插球镜柱镜");
 				var mirro = await this.$api.sendRequest({
 					url: '/api/goodssku/luminosity_sku',
 					data: {
@@ -614,10 +612,10 @@
 				})
 				delete mirro.timestamp
 				this.mirrolist = Object.values(mirro)
-				if (this.mirrolist.length == 0) uni.showToast({
-					title: "没有拉取到柱镜信息,请刷新重试",
-					icon: "none"
-				})
+				// if (this.mirrolist.length == 0) uni.showToast({
+				// 	title: "没有拉取到柱镜信息,让管理员检查goodssku/luminosity_sku接口",
+				// 	icon: "none"
+				// })
 				this.setBalllist()
 			},
 			reset() {
@@ -627,7 +625,7 @@
 				this.cylinder_mirrorArray = this.cylinder_mirrorArray_bk
 			},
 			bindPickerChangeF(e) {
-				console.log('picker发送选择改变，左右眼球携带值为', e.target.value)
+				////console.log('picker发送选择改变，左右眼球携带值为', e.target.value)
 				this.myValue[this.nowIndex].leftIndex = e.target.value
 				//this.myValue[this.lastIndex].leftIndex = e.target.value
 				//修改球镜选择范围
@@ -637,7 +635,7 @@
 			//球镜的值+柱镜的值 <= this.photometric
 			bindPickerChangeA(e) {
 				let item = this.myValue[this.nowIndex]
-				console.log('picker发送选择改变，球镜携带值为', e.target.value)
+				////console.log('picker发送选择改变，球镜携带值为', e.target.value)
 				item.ball_mirrorIndex = e.target.value
 				if (this.goodsDetail.luminosity_status == 1) {
 					item.ball_mirrorArray = this.newballlist
@@ -651,20 +649,20 @@
 				const ballValue = item.ball_mirrorArray[item.ball_mirrorIndex]
 				//if(this.cylinder_mirrorIndex!=null) return;//判定首次选择才删改互补镜值，以免造成重复删改导致数据缺失。
 				let arr = []
-				console.log(this.ball_mirrorArray)
+				////console.log(this.ball_mirrorArray)
 				this.cylinder_mirrorArray_bk.forEach(num => {
 					if (parseFloat(num) + parseFloat(ballValue) >= parseFloat(this.photometric)) {
 						arr.push(num)
 					}
 				})
 				//如果有值的时候
-				console.log(item.cylinder_mirrorIndex, "cylinder")
+				////console.log(item.cylinder_mirrorIndex, "cylinder")
 				if (item.cylinder_mirrorIndex != null) {
 					//目前的值
-					console.log('目前的值' + item.cylinder_mirrorIndex)
+					////console.log('目前的值' + item.cylinder_mirrorIndex)
 					const cylinderValue = item.cylinder_mirrorArray[item.cylinder_mirrorIndex]
 					var cylinderindex = arr.indexOf(cylinderValue)
-					console.log(cylinderindex)
+					////console.log(cylinderindex)
 					if (cylinderindex == -1) {
 						item.cylinder_mirrorIndex = 0
 					} else {
@@ -672,13 +670,13 @@
 					}
 				}
 				item.cylinder_mirrorArray = arr;
-				console.log(item.cylinder_mirrorArray); //柱镜
+				////console.log(item.cylinder_mirrorArray); //柱镜
 			},
 			bindPickerChangeB(e) {
 				let item = this.myValue[this.nowIndex]
 				const val = item.cylinder_mirrorArray[e.target.value]
 				const v1 = this.myValue[this.nowIndex].ball_mirrorArray[this.myValue[this.nowIndex].ball_mirrorIndex]
-				console.log(this.goodsDetail.luminosity_status, "this.goodsDetail.luminosity_status")
+				////console.log(this.goodsDetail.luminosity_status, "this.goodsDetail.luminosity_status")
 				if (this.goodsDetail.luminosity_status == 1) {
 					this.mirrolist.forEach((ei, index) => {
 						if (ei.cylinder_max >= val && val >= ei.cylinder_min && v1 >= ei.ball_min && v1 <= ei
@@ -686,16 +684,16 @@
 							item.discount_price = ei.discount_price
 							item.sku_id = ei.sku_id
 						}
-						console.log(ei, ei.cylinder_max >= val && val >= ei.cylinder_min,
-							'222222222222222222222222222222222222222', ei.cylinder_max >= val && val >= ei
-							.cylinder_min ? "1" : "2", ei.sku_id)
+						////console.log(ei, ei.cylinder_max >= val && val >= ei.cylinder_min,
+							// '222222222222222222222222222222222222222', ei.cylinder_max >= val && val >= ei
+							// .cylinder_min ? "1" : "2", ei.sku_id)
 					})
 					this.myValue[this.nowIndex].cylinder_mirrorIndex = e.target.value
 					item.cylinder_mirrorIndex = e.target.value
 					this.getSumPrice()
 					return
 				}
-				console.log('picker发送选择改变，柱镜携带值为', e.target.value)
+				//console.log('picker发送选择改变，柱镜携带值为', e.target.value)
 				this.myValue[this.nowIndex].cylinder_mirrorIndex = e.target.value
 				item.cylinder_mirrorIndex = e.target.value
 				//修改球镜选择范围
@@ -703,7 +701,7 @@
 				//if(this.ball_mirrorIndex!=null) return;//判定首次选择才删改互补镜值，以免造成重复删改导致数据缺失。
 				let arr = []
 				this.ball_mirrorArray_bk.forEach(num => { //-10
-					//console.log(num)
+					////console.log(num)
 					if (parseFloat(num) + parseFloat(cylinderValue) >= parseFloat(this.photometric)) {
 						arr.push(num)
 					}
@@ -719,21 +717,21 @@
 					}
 				}
 				item.ball_mirrorArray = arr
-				console.log(item.ball_mirrorIndex)
-				console.log(item.ball_mirroCrArray); //球镜
+				//console.log(item.ball_mirrorIndex)
+				//console.log(item.ball_mirroCrArray); //球镜
 			},
 			bindPickerChangeC(e) {
-				console.log('picker发送选择改变，轴位携带值为', e.target.value)
+				//console.log('picker发送选择改变，轴位携带值为', e.target.value)
 				this.myValue[this.nowIndex].axisIndex = e.target.value
 				this.axisIndex = e.target.value
 			},
 			bindPickerChangeD(e) {
-				console.log('picker发送选择改变，ADD携带值为', e.target.value)
+				//console.log('picker发送选择改变，ADD携带值为', e.target.value)
 				this.myValue[this.nowIndex].sumIndex = e.target.value
 				this.sumIndex = e.target.value
 			},
 			bindPickerChangeE(e) {
-				console.log('picker发送选择改变，通道携带值为', e.target.value)
+				//console.log('picker发送选择改变，通道携带值为', e.target.value)
 				this.myValue[this.nowIndex].objIndex = e.target.value
 				this.objIndex = e.target.value
 			},
@@ -765,7 +763,7 @@
 				this.$refs.skuPopup.close();
 			},
 			change(skuId, spec_id) {
-				console.log("选择膜层", skuId, spec_id, this.goodsDetail)
+				//console.log("选择膜层", skuId, spec_id, this.goodsDetail)
 				if (this.disabled) return;
 				this.btnSwitch = false;
 				this.skuId = skuId;
@@ -806,6 +804,7 @@
 						sku_id: this.skuId
 					},
 					success: res => {
+						console.log(res.sku_images,"goodsSkuDetail.sku_images图片");
 						let data = res.data;
 						if (data != null) {
 							data.unit = data.unit || '件';
@@ -1170,7 +1169,7 @@
 			},
 			//点击增加单笔数量
 			getClickGoodsAdd(obj, eyeIndex) {
-				console.log(this.cylinder_mirrorArray_bk, "sssssssssss");
+				//console.log(this.cylinder_mirrorArray_bk, "sssssssssss");
 				this.myValue.push({
 					objIndex: undefined,
 					product_num: 1,
@@ -1183,11 +1182,11 @@
 					cylinder_mirrorArray: this.cylinder_mirrorArray_bk,
 					ball_mirrorArray: this.ball_mirrorArray_bk
 				})
-				console.log(this.photometric, "myvalue", this.myValue);
-				// console.log(this.myValue)
+				//console.log(this.photometric, "myvalue", this.myValue);
+				// //console.log(this.myValue)
 				// let gets = this.myValue.slice()
 				this.scrollto = `addbtn${this.myValue.length}`
-				console.log(this.scrollto, "到哪去")
+				//console.log(this.scrollto, "到哪去")
 			},
 			//删除选中订单
 			removeTap(index) {
@@ -1407,7 +1406,7 @@
 
 			//提交
 			confirm() {
-				console.log(this.number);
+				//console.log(this.number);
 				// 删除待付款物流方式缓存
 				uni.removeStorageSync('delivery');
 				if (this.preview) {
@@ -1520,7 +1519,7 @@
 							sku_id: e.sku_id
 						})
 					})
-					console.log(LensParam, "111")
+					//console.log(LensParam, "111")
 					// 加入购物车
 					if (this.type == 'join_cart') this.postJoinCart(LensParam)
 					//立即购买
@@ -1546,6 +1545,11 @@
 					//清空状态
 					this.myValue = []
 					this.getClickGoodsAdd()
+					console.error(this.goodsDetail.rimless,"rimless")
+					if (this.goodsDetail.rimless == 1) {
+						this.rimless = this.goodsDetail.rimless
+						this.getClickGoodsAdd({}, 1)
+					}
 				});
 			},
 			/** 
@@ -1629,12 +1633,12 @@
 					buyer_message: this.buyer_message,
 					rimless: this.rimless
 				}
-				console.log(param, "parammmmmmmmmmm");
+				//console.log(param, "parammmmmmmmmmm");
 				this.$api.sendRequest({
 					url: '/api/cart/add',
 					data: param,
 					success: res => {
-						console.log(res);
+						//console.log(res);
 						var data = res.data;
 						if (data > 0) {
 							this.$util.showToast({

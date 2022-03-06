@@ -144,11 +144,7 @@
             "minified" : true
         },
         "usingComponents" : true,
-        "permission" : {
-            "scope.userLocation" : {
-                "desc" : "为了更好地为您提供服务"
-            }
-        },
+        "permission" : {},
         "plugins" : {}
     },
     // "live-player-plugin" : {

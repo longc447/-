@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "批发商申请",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "pick-regions": "/components/pick-regions/pick-regions"
+  }
+}

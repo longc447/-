@@ -37,8 +37,8 @@ const store = new Vuex.Store({
 		sourceMember: 0, // 来源会员
 		authInfo: {}, // 授权信息
 		paySource: '',
-		token: null,
-		diySeckillInterval: null ,
+		token: '',
+		diySeckillInterval: '' ,
 		is_wholesaler:''//批发商
 		
 	},

@@ -96,10 +96,10 @@ var components
 try {
   components = {
     diyBottomNav: function() {
-      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1383))
+      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391))
     },
     nsLogin: function() {
-      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1348))
+      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1356))
     }
   }
 } catch (e) {
@@ -241,12 +241,14 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
 
 
 
-            res.data,name = _res$data.name,mobile = _res$data.mobile,full_address = _res$data.full_address,address = _res$data.address,id = _res$data.id;
+
+            res.data,name = _res$data.name,mobile = _res$data.mobile,full_address = _res$data.full_address,address = _res$data.address,city_id = _res$data.city_id,id = _res$data.id;
             _this2.addressInfo = {
               name: name,
               mobile: mobile,
               full_address: full_address,
               address: address,
+              city_id: city_id,
               id: id };
 
             console.log(_this2.addressInfo, "info");
@@ -254,34 +256,42 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
         } });
 
     },
-    createOrder: function createOrder() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var id, param, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+    createOrder: function createOrder() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _this3$addressInfo, id, city_id, param;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_this3$addressInfo =
 
-                id =
-                _this3.addressInfo.id;if (
+
+
+
+                _this3.addressInfo, id = _this3$addressInfo.id, city_id = _this3$addressInfo.city_id;if (
                 id) {_context.next = 3;break;}return _context.abrupt("return", uni.showToast({
                   title: "请选择地址",
                   icon: "none" }));case 3:if (!(
 
-                _this3.remark === "")) {_context.next = 5;break;}return _context.abrupt("return", uni.showToast({
-                  title: "请填写备注",
+                _this3.fileList.length == 0)) {_context.next = 5;break;}return _context.abrupt("return", uni.showToast({
+                  title: "请上传图片",
                   icon: "none" }));case 5:
 
+                // if (this.remark === "") return uni.showToast({
+                // 	title: "请填写备注",
+                // 	icon: "none"
+                // })
                 param = {
                   address_id: id,
+                  city_id: city_id,
                   remarks: _this3.remark,
-                  images: [] };if (!(
+                  images: [] };
 
-                _this3.fileList.length > 0)) {_context.next = 13;break;}
+                if (_this3.fileList.length > 0) {
 
-                uni.showLoading({
-                  title: "正在上传图片",
-                  mask: true });_context.next = 10;return (
+                  uni.showLoading({
+                    title: "正在上传图片",
+                    mask: true });
 
-
-                  Promise.all(_this3.fileList.map(function (e) {return _this3.upload(e);})));case 10:res = _context.sent;
-                param.images = res.map(function (e) {return e.data.pic_path;});
-                uni.hideLoading();case 13:
-
+                  console.log(_this3.fileList, "文件列表");
+                  // const res = await Promise.all(this.imgList.map(e => this.upload(e)))
+                  // res.map(e => e.data.pic_path)
+                  param.images = _this3.imgList;
+                  uni.hideLoading();
+                }
 
                 uni.showLoading({
                   title: "正在提交订单",
@@ -297,7 +307,7 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
                       icon: "none" });
 
                     setTimeout(function () {
-                      _this3.$util.redirectTo('/pages/order/list/list?status=waitpays');
+                      _this3.$util.redirectTo('/pages/photo/tips');
                     }, 2000);
                   },
                   fail: function fail(err) {
@@ -308,7 +318,7 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
 
                   } });
 
-                console.log("下单提交", param);case 16:case "end":return _context.stop();}}}, _callee);}))();
+                console.log("下单提交", param);case 10:case "end":return _context.stop();}}}, _callee);}))();
     },
     selectAddress: function selectAddress() {
       if (this.token === '') return this.$refs.login.open();
@@ -320,6 +330,10 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
       this.$util.redirectTo('/otherpages/member/address/address', params);
     },
     upload: function upload(file) {
+
+      // file = file.path
+      console.log(file, "上传的东西");
+
       return new Promise(function (resolve, reject) {
         uni.uploadFile({
           url: _config.default.baseUrl + "/api/upload/headimg",
@@ -329,21 +343,36 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
             if (res.statusCode != 200) reject(res.errMsg);
             resolve(JSON.parse(res.data));
           },
-          fail: function fail(err) {return reject(err);} });
+          fail: function fail(err) {
+            console.log(err, "上传图片有问题");
+            reject(err);
+          } });
+
 
       });
     },
     addimg: function addimg() {
       var _this = this;
       console.log('现在：', this.imgList.length, "还可以选：", 9 - _this.imgList.length);
-      uni.chooseImage({
-        count: 9 - _this.imgList.length,
-        success: function success(res) {
-          _this.imgList = [].concat(_toConsumableArray(_this.imgList), _toConsumableArray(res.tempFilePaths));
-          _this.fileList = [].concat(_toConsumableArray(_this.fileList), _toConsumableArray(res.tempFiles));
-          console.log(res, "选择的图片");
-        } });
 
+      _this.$util.upload(
+      9 - _this.imgList.length, {
+        path: 'headimg' },
+
+      function (res) {
+        _this.imgList = [].concat(_toConsumableArray(_this.imgList), _toConsumableArray(res));
+        _this.fileList = [].concat(_toConsumableArray(_this.fileList), _toConsumableArray(res));
+        console.log(res, "选择的图片");
+      });
+
+      // uni.chooseImage({
+      // 	count: 9 - _this.imgList.length, 
+      // 	success(res) {
+      // 		_this.imgList = [..._this.imgList, ...res.tempFilePaths];
+      // 		_this.fileList = [..._this.fileList, ...res.tempFiles];
+      // 		console.log(res, "选择的图片");
+      // 	}
+      // })
     },
     remove: function remove(index) {var _this4 = this;
       uni.showModal({

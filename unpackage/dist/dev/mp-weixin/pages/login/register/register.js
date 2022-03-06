@@ -98,13 +98,13 @@ var components
 try {
   components = {
     uniPopup: function() {
-      return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1203))
+      return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1211))
     },
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
     },
     registerReward: function() {
-      return Promise.all(/*! import() | components/register-reward/register-reward */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/register-reward/register-reward")]).then(__webpack_require__.bind(null, /*! @/components/register-reward/register-reward.vue */ 1397))
+      return Promise.all(/*! import() | components/register-reward/register-reward */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/register-reward/register-reward")]).then(__webpack_require__.bind(null, /*! @/components/register-reward/register-reward.vue */ 1405))
     }
   }
 } catch (e) {
@@ -248,7 +248,7 @@ __webpack_require__.r(__webpack_exports__);
 var _validate = _interopRequireDefault(__webpack_require__(/*! common/js/validate.js */ 167));
 
 var _auth = _interopRequireDefault(__webpack_require__(/*! common/js/auth.js */ 9));
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1203));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var registerReward = function registerReward() {Promise.all(/*! require.ensure | components/register-reward/register-reward */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/register-reward/register-reward")]).then((function () {return resolve(__webpack_require__(/*! @/components/register-reward/register-reward.vue */ 1397));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var registerReward = function registerReward() {Promise.all(/*! require.ensure | components/register-reward/register-reward */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/register-reward/register-reward")]).then((function () {return resolve(__webpack_require__(/*! @/components/register-reward/register-reward.vue */ 1405));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {

@@ -98,10 +98,10 @@ var components
 try {
   components = {
     nsEmpty: function() {
-      return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1327))
+      return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
     },
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
     }
   }
 } catch (e) {
@@ -125,7 +125,6 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var m1 = _vm.$lang("common.currencySymbol")
   var l1 =
     _vm.orderList.length > 0
       ? _vm.__map(_vm.orderList, function(orderItem, orderIndex) {
@@ -135,7 +134,6 @@ var render = function() {
             _vm.orderStatus == "waitpay" && orderItem.order_status == 0
               ? _vm.$util.inArray(orderItem.order_id, _vm.mergePayOrder)
               : null
-          var m0 = _vm.$lang("common.currencySymbol")
 
           var l0 = _vm.__map(orderItem.order_goods, function(
             goodsItem,
@@ -151,18 +149,25 @@ var render = function() {
               goodsItem.sku_spec_format && goodsItem.rimless == 0
                 ? _vm._f("doller")(goodsItem.cylinder_mirror)
                 : null
+            var m0 =
+              goodsItem.price > 0 ? _vm.$lang("common.currencySymbol") : null
             return {
               $orig: $orig,
               f0: f0,
-              f1: f1
+              f1: f1,
+              m0: m0
             }
           })
 
+          var m1 =
+            orderItem.is_photograph != 1
+              ? _vm.$lang("common.currencySymbol")
+              : null
           return {
             $orig: $orig,
             g0: g0,
-            m0: m0,
-            l0: l0
+            l0: l0,
+            m1: m1
           }
         })
       : null
@@ -171,7 +176,6 @@ var render = function() {
     {},
     {
       $root: {
-        m1: m1,
         l1: l1,
         m2: m2
       }
@@ -211,6 +215,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
 
 
 
@@ -573,43 +582,47 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 //
 //
 //
-var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1498));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { scrollInto: '', orderStatus: 'all', statusList: [], orderList: [], contentText: {}, mergePayOrder: [], isIphoneX: false, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 }, orderData: {}, payMoney: 0, payMoneyMerge: 0 };}, components: { nsPayment: nsPayment }, mixins: [_orderMethod.default, _golbalConfig.default, _tool.default], onLoad: function onLoad(option) {if (option.status) this.orderStatus = option.status;}, onShow: function onShow() {// 刷新多语言
-    this.$langConfig.refresh();this.isIphoneX = this.$util.uniappIsIPhoneX();this.getEvaluateConfig();this.getOrderStatus();if (uni.getStorageSync('token')) {if (this.$refs.mescroll) this.$refs.mescroll.refresh();} else {this.$util.redirectTo('/pages/login/login/login', { back: '/pages/order/list/list?status=' + this.orderStatus });}}, methods: { ontabtap: function ontabtap(e) {var index = e.target.dataset.current || e.currentTarget.dataset.current;this.orderStatus = this.statusList[index].status;if (this.orderStatus == '') this.mergePayOrder = [];this.$refs.loadingCover.show();this.$refs.mescroll.refresh();}, getListData: function getListData(mescroll) {var _this = this;this.$api.sendRequest({ url: '/api/order/lists', data: { page: mescroll.num, page_size: mescroll.size, order_status: this.orderStatus }, success: function success(res) {var newArr = [];var msg = res.message;if (res.code == 0 && res.data) {newArr = res.data.list;} else {_this.$util.showToast({ title: msg });}mescroll.endSuccess(newArr.length); //设置列表数据
-          if (mescroll.num == 1) _this.orderList = []; //如果是第一页需手动制空列表
-          _this.orderList = _this.orderList.concat(newArr); //追加新数据
-          _this.orderList.forEach(function (v) {v.order_goods.forEach(function (vo) {if (vo.sku_spec_format) {try {vo.sku_spec_format = JSON.parse(vo.sku_spec_format);} catch (e) {vo.sku_spec_format = vo.sku_spec_format;}} else {vo.sku_spec_format = [];}});});if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();}, fail: function fail(res) {mescroll.endErr();if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();} });}, /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        * 获取订单状态
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        */getOrderStatus: function getOrderStatus() {this.statusList = [{ status: 'all', name: this.$lang('all'), id: 'status_0' }, { status: 'waitpay', name: this.$lang('waitPay'), id: 'status_1' }, { status: 'waitsend', name: this.$lang('readyDelivery'), id: 'status_2' }, { status: 'waitconfirm', name: this.$lang('waitDelivery'), id: 'status_3' }, { status: 'waitrate', name: this.$lang('waitEvaluate'), id: 'status_4' }];}, operation: function operation(action, orderData) {var _this2 = this;var index = this.status;switch (action) {case 'orderPay': // 支付
+//
+//
+//
+//
+//
+var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1506));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { luminosity_status: 1, scrollInto: '', orderStatus: 'all', statusList: [], orderList: [], contentText: {}, mergePayOrder: [], isIphoneX: false, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 }, orderData: {}, payMoney: 0, payMoneyMerge: 0 };}, components: { nsPayment: nsPayment }, mixins: [_orderMethod.default, _golbalConfig.default, _tool.default], onLoad: function onLoad(option) {if (option.status) this.orderStatus = option.status;}, onShow: function onShow() {// 刷新多语言
+    this.$langConfig.refresh();this.isIphoneX = this.$util.uniappIsIPhoneX();this.getEvaluateConfig();this.getOrderStatus();if (uni.getStorageSync('token')) {if (this.$refs.mescroll) this.$refs.mescroll.refresh();} else {this.$util.redirectTo('/pages/login/login/login', { back: '/pages/order/list/list?status=' + this.orderStatus });}}, methods: { ontabtap: function ontabtap(e) {var index = e.target.dataset.current || e.currentTarget.dataset.current;this.orderStatus = this.statusList[index].status;if (this.orderStatus == '') this.mergePayOrder = [];this.$refs.loadingCover.show();this.$refs.mescroll.refresh();}, getListData: function getListData(mescroll) {var _this2 = this;var _this = this;this.$api.sendRequest({ url: '/api/order/lists', data: { page: mescroll.num, page_size: mescroll.size, order_status: this.orderStatus }, success: function success(res) {var newArr = [];var msg = res.message;if (res.code == 0 && res.data) {newArr = res.data.list;} else {_this2.$util.showToast({ title: msg });}mescroll.endSuccess(newArr.length); //设置列表数据
+          if (mescroll.num == 1) _this2.orderList = []; //如果是第一页需手动制空列表
+          _this2.orderList = _this2.orderList.concat(newArr); //追加新数据
+          _this2.orderList.forEach(function (v) {// v.order_goods.forEach(vo => {
+            console.log(v.images, "vooooooooooo");if (v.images) v.images = JSON.parse(v.images); // 	if (vo.image) {
+            // 		try {
+            // 			vo.image = JSON.parse(vo.image);
+            // 		} catch (e) {
+            // 			vo.image = vo.image;
+            // 		}
+            // 	} else {
+            // 		vo.image = [];
+            // 	}
+            // });
+          });if (_this2.$refs.loadingCover) _this2.$refs.loadingCover.hide();}, fail: function fail(res) {mescroll.endErr();if (_this2.$refs.loadingCover) _this2.$refs.loadingCover.hide();} });}, /**
+                                                                                                                                                                                                     * 获取订单状态
+                                                                                                                                                                                                     */getOrderStatus: function getOrderStatus() {this.statusList = [{ status: 'all', name: this.$lang('all'), id: 'status_0' }, { status: 'waitpay', name: this.$lang('waitPay'), id: 'status_1' }, { status: 'waitsend', name: this.$lang('readyDelivery'), id: 'status_2' }, { status: 'waitconfirm', name: this.$lang('waitDelivery'), id: 'status_3' }, { status: 'waitrate', name: this.$lang('waitEvaluate'), id: 'status_4' }];}, operation: function operation(action, orderData) {var _this3 = this;var index = this.status;switch (action) {case 'orderPay': // 支付
           this.orderData = orderData;this.payMoney = parseFloat(orderData.pay_money);this.orderPay(orderData);break;case 'orderClose': //关闭
-          this.orderClose(orderData.order_id, function () {_this2.$refs.mescroll.refresh();});break;case 'memberTakeDelivery': //收货
-          this.orderDelivery(orderData.order_id, function () {_this2.$refs.mescroll.refresh();});break;case 'trace': //查看物流
+          this.orderClose(orderData.order_id, function () {_this3.$refs.mescroll.refresh();});break;case 'memberTakeDelivery': //收货
+          this.orderDelivery(orderData.order_id, function () {_this3.$refs.mescroll.refresh();});break;case 'trace': //查看物流
           this.$util.redirectTo('/pages/order/logistics/logistics', { order_id: orderData.order_id });break;case 'memberOrderEvaluation': //评价
           this.$util.redirectTo('/otherpages/order/evaluate/evaluate', { order_id: orderData.order_id });break;case 'extendTakeDelivery': //延长收回
-          this.orderExtendTakeDelivery(orderData.order_id, function () {_this2.$refs.mescroll.refresh();});break;}}, orderDetail: function orderDetail(data) {switch (parseInt(data.order_type)) {case 2: // 自提订单
+          this.orderExtendTakeDelivery(orderData.order_id, function () {_this3.$refs.mescroll.refresh();});break;}}, orderDetail: function orderDetail(data) {switch (parseInt(data.order_type)) {case 2: // 自提订单
           this.$util.redirectTo('/pages/order/detail_pickup/detail_pickup', { order_id: data.order_id });break;case 3: // 本地配送订单
           this.$util.redirectTo('/pages/order/detail_local_delivery/detail_local_delivery', { order_id: data.order_id });break;case 4: // 虚拟订单
           this.$util.redirectTo('/pages/order/detail_virtual/detail_virtual', { order_id: data.order_id });break;default:this.$util.redirectTo('/pages/order/detail/detail', { order_id: data.order_id });break;}}, /**
                                                                                                                                                                                                                      * 选择订单
                                                                                                                                                                                                                      * @param {Object} orderId
-                                                                                                                                                                                                                     */selectOrder: function selectOrder(orderId, pay_money) {if (this.$util.inArray(orderId, this.mergePayOrder) != -1) {this.mergePayOrder.splice(this.$util.inArray(orderId, this.mergePayOrder), 1);this.payMoneyMerge -= parseFloat(pay_money);} else {this.payMoneyMerge += parseFloat(pay_money);
-        this.mergePayOrder.push(orderId);
-      }
-    },
-    /**
-        * 合并支付
-        */
-    mergePay: function mergePay() {var _this3 = this;
-      if (this.mergePayOrder.length) {
-        this.$api.sendRequest({
-          url: '/api/order/pay',
-          data: {
-            order_ids: this.mergePayOrder.toString() },
-
-          success: function success(res) {
+                                                                                                                                                                                                                     */selectOrder: function selectOrder(orderId, pay_money) {if (this.$util.inArray(orderId, this.mergePayOrder) != -1) {this.mergePayOrder.splice(this.$util.inArray(orderId, this.mergePayOrder), 1);this.payMoneyMerge -= parseFloat(pay_money);} else {this.payMoneyMerge += parseFloat(pay_money);this.mergePayOrder.push(orderId);}}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * 合并支付
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              */mergePay: function mergePay() {var _this4 = this;if (this.mergePayOrder.length) {this.$api.sendRequest({ url: '/api/order/pay', data: { order_ids: this.mergePayOrder.toString() }, success: function success(res) {
             if (res.code >= 0) {
-              _this3.$refs.choosePaymentMergePopup.getPayInfo(res.data);
+              _this4.$refs.choosePaymentMergePopup.getPayInfo(res.data);
             } else {
-              _this3.$util.showToast({
+              _this4.$util.showToast({
                 title: res.message });
 
             }
@@ -627,13 +640,13 @@ var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure |
       default_goods_img;
       this.$forceUpdate();
     },
-    getEvaluateConfig: function getEvaluateConfig() {var _this4 = this;
+    getEvaluateConfig: function getEvaluateConfig() {var _this5 = this;
       this.$api.sendRequest({
         url: '/api/goodsevaluate/config',
         success: function success(res) {
           if (res.code == 0) {
             var data = res.data;
-            _this4.evaluateConfig = data;
+            _this5.evaluateConfig = data;
           }
         } });
 

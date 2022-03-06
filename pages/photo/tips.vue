@@ -7,7 +7,7 @@
 		<text class="btn return" @click="$util.redirectTo('/pages/index/index/index')">
 			返回首页
 		</text>
-		<text class="btn" @click="$util.redirectTo('/pages/order/list/list?status=waitpays')">
+		<text class="btn" @click="to('/pages/order/list/list?status=waitpays')">
 			查看订单
 		</text>
 	</view>
@@ -17,7 +17,12 @@
 	export default {
 		methods:{
 			to(url){
-				this.$util.redirectTo(url);
+				console.log(url);
+				
+				// this.$util.redirectTo(url);
+				uni.navigateTo({
+					url
+				})
 			}
 		}
 	}

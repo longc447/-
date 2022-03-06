@@ -98,16 +98,16 @@ var components
 try {
   components = {
     uniNumberBox: function() {
-      return __webpack_require__.e(/*! import() | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/components/uni-number-box/uni-number-box.vue */ 1406))
+      return __webpack_require__.e(/*! import() | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/components/uni-number-box/uni-number-box.vue */ 1414))
     },
     loadingCover: function() {
-      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1320))
+      return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
     },
     diyBottomNav: function() {
-      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1383))
+      return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391))
     },
     nsLogin: function() {
-      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1348))
+      return Promise.all(/*! import() | components/ns-login/ns-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-login/ns-login")]).then(__webpack_require__.bind(null, /*! @/components/ns-login/ns-login.vue */ 1356))
     }
   }
 } catch (e) {
@@ -485,8 +485,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
 var _scrollView = _interopRequireDefault(__webpack_require__(/*! @/common/js/scroll-view.js */ 188));
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1413));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1406));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1383));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1420));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1421));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1414));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1428));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
@@ -519,6 +523,8 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
   onLoad: function onLoad() {
     var _this = this;
     uni.hideTabBar();
+    this.token = uni.getStorageSync('token');
+    console.log(this.token, "token");
     uni.getSystemInfo({
       success: function success(res) {
         if (res.model.substring(0, 9) == "iPhone 12") {
@@ -587,7 +593,6 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
         url: '/api/cart/goodslists',
         success: function success(res) {
           if (res.code >= 0) {
-            _this3.token = uni.getStorageSync('token');
             if (res.data.length) _this3.handleCartData(res.data);else
             _this3.cartData = [];
           } else {
@@ -599,8 +604,6 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
           if (_this3.$refs.loadingCover) _this3.$refs.loadingCover.hide();
         } });
 
-
-      console.log(this.cartData, "this.cartData");
     },
     /**
         * 处理购物车数据结构
@@ -642,11 +645,15 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
       if (this.cartData.length) {
         this.cartData.forEach(function (cart) {
           cart.cartList.forEach(function (v) {
-            if (v.sku_spec_format) {
-              v.sku_spec_format = JSON.parse(v.sku_spec_format);
-            } else {
-              v.sku_spec_format = [];
-            }
+            // if (v.sku_spec_format) {
+            // 	try{
+            // 		// v.sku_spec_format = JSON.parse(v.sku_spec_format);	
+            // 	}catch(e){
+            // console.error(v.sku_spec_format,"---------");
+            // 	}
+            // } else {
+            // 	v.sku_spec_format = [];
+            // }
           });
         });
       }

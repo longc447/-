@@ -398,7 +398,7 @@
 				<block v-if="Development">
 					<view class="group-wrap" v-if="preview == 0">
 						<view class="shop-wrap">
-							<navigator hover-class="none" :url="'/otherpages/shop/index/index?site_id=' + shopInfo.site_id" class="box">
+							<navigator hover-class="none" class="box">
 								<view class="shop-logo">
 									<image v-if="shopInfo.avatar" :src="$util.img(shopInfo.avatar)" @error="shopInfo.avatar = $util.getDefaultImage().default_shop_img"
 									 mode="aspectFit" />
@@ -409,12 +409,12 @@
 									<view class="description" v-if="shopInfo.seo_description">{{ shopInfo.seo_description }}</view>
 								</view>
 							</navigator>
-							<navigator hover-class="none" :url="'/otherpages/shop/index/index?site_id=' + shopInfo.site_id" class="box shop-score">
+							<text hover-class="none" :url="'/otherpages/shop/index/index?site_id=' + shopInfo.site_id" class="box shop-score">
 								<text>商品描述{{ shopInfo.shop_desccredit }}</text>
 								<text>卖家服务{{ shopInfo.shop_servicecredit }}</text>
 								<text>发货速度{{ shopInfo.shop_deliverycredit }}</text>
-							</navigator>
-							<view class="box">
+							</text>
+				<!-- 			<view class="box">
 								<view class="goods-action">
 									<navigator hover-class="none" class="color-base-text color-base-border" :url="'/otherpages/shop/list/list?site_id=' + shopInfo.site_id">
 										全部商品
@@ -423,7 +423,7 @@
 										查看店铺
 									</navigator>
 								</view>
-							</view>
+							</view> -->
 						</view>
 					</view>
 				</block>
@@ -568,7 +568,7 @@
 		<!-- 商品底部导航 -->
 		<ns-goods-action :safeArea="isIphoneX" :isiPhone="isiPhone12">
 			<template v-if="goodsSkuDetail.goods_state == 1 && goodsSkuDetail.verify_state == 1">
-				<ns-goods-action-icon text="店铺" icon="iconshouye11" @click="goHome" />
+				<!-- <ns-goods-action-icon text="店铺" icon="iconshouye11" @click="goHome" /> -->
 				<ns-goods-action-icon text="客服" icon="iconkefu11" @click="goConnect" v-if="kefuConfig.type == 'system' && showKefu==1" />
 				<ns-goods-action-icon text="购物车" icon="icongouwuche21" :corner-mark="cartCount > 0 ? cartCount + '' : ''" @click="goCart" />
 				<block v-if="goodsSkuDetail.stock == 0 && !goodsSkuDetail.sku_spec_format">

@@ -40,68 +40,72 @@
 												{{ x.spec_value_name }}
 												{{ i < item.sku_spec_format.length - 1 ? ';' : '' }}
 											</block>
-											<view class="parameter_detail"
-												style="font-size: 3vw;font-weight: bold;line-height: 10rpx;margin-bottom: 20rpx;">
-												<view class="parameter_box" style="background: #f8f8f8;border-radius: 10rpx;">
-													<view class="" v-for="(it,itindex) in item.remarks" :key="itindex"
-														v-if="item.remarks.length">
-														<text v-if="it.eye" style="margin-right: 15rpx;">
-															{{it.eye=="左眼"?" L":" R"}}</text>
-														<text style="color: rgb(160,160,160);"
-															v-if="it.ball_mirror">{{" S：" }}</text>
-														<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
-
-														<text style="color: rgb(160,160,160);"
-															v-if="it.cylinder_mirror">{{" C："}}</text>
-														<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
-
-														<text style="color: rgb(160,160,160);" v-if="it.axis">
-															{{" 轴位："}}</text>
-														<text v-if="it.axis">
-															{{it.axis}}</text>
-
-														<text style="color: rgb(160,160,160);" v-if="it.passage">
-															{{" 通道："}}</text>
-														<text v-if="it.passage">
-															{{it.passage}}</text>
-														<text style="color: rgb(160,160,160);" v-if="it.a_dd">
-															{{" ADD："}}</text>
-														<text v-if="it.a_dd">
-															{{it.a_dd}}</text>
-													</view>
-													<view class="" style="font-weight: bold;">
-														<text style="font-weight:500;margin-right: 15rpx;" v-if="item.eye">
-															{{item.eye=="左眼"?" L":" R"}}</text>
-														<text style="color: rgb(160,160,160);"
-															v-if="item.ball_mirror&&!item.remarks.length">{{" S："}}</text>
-														<text
-															v-if="item.ball_mirror&&!item.remarks.length">{{item.ball_mirror }}</text>
-
-														<text style="color: rgb(160,160,160);"
-															v-if="item.cylinder_mirror&&!item.remarks.length">{{" C："}}</text>
-														<text
-															v-if="item.cylinder_mirror&&!item.remarks.length">{{item.cylinder_mirror}}</text>
-
-														<text style="color: rgb(160,160,160);" v-if="item.axis">
-															{{" 轴位："}}</text>
-														<text v-if="item.axis">
-															{{item.axis}}</text>
-
-														<text style="color: rgb(160,160,160);"
-															v-if="item.passage&&!item.remarks.length"> {{" 通道："}}</text>
-														<text v-if="item.passage&&!item.remarks.length">
-															{{item.passage}}</text>
-
-														<text style="color: rgb(160,160,160);"
-															v-if="item.a_dd&&!item.remarks.length">{{" ADD："}}</text>
-														<text  v-if="item.a_dd&&!item.remarks.length">
-															{{item.a_dd}}</text>
-
-													</view>
-
+										</view>
+									</view>
+									<view class="parameter_detail" v-if="item.photometric!=0&&item.is_photograph!=1"
+											style="font-size: 3vw;font-weight: bold;line-height: 10rpx;margin-bottom: 20rpx;">
+											<view class="parameter_box" style="background: #f8f8f8;border-radius: 10rpx;">
+												<view class="" v-for="(it,itindex) in item.remarks" :key="itindex"
+													v-if="item.remarks.length">
+													<text v-if="it.eye" style="margin-right: 15rpx;">
+														{{it.eye=="左眼"?" L":" R"}}</text>
+													<text style="color: rgb(160,160,160);"
+														v-if="it.ball_mirror">{{" S：" }}</text>
+													<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
+									
+													<text style="color: rgb(160,160,160);"
+														v-if="it.cylinder_mirror">{{" C："}}</text>
+													<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
+									
+													<text style="color: rgb(160,160,160);" v-if="it.axis">
+														{{" 轴位："}}</text>
+													<text v-if="it.axis">
+														{{it.axis}}</text>
+									
+													<text style="color: rgb(160,160,160);" v-if="it.passage">
+														{{" 通道："}}</text>
+													<text v-if="it.passage">
+														{{it.passage}}</text>
+													<text style="color: rgb(160,160,160);" v-if="it.a_dd">
+														{{" ADD："}}</text>
+													<text v-if="it.a_dd">
+														{{it.a_dd}}</text>
 												</view>
+												<view class="" style="font-weight: bold;">
+													<text style="font-weight:500;margin-right: 15rpx;" v-if="item.eye">
+														{{item.eye=="左眼"?" L":" R"}}</text>
+													<text style="color: rgb(160,160,160);"
+														v-if="item.ball_mirror&&!item.remarks.length">{{" S："}}</text>
+													<text
+														v-if="item.ball_mirror&&!item.remarks.length">{{item.ball_mirror }}</text>
+									
+													<text style="color: rgb(160,160,160);"
+														v-if="item.cylinder_mirror&&!item.remarks.length">{{" C："}}</text>
+													<text
+														v-if="item.cylinder_mirror&&!item.remarks.length">{{item.cylinder_mirror}}</text>
+									
+													<text style="color: rgb(160,160,160);" v-if="item.axis">
+														{{" 轴位："}}</text>
+													<text v-if="item.axis">
+														{{item.axis}}</text>
+									
+													<text style="color: rgb(160,160,160);"
+														v-if="item.passage&&!item.remarks.length"> {{" 通道："}}</text>
+													<text v-if="item.passage&&!item.remarks.length">
+														{{item.passage}}</text>
+									
+													<text style="color: rgb(160,160,160);"
+														v-if="item.a_dd&&!item.remarks.length">{{" ADD："}}</text>
+													<text  v-if="item.a_dd&&!item.remarks.length">
+														{{item.a_dd}}</text>
+									
+												</view>
+									
 											</view>
 										</view>
+									
+									<view class="sku">
+										
 									</view>
 									<view class="goods-sub-section">
 										<block v-if="item.promotion_type == 1">
@@ -341,8 +345,6 @@
 						if (this.$refs.loadingCover) this.$refs.loadingCover.hide();
 					}
 				});
-				
-				console.log(this.cartData,"this.cartData");
 			},
 			/**
 			 * 处理购物车数据结构
@@ -384,11 +386,15 @@
 				if (this.cartData.length) {
 					this.cartData.forEach(cart => {
 						cart.cartList.forEach(v => {
-							if (v.sku_spec_format) {
-								v.sku_spec_format = JSON.parse(v.sku_spec_format);
-							} else {
-								v.sku_spec_format = [];
-							}
+							// if (v.sku_spec_format) {
+							// 	try{
+							// 		// v.sku_spec_format = JSON.parse(v.sku_spec_format);	
+							// 	}catch(e){
+							// console.error(v.sku_spec_format,"---------");
+							// 	}
+							// } else {
+							// 	v.sku_spec_format = [];
+							// }
 						});
 					});
 				}

@@ -1,17 +1,22 @@
 <template>
 	<view class="detail-container" :class="{ 'safe-area': isIphoneX }" :data-theme="themeStyle">
 		<!-- 订单状态 -->
-		<view class="status-wrap color-base-bg" :style="{ backgroundImage: 'url(' + $util.img('upload/uniapp/order/status-wrap-bg.png') + ')' }">
+		<view class="status-wrap color-base-bg"
+			:style="{ backgroundImage: 'url(' + $util.img('upload/uniapp/order/status-wrap-bg.png') + ')' }">
 			<view class="order-status-left">
 				<image :src="$util.img(action.icon)"></image>
 				<view class="status-name">
 					<view>{{ orderData.order_status_name }}</view>
 					<view class="time" v-if="orderData.order_status == 3">
 						<text>还剩</text>
-						<text v-if="orderData.take_delivery_execute_time.d > 0">{{orderData.take_delivery_execute_time.d}}天</text>
-						<text v-if="orderData.take_delivery_execute_time.h > 0">{{orderData.take_delivery_execute_time.h}}时</text>
-						<text v-if="orderData.take_delivery_execute_time.i > 0">{{orderData.take_delivery_execute_time.i}}分</text>
-						<text v-if="orderData.take_delivery_execute_time.s > 0">{{orderData.take_delivery_execute_time.s}}秒</text>
+						<text
+							v-if="orderData.take_delivery_execute_time.d > 0">{{orderData.take_delivery_execute_time.d}}天</text>
+						<text
+							v-if="orderData.take_delivery_execute_time.h > 0">{{orderData.take_delivery_execute_time.h}}时</text>
+						<text
+							v-if="orderData.take_delivery_execute_time.i > 0">{{orderData.take_delivery_execute_time.i}}分</text>
+						<text
+							v-if="orderData.take_delivery_execute_time.s > 0">{{orderData.take_delivery_execute_time.s}}秒</text>
 						<text>自动收货</text>
 					</view>
 				</view>
@@ -46,36 +51,36 @@
 						<image :src="$util.img(goodsItem.sku_image, { size: 'mid' })" @error="imgError(goodsIndex)" mode="aspectFill"></image>
 					</view> -->
 					<view class="goods-info">
-						<view @click="goDetail(goodsItem.sku_id)" class="goods-name" style="font-size: 35rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
-						<view class="sku" v-if="goodsItem.sku_spec_format">
-							<view class="goods-spec"  style="background: #f8f8f8;border-radius: 10rpx;">
+						<view @click="goDetail(goodsItem.sku_id)" class="goods-name"
+							style="font-size: 35rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
+						<view class="sku" v-if="goodsItem.sku_spec_format&&orderData.is_photograph!=1">
+							<view class="goods-spec" style="background: #f8f8f8;border-radius: 10rpx;">
 								<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 									{{ x.spec_value_name }} {{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 								</block>
-							<!-- 	<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">球镜：{{goodsItem.ball_mirror}}</text>
+								<!-- 	<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">球镜：{{goodsItem.ball_mirror}}</text>
 								<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">柱镜：{{goodsItem.cylinder_mirror}}</text>
 								<text style="font-size: 3vw;color: rgb(160,160,160);">轴位：{{goodsItem.axis}}</text>
 								 -->
-								
-								
+
+
 								<view class="">
 									<view class="" v-for="(it,itindex) in goodsItem.remarks" :key="itindex"
 										v-if="goodsItem.rimless!=0">
 										<text v-if="it.eye" style="margin-right: 15rpx;">
 											{{it.eye=="左眼"?" L":" R"}}</text>
-										<text style="color: rgb(160,160,160);"
-											v-if="it.ball_mirror">{{" S：" }}</text>
+										<text style="color: rgb(160,160,160);" v-if="it.ball_mirror">{{" S：" }}</text>
 										<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
-									
+
 										<text style="color: rgb(160,160,160);"
 											v-if="it.cylinder_mirror">{{" C："}}</text>
 										<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
-									
+
 										<text style="color: rgb(160,160,160);" v-if="it.axis">
 											{{" 轴位："}}</text>
 										<text v-if="it.axis">
 											{{it.axis}}</text>
-									
+
 										<text style="color: rgb(160,160,160);" v-if="it.passage">
 											{{" 通道："}}</text>
 										<text v-if="it.passage">
@@ -85,39 +90,35 @@
 										<text v-if="it.a_dd">
 											{{it.a_dd}}</text>
 									</view>
-									
+
 								</view>
 								<view v-if="goodsItem.rimless==0">
 									<text
 										style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;margin-right: 15rpx;"
 										v-if="goodsItem.eye">
 										{{goodsItem.eye == '右眼'? 'R ' : goodsItem.eye == '左眼' ? 'L ' : ''}}</text>
-									<text
-										style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">S：<text
+									<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">S：<text
 											style="font-weight: bold;color:#000000;">{{goodsItem.ball_mirror | doller }}</text></text>
-									<text
-										style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">C：<text
+									<text style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">C：<text
 											style="font-weight: bold;color:#000000;">{{goodsItem.cylinder_mirror | doller }}</text></text>
 									<text style="font-size: 3vw;color: rgb(160,160,160);">
 										{{" 轴位："}}<text
 											style="font-weight: bold;color:#000000;">{{goodsItem.axis}}</text></text>
-									<text style="font-size: 3vw;color: rgb(160,160,160);"
-										v-if="goodsItem.passage">
+									<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.passage">
 										{{" 通道："}}<text
 											style="font-weight: bold;color:#000000;">{{goodsItem.passage}}</text></text>
-									<text style="font-size: 3vw;color: rgb(160,160,160);"
-										v-if="goodsItem.a_dd">
+									<text style="font-size: 3vw;color: rgb(160,160,160);" v-if="goodsItem.a_dd">
 										{{" ADD："}}<text
 											style="font-weight: bold;color:#000000;">{{goodsItem.a_dd}}</text></text>
-								
-								
+
+
 								</view>
-								
-								
-								
+
+
+
 							</view>
 						</view>
-						<view class="goods-sub-section">
+						<view class="goods-sub-section" v-if="orderData.is_photograph!=1">
 							<view>
 								<text class="goods-price color-base-text">
 									<text class="unit">{{ $lang('common.currencySymbol') }}</text>
@@ -131,9 +132,19 @@
 								</text>
 							</view>
 						</view>
+						<view class="" v-if="orderData.is_photograph==1">
+						</view>
+
+						<view class="imageBox">
+							<view class="imgItem" v-for="(item,index) in orderData.images" :key="index"
+								@click="$refs.imageBox.show(item)">
+								<image :src="item" mode="widthFix"></image>
+							</view>
+						</view>
 						<text class="tip" v-if="goodsItem.is_present">赠品</text>
 						<view class="goods-action" v-if="orderData.is_enable_refund">
-							<view @click="goRefund(goodsItem.order_goods_id)" v-if="goodsItem.refund_status == 0 || goodsItem.refund_status == -1">
+							<view @click="goRefund(goodsItem.order_goods_id)"
+								v-if="goodsItem.refund_status == 0 || goodsItem.refund_status == -1">
 								<view class="order-box-btn" v-if="!goodsItem.is_present">退款</view>
 							</view>
 							<view @click="goRefundDetail(goodsItem.order_goods_id)" v-else>
@@ -144,7 +155,6 @@
 				</view>
 			</view>
 		</view>
-
 		<!-- 订单概况 -->
 		<view class="order-summary">
 			<view class="order-cell">
@@ -320,16 +330,21 @@
 			</view>
 
 			<view class="order-action" :class="{ 'bottom-safe-area': isIphoneX }" v-if="orderData.action.length > 0">
-				<view class="order-box-btn white" v-if="evaluateConfig.evaluate_status == 1 && orderData.is_evaluate == 1" @click="operation('memberOrderEvaluation')">
+				<view class="order-box-btn white"
+					v-if="evaluateConfig.evaluate_status == 1 && orderData.is_evaluate == 1"
+					@click="operation('memberOrderEvaluation')">
 					<text v-if="orderData.evaluate_status == 0">评价</text>
 					<text v-else-if="orderData.evaluate_status == 1">追评</text>
 				</view>
-				<view class="order-box-btn" :class="operationItem.action == 'orderPay' ? 'color-base-bg color-base-border' : 'white'"
-				 v-for="(operationItem, operationIndex) in orderData.action" :key="operationIndex" @click="operation(operationItem.action)">
+				<view class="order-box-btn"
+					:class="operationItem.action == 'orderPay' ? 'color-base-bg color-base-border' : 'white'"
+					v-for="(operationItem, operationIndex) in orderData.action" :key="operationIndex"
+					@click="operation(operationItem.action)">
 					{{ operationItem.title }}
 				</view>
 			</view>
-			<view class="order-action" :class="{ 'bottom-safe-area': isIphoneX }" v-else-if="orderData.action.length == 0 && orderData.is_evaluate == 1 && evaluateConfig.evaluate_status == 1">
+			<view class="order-action" :class="{ 'bottom-safe-area': isIphoneX }"
+				v-else-if="orderData.action.length == 0 && orderData.is_evaluate == 1 && evaluateConfig.evaluate_status == 1">
 				<view class="order-box-btn white" @click="operation('memberOrderEvaluation')">
 					<text v-if="orderData.evaluate_status == 0">评价</text>
 					<text v-else-if="orderData.evaluate_status == 1">追评</text>
@@ -340,6 +355,7 @@
 		<!-- 选择支付方式弹窗 -->
 		<ns-payment ref="choosePaymentPopup" :payMoney="orderData.pay_money" @confirm="pay"></ns-payment>
 		<loading-cover ref="loadingCover"></loading-cover>
+		<ImageBox ref="imageBox" />
 	</view>
 </template>
 
@@ -348,7 +364,13 @@
 	import orderMethod from '../public/js/orderMethod.js';
 	import nsPayment from '@/components/payment/payment.vue';
 	import tools from '../public/js/tool.js'
+	import ImageBox from '@/components/imageloader/imageloader.vue';
 	export default {
+		components: {
+
+			nsPayment,
+			ImageBox
+		},
 		data() {
 			return {
 				isIphoneX: false,
@@ -372,10 +394,7 @@
 				}
 			};
 		},
-		mixins: [globalConfig, orderMethod,tools],
-		components: {
-			nsPayment
-		},
+		mixins: [globalConfig, orderMethod, tools],
 		onLoad(option) {
 			if (option.order_id) this.orderId = option.order_id;
 		},
@@ -416,7 +435,8 @@
 					success: res => {
 						if (res.code == 0) {
 							this.kefuConfig = res.data;
-							if (this.kefuConfig.system && !this.addonIsExit.servicer) this.kefuConfig.system = 0;
+							if (this.kefuConfig.system && !this.addonIsExit.servicer) this.kefuConfig.system =
+								0;
 						}
 					}
 				});
@@ -446,6 +466,8 @@
 						uni.stopPullDownRefresh();
 						if (res.code >= 0) {
 							this.orderData = res.data;
+							// this.orderData.images=[...this.orderData.images,...this.orderData.images]
+							this.orderData.images = JSON.parse(this.orderData.images)
 							this.orderData.order_goods.forEach(v => {
 								if (v.sku_spec_format) {
 									v.sku_spec_format = JSON.parse(v.sku_spec_format);
@@ -453,8 +475,9 @@
 									v.sku_spec_format = [];
 								}
 							});
-							if (res.data.order_status == 3) res.data.take_delivery_execute_time = this.$util.countDown(res.data.take_delivery_execute_time -
-								res.timestamp);
+							if (res.data.order_status == 3) res.data.take_delivery_execute_time = this.$util
+								.countDown(res.data.take_delivery_execute_time -
+									res.timestamp);
 							this.action = JSON.parse(res.data.order_status_action);
 							if (this.$refs.loadingCover) this.$refs.loadingCover.hide();
 						} else {
@@ -545,4 +568,49 @@
 
 <style lang="scss">
 	@import '../public/css/detail.scss';
+
+	.imageBox {
+		margin: 30rpx 0;
+		display: flex;
+		flex-wrap: wrap;
+		// background: #000000;
+
+		.imgItem {
+			position: relative;
+			width: 100%;
+			max-width: calc((100% - 25rpx) / 3);
+			border: 5rpx solid #FFFFFF;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-height: 250rpx;
+			overflow: hidden;
+
+			image {
+				// margin: 9rpx;
+				width: 100%;
+				height: 100%;
+			}
+
+			text {
+				// line-height: 25rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 10rpx;
+				font-size: 40rpx;
+				z-index: 1;
+				text-align: center;
+				font-weight: bold;
+				// border-radius: 30rpx;
+				color: #FFFFFF;
+				width: 30rpx;
+				height: 30rpx;
+				background-color: red;
+				position: absolute;
+				top: 10rpx;
+				right: 10rpx;
+			}
+		}
+	}
 </style>

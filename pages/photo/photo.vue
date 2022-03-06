@@ -74,8 +74,8 @@
 				this.$api.sendRequest({
 					url: '/api/memberaddress/defaultInfo',
 					success: res => {
-							console.log(res,"数据");
-						this.is_virtual=res.code
+						console.log(res, "数据");
+						this.is_virtual = res.code
 						if (res.code >= 0) {
 							let {
 								name,
@@ -93,13 +93,13 @@
 								city_id,
 								id
 							};
-							console.log(this.addressInfo,"info");
+							console.log(this.addressInfo, "info");
 						}
 					}
 				})
 			},
 			async createOrder() {
-				
+
 				const {
 					id,
 					city_id
@@ -108,9 +108,9 @@
 					title: "请选择地址",
 					icon: "none"
 				})
-				if(this.fileList.length==0) return uni.showToast({
-					title:"请上传图片",
-					icon:"none"
+				if (this.fileList.length == 0) return uni.showToast({
+					title: "请上传图片",
+					icon: "none"
 				})
 				// if (this.remark === "") return uni.showToast({
 				// 	title: "请填写备注",
@@ -128,9 +128,10 @@
 						title: "正在上传图片",
 						mask: true
 					})
-
-					const res = await Promise.all(this.fileList.map(e => this.upload(e)))
-					param.images = res.map(e => e.data.pic_path)
+					console.log(this.fileList, "文件列表");
+					// const res = await Promise.all(this.imgList.map(e => this.upload(e)))
+					// res.map(e => e.data.pic_path)
+					param.images = this.imgList
 					uni.hideLoading()
 				}
 
@@ -171,6 +172,10 @@
 				this.$util.redirectTo('/otherpages/member/address/address', params);
 			},
 			upload(file) {
+				// #ifdef MP-WEIXIN
+				// file = file.path
+				console.log(file, "上传的东西");
+				// #endif
 				return new Promise((resolve, reject) => {
 					uni.uploadFile({
 						url: Config.baseUrl + "/api/upload/headimg",
@@ -180,21 +185,36 @@
 							if (res.statusCode != 200) reject(res.errMsg)
 							resolve(JSON.parse(res.data))
 						},
-						fail: err => reject(err)
+						fail: err => {
+							console.log(err, "上传图片有问题")
+							reject(err)
+						}
+
 					})
 				})
 			},
 			addimg() {
 				let _this = this;
 				console.log('现在：', this.imgList.length, "还可以选：", 9 - _this.imgList.length);
-				uni.chooseImage({
-					count: 9 - _this.imgList.length,
-					success(res) {
-						_this.imgList = [..._this.imgList, ...res.tempFilePaths];
-						_this.fileList = [..._this.fileList, ...res.tempFiles];
+
+				_this.$util.upload(
+					9 - _this.imgList.length, {
+						path: 'headimg'
+					},
+					res => {
+						_this.imgList = [..._this.imgList, ...res];
+						_this.fileList = [..._this.fileList, ...res];
 						console.log(res, "选择的图片");
 					}
-				})
+				);
+				// uni.chooseImage({
+				// 	count: 9 - _this.imgList.length, 
+				// 	success(res) {
+				// 		_this.imgList = [..._this.imgList, ...res.tempFilePaths];
+				// 		_this.fileList = [..._this.fileList, ...res.tempFiles];
+				// 		console.log(res, "选择的图片");
+				// 	}
+				// })
 			},
 			remove(index) {
 				uni.showModal({

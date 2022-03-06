@@ -47,7 +47,7 @@
 			};
 		},
 		mounted() {
-			console.log(this.range,"range");
+			console.error(this.range,"title的数据");
 			
 			this.list = this.range
 		},

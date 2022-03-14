@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _mapWxJssdk = _interopRequireDefault(__webpack_require__(/*! common/js/map-wx-jssdk.js */ 153));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var citySelect = function citySelect() {Promise.all(/*! require.ensure | otherpages/components/city-select/city-select */[__webpack_require__.e("common/vendor"), __webpack_require__.e("otherpages/components/city-select/city-select")]).then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/city-select/city-select.vue */ 1570));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _mapWxJssdk = _interopRequireDefault(__webpack_require__(/*! common/js/map-wx-jssdk.js */ 153));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var citySelect = function citySelect() {Promise.all(/*! require.ensure | otherpages/components/city-select/city-select */[__webpack_require__.e("common/vendor"), __webpack_require__.e("otherpages/components/city-select/city-select")]).then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/city-select/city-select.vue */ 1577));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {

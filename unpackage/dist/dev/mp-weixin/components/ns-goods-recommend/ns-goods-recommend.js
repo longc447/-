@@ -80,7 +80,7 @@ var components
 try {
   components = {
     nsLoading: function() {
-      return __webpack_require__.e(/*! import() | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then(__webpack_require__.bind(null, /*! @/components/ns-loading/ns-loading.vue */ 1683))
+      return __webpack_require__.e(/*! import() | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then(__webpack_require__.bind(null, /*! @/components/ns-loading/ns-loading.vue */ 1690))
     }
   }
 } catch (e) {
@@ -223,7 +223,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsLoading = function nsLoading() {__webpack_require__.e(/*! require.ensure | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then((function () {return resolve(__webpack_require__(/*! @/components/ns-loading/ns-loading.vue */ 1683));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsLoading = function nsLoading() {__webpack_require__.e(/*! require.ensure | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then((function () {return resolve(__webpack_require__(/*! @/components/ns-loading/ns-loading.vue */ 1690));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 // 商品推荐
 var _default = {

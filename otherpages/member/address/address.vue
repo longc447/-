@@ -31,12 +31,12 @@
 						</view>
 						<view class="btn-add">
 							<!-- #ifdef MP-WEIXIN -->
-							<view class="wx-add" @click="getChooseAddress()" v-if="local != 1">
+<!-- 							<view class="wx-add" @click="getChooseAddress()" v-if="local != 1">
 								<text class="">{{ $lang('getAddress') }}</text>
-							</view>
+							</view> -->
 							<!-- #endif -->
 							<!-- #ifdef H5 -->
-							<button type="primary" class="add-address" @click="getChooseAddress()" v-if="$util.isWeiXin() && local != 1">{{ $lang('getAddress') }}</button>
+							<!-- <button type="primary" class="add-address" @click="getChooseAddress()" v-if="$util.isWeiXin() && local != 1">{{ $lang('getAddress') }}</button> -->
 							<!-- #endif -->
 							<button type="primary" class="add-address" @click="addAddress('add')">
 								<text class="iconfont iconadd1"></text>
@@ -49,12 +49,13 @@
 					</view>
 					<view class="button-wrap" v-if="addressList.length == 0 && showEmpty">
 						<!-- #ifdef H5 -->
-						<button type="primary" class="add-address" @click="getChooseAddress()" v-if="$util.isWeiXin() && local != 1">{{ $lang('getAddress') }}</button>
+						
+						<!-- <button type="primary" class="add-address" @click="getChooseAddress()" v-if="$util.isWeiXin() && local != 1">{{ $lang('getAddress') }}</button> -->
 						<!-- #endif -->
 						<!-- #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO -->
-						<view class="wx-add" @click="getChooseAddress()" v-if="local != 1">
+						<!-- <view class="wx-add" @click="getChooseAddress()" v-if="local != 1">
 							<text class="">{{ $lang('getAddress') }}</text>
-						</view>
+						</view> -->
 						<!-- <button type="primary" class="add-wx color-base-text" @click="getChooseAddress()">{{ $lang('getAddress') }}</button> -->
 						<!-- #endif -->
 
@@ -276,6 +277,7 @@
 				// #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO
 				uni.chooseAddress({
 					success: res => {
+						debugger
 						if (res.errMsg == 'chooseAddress:ok') {
 							this.saveAddress({
 								name: res.userName, // 收货人姓名,

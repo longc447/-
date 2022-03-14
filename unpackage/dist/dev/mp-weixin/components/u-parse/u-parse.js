@@ -143,7 +143,7 @@ var _html2json = _interopRequireDefault(__webpack_require__(/*! ./libs/html2json
 //
 //
 //
-var wxParseTemplate = function wxParseTemplate() {__webpack_require__.e(/*! require.ensure | components/u-parse/components/wxParseTemplate0 */ "components/u-parse/components/wxParseTemplate0").then((function () {return resolve(__webpack_require__(/*! ./components/wxParseTemplate0 */ 1888));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default2 = { name: 'wxParse', props: { loading: { type: Boolean, default: false }, className: { type: String, default: '' }, content: { type: String,
+var wxParseTemplate = function wxParseTemplate() {__webpack_require__.e(/*! require.ensure | components/u-parse/components/wxParseTemplate0 */ "components/u-parse/components/wxParseTemplate0").then((function () {return resolve(__webpack_require__(/*! ./components/wxParseTemplate0 */ 1895));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default2 = { name: 'wxParse', props: { loading: { type: Boolean, default: false }, className: { type: String, default: '' }, content: { type: String,
       default: '' },
 
     noData: {

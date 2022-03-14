@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var diyShopInfo = function diyShopInfo() {__webpack_require__.e(/*! require.ensure | otherpages/components/diy-shop-info/diy-shop-info */ "otherpages/components/diy-shop-info/diy-shop-info").then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/diy-shop-info/diy-shop-info.vue */ 1599));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var diyShopInfo = function diyShopInfo() {__webpack_require__.e(/*! require.ensure | otherpages/components/diy-shop-info/diy-shop-info */ "otherpages/components/diy-shop-info/diy-shop-info").then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/diy-shop-info/diy-shop-info.vue */ 1606));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

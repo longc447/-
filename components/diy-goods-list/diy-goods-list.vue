@@ -67,7 +67,7 @@ export default {
 	data() {
 		return {
 			goodsList: [],
-			is_wholesaler:0
+			is_wholesaler:3
 		};
 	},
 	created() {

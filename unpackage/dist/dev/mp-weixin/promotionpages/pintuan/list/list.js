@@ -96,7 +96,7 @@ var components
 try {
   components = {
     nsAdv: function() {
-      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1519))
+      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1526))
     },
     nsEmpty: function() {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
@@ -274,7 +274,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 //
 //
 //
-var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1519));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { dataList: [], siteId: 0 };}, mixins: [_golbalConfig.default], components: { nsAdv: nsAdv }, onLoad: function onLoad(options) {if (options.site_id) {this.siteId = options.site_id;}}, onShow: function onShow() {var _this = this; // 刷新多语言
+var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1526));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { dataList: [], siteId: 0 };}, mixins: [_golbalConfig.default], components: { nsAdv: nsAdv }, onLoad: function onLoad(options) {if (options.site_id) {this.siteId = options.site_id;}}, onShow: function onShow() {var _this = this; // 刷新多语言
     this.$langConfig.refresh();this.$store.dispatch('getAddonIsexit').then(function (data) {if (!data.pintuan) {_this.$util.showToast({ title: '拼团未开启', mask: true });setTimeout(function () {_this.$util.redirectTo('/pages/index/index/index', {}, 'redirectTo');}, 1000);}});}, methods: { getData: function getData(mescroll) {var _this2 = this;this.$api.sendRequest({ url: '/pintuan/api/goods/page', data: { page_size: mescroll.size, page: mescroll.num, site_id: this.siteId }, success: function success(res) {var newArr = [];var msg = res.message;
           if (res.code == 0 && res.data) {
             newArr = res.data.list;

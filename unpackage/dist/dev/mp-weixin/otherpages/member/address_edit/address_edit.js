@@ -96,7 +96,7 @@ var components
 try {
   components = {
     pickRegions: function() {
-      return Promise.all(/*! import() | components/pick-regions/pick-regions */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pick-regions/pick-regions")]).then(__webpack_require__.bind(null, /*! @/components/pick-regions/pick-regions.vue */ 1513))
+      return Promise.all(/*! import() | components/pick-regions/pick-regions */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pick-regions/pick-regions")]).then(__webpack_require__.bind(null, /*! @/components/pick-regions/pick-regions.vue */ 1520))
     },
     loadingCover: function() {
       return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
@@ -270,7 +270,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _validate = _interopRequireDefault(__webpack_require__(/*! common/js/validate.js */ 167));
 var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));
-var _config = _interopRequireDefault(__webpack_require__(/*! @/common/js/config.js */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var pickRegions = function pickRegions() {Promise.all(/*! require.ensure | components/pick-regions/pick-regions */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pick-regions/pick-regions")]).then((function () {return resolve(__webpack_require__(/*! @/components/pick-regions/pick-regions.vue */ 1513));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _config = _interopRequireDefault(__webpack_require__(/*! @/common/js/config.js */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var pickRegions = function pickRegions() {Promise.all(/*! require.ensure | components/pick-regions/pick-regions */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pick-regions/pick-regions")]).then((function () {return resolve(__webpack_require__(/*! @/components/pick-regions/pick-regions.vue */ 1520));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
     pickRegions: pickRegions },

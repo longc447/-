@@ -137,16 +137,8 @@ var render = function() {
           }
         })
       : null
-  var m3 =
-    _vm.addressList.length !== 0 && _vm.local != 1
-      ? _vm.$lang("getAddress")
-      : null
-  var m4 = _vm.addressList.length !== 0 ? _vm.$lang("newAddAddress") : null
-  var m5 =
-    _vm.addressList.length == 0 && _vm.showEmpty && _vm.local != 1
-      ? _vm.$lang("getAddress")
-      : null
-  var m6 =
+  var m3 = _vm.addressList.length !== 0 ? _vm.$lang("newAddAddress") : null
+  var m4 =
     _vm.addressList.length == 0 && _vm.showEmpty
       ? _vm.$lang("newAddAddress")
       : null
@@ -158,9 +150,7 @@ var render = function() {
         m1: m1,
         l0: l0,
         m3: m3,
-        m4: m4,
-        m5: m5,
-        m6: m6
+        m4: m4
       }
     }
   )
@@ -198,6 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
 
 
 
@@ -343,6 +334,7 @@ var _wxJssdk = __webpack_require__(/*! common/js/wx-jssdk.js */ 154);function _i
 //
 //
 //
+//
 var _default = { data: function data() {return { addressList: [], back: '', // 返回页
       redirect: 'redirectTo', // 跳转方式
       isIndex: false, showEmpty: false, local: 0 //定位是否显示
@@ -350,8 +342,7 @@ var _default = { data: function data() {return { addressList: [], back: '', // �
     this.$langConfig.refresh();if (this.$refs.mescroll) this.$refs.mescroll.refresh();uni.removeStorageSync('addressInfo');}, methods: { getListData: function getListData(mescroll) {var _this = this;this.showEmpty = false;this.$api.sendRequest({ url: '/api/memberaddress/page', data: { page: mescroll.num, page_size: mescroll.size }, success: function success(res) {_this.showEmpty = true;var newArr = [];var msg = res.message;if (res.code == 0 && res.data) {newArr = res.data.list;} else {_this.$util.showToast({ title: msg });}mescroll.endSuccess(newArr.length); //设置列表数据
           if (mescroll.num == 1) _this.addressList = []; //如果是第一页需手动制空列表
           _this.addressList = _this.addressList.concat(newArr); //追加新数据
-          if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();}, fail: function fail(res) {mescroll.endErr();if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();} });}, /* 地址跳转 */addAddress: function addAddress(type, id) {var data = {};if (type == 'edit') data.id = id;if (this.back) data.back = this.back;this.$util.redirectTo('/otherpages/member/address_edit/address_edit', data);}, /* 删除地址信息 */deleteAddress: function deleteAddress(id, is_default) {var _this2 = this;uni.showModal({ title: '操作提示',
-        content: '确定要删除该地址吗？',
+          if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();}, fail: function fail(res) {mescroll.endErr();if (_this.$refs.loadingCover) _this.$refs.loadingCover.hide();} });}, /* 地址跳转 */addAddress: function addAddress(type, id) {var data = {};if (type == 'edit') data.id = id;if (this.back) data.back = this.back;this.$util.redirectTo('/otherpages/member/address_edit/address_edit', data);}, /* 删除地址信息 */deleteAddress: function deleteAddress(id, is_default) {var _this2 = this;uni.showModal({ title: '操作提示', content: '确定要删除该地址吗？',
         success: function success(res) {
           if (res.confirm) {
             if (is_default == 1) {
@@ -475,6 +466,7 @@ var _default = { data: function data() {return { addressList: [], back: '', // �
 
       uni.chooseAddress({
         success: function success(res) {
+          debugger;
           if (res.errMsg == 'chooseAddress:ok') {
             _this4.saveAddress({
               name: res.userName, // 收货人姓名,

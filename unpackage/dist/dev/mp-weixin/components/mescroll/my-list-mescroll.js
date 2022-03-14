@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Mescroll = function Mescroll() {Promise.all(/*! require.ensure | components/mescroll/mescroll-uni */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/mescroll/mescroll-uni")]).then((function () {return resolve(__webpack_require__(/*! ./mescroll-uni.vue */ 1690));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Mescroll = function Mescroll() {Promise.all(/*! require.ensure | components/mescroll/mescroll-uni */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/mescroll/mescroll-uni")]).then((function () {return resolve(__webpack_require__(/*! ./mescroll-uni.vue */ 1697));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

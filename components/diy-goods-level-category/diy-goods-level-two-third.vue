@@ -106,6 +106,7 @@
 	import nsSearch from '@/components/ns-search/ns-search.vue';
 	import globalConfig from '@/common/js/golbalConfig.js';
 	import category from '@/components/diy-goods-level-category/diy-goods-level-category.js';
+	import Config from '../../common/js/config.js'
 	export default {
 		data() {
 			return {
@@ -119,7 +120,7 @@
 				TwoCategoryId: 0,
 				TwoCategoryIndex: 0,
 				twoCateSelected: 1,
-				is_wholesaler: 0
+				is_wholesaler: Config.is_wholesaler
 			};
 		},
 		components: {

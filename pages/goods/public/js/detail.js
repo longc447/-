@@ -231,7 +231,6 @@ export default {
 				}
 			});
 			let data = res.data;
-			debugger
 			if (data.goods_sku_detail != null) {
 				this.goodsSkuDetail = data.goods_sku_detail;
 				this.goodsSkuDetail.preview = this.preview;
@@ -818,6 +817,7 @@ export default {
 					} else {
 						this.posterMsg = res.message;
 					}
+					console.log(this.poster,this.posterMsg,"tup")
 				}
 			});
 		},

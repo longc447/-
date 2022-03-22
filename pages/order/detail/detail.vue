@@ -54,7 +54,7 @@
 						<view @click="goDetail(goodsItem.sku_id)" class="goods-name"
 							style="font-size: 35rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
 						<view class="sku" v-if="goodsItem.sku_spec_format&&orderData.is_photograph!=1">
-							<view class="goods-spec" style="background: #f8f8f8;border-radius: 10rpx;">
+							<view class="goods-spec" style="background: #f8f8f8;border-radius: 10rpx;" v-if="goodsItem.photometric!=0">
 								<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 									{{ x.spec_value_name }} {{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 								</block>
@@ -467,13 +467,16 @@
 						if (res.code >= 0) {
 							this.orderData = res.data;
 							// this.orderData.images=[...this.orderData.images,...this.orderData.images]
-							this.orderData.images = JSON.parse(this.orderData.images)
-							this.orderData.order_goods.forEach(v => {
-								if (v.sku_spec_format) {
-									v.sku_spec_format = JSON.parse(v.sku_spec_format);
-								} else {
-									v.sku_spec_format = [];
-								}
+							if(this.orderData.images!=="")this.orderData.images = JSON.parse(this.orderData.images)
+						
+							if(this.orderData&&this.orderData.order_goods)this.orderData.order_goods.forEach(v => {
+								// if (v.sku_spec_format) {
+								// 	console.log(v.sku_spec_format)
+								// 	debugger
+								// 	if(v.sku_spec_format!=="")v.sku_spec_format = JSON.parse(v.sku_spec_format);
+								// } else {
+								// 	v.sku_spec_format = [];
+								// }
 							});
 							if (res.data.order_status == 3) res.data.take_delivery_execute_time = this.$util
 								.countDown(res.data.take_delivery_execute_time -

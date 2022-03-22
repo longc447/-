@@ -308,6 +308,7 @@
 <script>
 	import uniPopup from '@/components/uni-popup/uni-popup-sku.vue';
 	import htmlParser from '@/common/js/html-parser';
+	import Config from '../../common/js/config.js'
 	// 商品SKU
 	export default {
 		name: 'ns-goods-sku',
@@ -371,7 +372,7 @@
 				objArray: [], //通道数组
 
 				photometric: 0, //联合光度
-				is_wholesaler: 0, //3 批发商
+				is_wholesaler: Config.is_wholesaler, //3 批发商
 				//商品数量变量
 				myValue: [], //循环总存放数组
 				nowIndex: 0, //正在操作的总数组下标

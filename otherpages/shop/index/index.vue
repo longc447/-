@@ -93,6 +93,7 @@ import nsNavbar from '@/components/ns-navbar/ns-navbar.vue';
 import { Weixin } from 'common/js/wx-jssdk.js';
 import globalConfig from '@/common/js/golbalConfig.js';
 import nsCopyRight from '@/components/ns-copyright/ns-copyright.vue';
+import Config from '../../../common/js/config.js'
 let systemInfo = uni.getSystemInfoSync();
 export default {
 	components: {
@@ -132,7 +133,7 @@ export default {
 			mpCollect: false,
 			preview: 0, //页面是否为预览  1为是，0为否
 			isConfigDiy: false,
-			is_wholesaler:""
+			is_wholesaler:Config.is_wholesaler
 		};
 	},
 	mixins: [globalConfig],

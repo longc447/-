@@ -542,7 +542,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _htmlParser = _interopRequireDefault(__webpack_require__(/*! @/common/js/html-parser */ 208));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-sku */ "components/uni-popup/uni-popup-sku").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-sku.vue */ 1560));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var _htmlParser = _interopRequireDefault(__webpack_require__(/*! @/common/js/html-parser */ 208));
+var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/config.js */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-sku */ "components/uni-popup/uni-popup-sku").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-sku.vue */ 1560));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 // 商品SKU
 var _default = {
   name: 'ns-goods-sku',
@@ -606,7 +607,7 @@ var _default = {
       objArray: [], //通道数组
 
       photometric: 0, //联合光度
-      is_wholesaler: 0, //3 批发商
+      is_wholesaler: _config.default.is_wholesaler, //3 批发商
       //商品数量变量
       myValue: [], //循环总存放数组
       nowIndex: 0, //正在操作的总数组下标

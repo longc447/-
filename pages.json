@@ -189,24 +189,7 @@
             }
             
         }
-        ,{
-            "path" : "pages/photo/photo",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "拍照下单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/photo/tips",
-            "style" :                                                                                    
-            {
-				"navigationStyle":"custom",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+        
     ],
 	"subPackages": [{
 
@@ -290,7 +273,24 @@
 						"navigationStyle": "custom"
 						// #endif
 					}
-				},
+				},{
+            "path" : "photo/photo",
+            "style" :                                                                                     
+            {
+                "navigationBarTitleText": "拍照下单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "photo/tips",
+            "style" :                                                                                    
+            {
+				"navigationStyle":"custom",
+                "enablePullDownRefresh": false
+            }
+            
+        },
 
 				//----------拼团模块（5）----------
 				{

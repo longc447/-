@@ -44,7 +44,7 @@
 											{{luminosity_status==1?goodsItem.goods_name:goodsItem.sku_name }}</view>
 										<view class="sku" v-if="goodsItem.sku_spec_format">
 
-											<view class="goods-spec" >
+											<view class="goods-spec" v-if="goodsItem.photometric!=0">
 
 												<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 													{{ x.spec_value_name }}

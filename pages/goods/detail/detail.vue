@@ -616,7 +616,7 @@
 	import globalConfig from '@/common/js/golbalConfig.js';
 	import toTop from '@/components/toTop/toTop.vue';
 	import uParse from '@/components/u-parse/u-parse.vue';
-
+	import Config from '../../../common/js/config.js'
 	export default {
 		components: {
 			nsGoodsAction,
@@ -639,7 +639,7 @@
 					open: '',
 					open_url: ''
 				},
-				is_wholesaler:0,
+				is_wholesaler:Config.is_wholesaler,
 				isiPhone12:false
 			};
 		},

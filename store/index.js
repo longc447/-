@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import Http from '../common/js/http.js'
-
+import Config from '../common/js/config.js'
 const store = new Vuex.Store({
 	state: {
 		tabbarList: {},
@@ -39,7 +39,7 @@ const store = new Vuex.Store({
 		paySource: '',
 		token: '',
 		diySeckillInterval: '' ,
-		is_wholesaler:''//批发商
+		is_wholesaler:Config.is_wholesaler//批发商
 		
 	},
 	mutations: {

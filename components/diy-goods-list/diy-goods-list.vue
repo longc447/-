@@ -42,7 +42,7 @@
 
 <script>
 import globalConfig from '@/common/js/golbalConfig.js';
-
+import Config from '../../common/js/config.js'
 export default {
 	name: 'diy-goods-list',
 	props: {
@@ -67,7 +67,7 @@ export default {
 	data() {
 		return {
 			goodsList: [],
-			is_wholesaler:3
+			is_wholesaler:Config.is_wholesaler
 		};
 	},
 	created() {

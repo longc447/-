@@ -19,9 +19,7 @@
     "pages/order/activist/activist",
     "pages/order/complain/complain",
     "pages/pay/result/result",
-    "pages/login/register/wholesale/wholesale",
-    "pages/photo/photo",
-    "pages/photo/tips"
+    "pages/login/register/wholesale/wholesale"
   ],
   "subPackages": [
     {
@@ -36,6 +34,8 @@
         "seckill/list/list",
         "seckill/detail/detail",
         "seckill/payment/payment",
+        "photo/photo",
+        "photo/tips",
         "pintuan/list/list",
         "pintuan/detail/detail",
         "pintuan/my_spell/my_spell",

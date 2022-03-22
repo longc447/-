@@ -142,11 +142,15 @@ var render = function() {
             var $orig = _vm.__get_orig(goodsItem)
 
             var f0 =
-              goodsItem.sku_spec_format && goodsItem.rimless == 0
+              goodsItem.sku_spec_format &&
+              goodsItem.photometric != 0 &&
+              goodsItem.rimless == 0
                 ? _vm._f("doller")(goodsItem.ball_mirror)
                 : null
             var f1 =
-              goodsItem.sku_spec_format && goodsItem.rimless == 0
+              goodsItem.sku_spec_format &&
+              goodsItem.photometric != 0 &&
+              goodsItem.rimless == 0
                 ? _vm._f("doller")(goodsItem.cylinder_mirror)
                 : null
             var m0 =

@@ -23,6 +23,18 @@
           "pathName": "pages/photo/tips",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/login/register/wholesale/wholesale",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/order/list/list",
+          "query": "",
+          "scene": null
         }
       ]
     }

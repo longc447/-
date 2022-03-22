@@ -304,7 +304,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     toIndex: function toIndex() {
       uni.reLaunch({
-        url: "/" });
+        url: "/pages/index/index/index" });
 
     },
     getWholesale: function getWholesale() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (

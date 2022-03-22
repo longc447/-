@@ -46,6 +46,7 @@
 <script>
 import globalConfig from '@/common/js/golbalConfig.js';
 import nsLoading from '@/components/ns-loading/ns-loading.vue';
+import Config from '../../common/js/config.js'
 // 商品推荐
 export default {
 	name: 'ns-goods-recommend',
@@ -59,7 +60,8 @@ export default {
 			isAll: !0,
 			isClick: true,
 			showLoading: false,
-			is_wholesaler:0
+			is_wholesaler:Config.is_wholesaler
+			
 		};
 	},
 	mixins: [globalConfig],

@@ -177,7 +177,7 @@ import uniDrawer from '@/components/uni-drawer/uni-drawer.vue';
 import uniTag from '@/components/uni-tag/uni-tag.vue';
 import list from '../public/js/list.js';
 import globalConfig from '@/common/js/golbalConfig.js';
-
+import Config from '../../../common/js/config.js'
 export default {
 	components: {
 		uniDrawer,
@@ -185,7 +185,7 @@ export default {
 	},
 	data() {
 		return {
-			is_wholesaler:0//批发商 3
+			is_wholesaler:Config.is_wholesaler//批发商 3
 		};
 	},
 	mixins: [globalConfig, list],

@@ -138,7 +138,7 @@
 		methods: {
 			toIndex(){
 				uni.reLaunch({
-					url:"/"
+					url:"/pages/index/index/index"
 				})
 			},
 			async getWholesale(){

@@ -99,7 +99,7 @@ try {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
     },
     nsGoodsRecommend: function() {
-      return Promise.all(/*! import() | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then(__webpack_require__.bind(null, /*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1421))
+      return Promise.all(/*! import() | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then(__webpack_require__.bind(null, /*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1426))
     },
     loadingCover: function() {
       return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
@@ -302,7 +302,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 var _collection = _interopRequireDefault(__webpack_require__(/*! ../public/js/collection.js */ 837));
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1421));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1426));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
     nsGoodsRecommend: nsGoodsRecommend },

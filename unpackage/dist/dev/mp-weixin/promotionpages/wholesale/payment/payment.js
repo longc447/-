@@ -1128,7 +1128,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 //
 //
 //
-var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1506));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default] };exports.default = _default;
+var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1511));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default] };exports.default = _default;
 
 /***/ }),
 

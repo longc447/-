@@ -58,9 +58,9 @@
 				<input v-model="cpwd" type="password" placeholder="请确认密码">
 			</view>
 		</view> -->
-		<view class="input-wrap">
+		<!-- <view class="input-wrap">
 			<view>
-				<!-- <text class="dot">*</text> -->
+				<text class="dot">*</text>
 				<text>身份证:</text>
 			</view>
 			<view @click="uploadFn('license_front')" style="flex:2;">
@@ -71,7 +71,7 @@
 				<image :src="license_behind" style="width: 200rpx;" mode="widthFix" v-if="license_behind"></image>
 				<image src="http://caihuo2020.oss-cn-beijing.aliyuncs.com/app/behind.png" style="width: 200rpx;" mode="widthFix" v-else></image>
 			</view>
-		</view>
+		</view> -->
 		<view class="input-wrap">
 			<view>
 				<text><text class="dot">*</text>营业执照:</text>
@@ -87,7 +87,7 @@
 		<view class="img">
 			<image src="https://dafeiapp.oss-cn-beijing.aliyuncs.com/shenhezhong.png"></image>
 			</view>
-		<view class="text">批发商申请中，耐心等待审核</view>
+		<view class="text">商户认证中，耐心等待审核</view>
 		<view class="submit" @click="getWholesale">
 			点击刷新
 		</view>

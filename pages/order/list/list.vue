@@ -42,71 +42,20 @@
 									<view class="pro-info">
 										<view class="goods-name"  style="font-size: 35rpx;font-weight: bold;">
 											{{luminosity_status==1?goodsItem.goods_name:goodsItem.sku_name }}</view>
-										<view class="sku" v-if="goodsItem.sku_spec_format">
-
+										<view class="sku"> <!-- v-if="goodsItem.sku_spec_format" -->
 											<view class="goods-spec" v-if="goodsItem.photometric!=0">
-
 												<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 													{{ x.spec_value_name }}
 													{{ i < goodsItem.sku_spec_format.length - 1 ? '; ' : '' }}
 												</block>
-												
-												<view  style="background: #f8f8f8;border-radius: 10rpx;" v-for="(it,itindex) in goodsItem.remarks"
-													:key="itindex" v-if="goodsItem.rimless!=0">
-													<text v-if="it.eye" style="margin-right: 15rpx;">
-														{{it.eye=="左眼"?" L":" R"}}</text>
-													<text style="color: rgb(160,160,160);"
-														v-if="it.ball_mirror">{{" S：" }}</text>
-													<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
-
-													<text style="color: rgb(160,160,160);"
-														v-if="it.cylinder_mirror">{{" C："}}</text>
-													<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
-
-													<text style="color: rgb(160,160,160);" v-if="it.axis">
-														{{" 轴位："}}</text>
-													<text v-if="it.axis">
-														{{it.axis}}</text>
-
-													<text style="color: rgb(160,160,160);" v-if="it.passage">
-														{{" 通道："}}</text>
-													<text v-if="it.passage">
-														{{it.passage}}</text>
-													<text style="color: rgb(160,160,160);" v-if="it.a_dd">
-														{{" ADD："}}</text>
-													<text v-if="it.a_dd">
-														{{it.a_dd}}</text>
-												</view>
-												<view v-if="goodsItem.rimless==0"  style="background: #f8f8f8;border-radius: 10rpx;">
-													<text
-														style="font-size: 3vw;color: rgb(160,160,160);font-weight: bold;color:#000000;margin-right: 15rpx;"
-														v-if="goodsItem.eye">
-														{{goodsItem.eye == '右眼'? 'R ' : goodsItem.eye == '左眼' ? 'L ' : ''}}</text>
-													<text
-														style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">S：<text
-															style="font-weight: bold;color:#000000;">{{goodsItem.ball_mirror | doller }}</text></text>
-													<text
-														style="font-size: 3vw;color: rgb(160,160,160);margin-right: 1vw;">C：<text
-															style="font-weight: bold;color:#000000;">{{goodsItem.cylinder_mirror | doller }}</text></text>
-													<text style="font-size: 3vw;color: rgb(160,160,160);">
-														{{" 轴位："}}<text
-															style="font-weight: bold;color:#000000;">{{goodsItem.axis}}</text></text>
-													<text style="font-size: 3vw;color: rgb(160,160,160);"
-														v-if="goodsItem.passage">
-														{{" 通道："}}<text
-															style="font-weight: bold;color:#000000;">{{goodsItem.passage}}</text></text>
-													<text style="font-size: 3vw;color: rgb(160,160,160);"
-														v-if="goodsItem.a_dd">
-														{{" ADD："}}<text
-															style="font-weight: bold;color:#000000;">{{goodsItem.a_dd}}</text></text>
-
-
-												</view>
+											
+											<sku-list :goodsItem="goodsItem"></sku-list>
+											
 											</view>
 										</view>
 									</view>
 									<view class="goods-sub-section">
-										<text class="goods-price" v-if="goodsItem.price > 0">
+										<text class="goods-price" v-if="(goodsItem.price > 0 && goodsItem.is_photograph==1) || goodsItem.is_photograph!=1">
 											<text
 												class="unit color-base-text font-size-activity-tag">{{ $lang('common.currencySymbol') }}</text>
 											<text class="color-base-text">{{ goodsItem.price }}</text>
@@ -212,6 +161,16 @@
 		},
 		components: {
 			nsPayment
+		},
+		filters: {
+			/**
+			 * 金额格式化输出
+			 * @param {Object} money
+			 */
+			moneyFormat(money) {
+				console.log(money,"=======>",parseFloat(money).toFixed(2))
+				return parseFloat(money).toFixed(2);
+			}
 		},
 		mixins: [orderMethod, globalConfig, tools],
 		onLoad(option) {

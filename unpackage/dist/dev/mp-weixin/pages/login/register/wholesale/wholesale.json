@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "批发商申请",
+  "navigationBarTitleText": "商户认证",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "pick-regions": "/components/pick-regions/pick-regions"

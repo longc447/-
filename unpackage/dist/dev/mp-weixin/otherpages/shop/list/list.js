@@ -101,10 +101,10 @@ try {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
     },
     uniDrawer: function() {
-      return __webpack_require__.e(/*! import() | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then(__webpack_require__.bind(null, /*! @/components/uni-drawer/uni-drawer.vue */ 1478))
+      return __webpack_require__.e(/*! import() | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then(__webpack_require__.bind(null, /*! @/components/uni-drawer/uni-drawer.vue */ 1483))
     },
     uniTag: function() {
-      return __webpack_require__.e(/*! import() | components/uni-tag/uni-tag */ "components/uni-tag/uni-tag").then(__webpack_require__.bind(null, /*! @/components/uni-tag/uni-tag.vue */ 1485))
+      return __webpack_require__.e(/*! import() | components/uni-tag/uni-tag */ "components/uni-tag/uni-tag").then(__webpack_require__.bind(null, /*! @/components/uni-tag/uni-tag.vue */ 1490))
     },
     diyBottomNav: function() {
       return __webpack_require__.e(/*! import() | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then(__webpack_require__.bind(null, /*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391))
@@ -651,7 +651,7 @@ var _list = _interopRequireDefault(__webpack_require__(/*! ../public/js/list.js 
 //
 //
 //
-var uniDrawer = function uniDrawer() {__webpack_require__.e(/*! require.ensure | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then((function () {return resolve(__webpack_require__(/*! @/components/uni-drawer/uni-drawer.vue */ 1478));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniTag = function uniTag() {__webpack_require__.e(/*! require.ensure | components/uni-tag/uni-tag */ "components/uni-tag/uni-tag").then((function () {return resolve(__webpack_require__(/*! @/components/uni-tag/uni-tag.vue */ 1485));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniDrawer: uniDrawer, uniTag: uniTag, diyBottomNav: diyBottomNav }, computed: { addonIsExit: function addonIsExit() {return this.$store.state.addonIsExit;} }, data: function data() {return {};}, mixins: [_list.default, _golbalConfig.default] };exports.default = _default;
+var uniDrawer = function uniDrawer() {__webpack_require__.e(/*! require.ensure | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then((function () {return resolve(__webpack_require__(/*! @/components/uni-drawer/uni-drawer.vue */ 1483));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniTag = function uniTag() {__webpack_require__.e(/*! require.ensure | components/uni-tag/uni-tag */ "components/uni-tag/uni-tag").then((function () {return resolve(__webpack_require__(/*! @/components/uni-tag/uni-tag.vue */ 1490));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniDrawer: uniDrawer, uniTag: uniTag, diyBottomNav: diyBottomNav }, computed: { addonIsExit: function addonIsExit() {return this.$store.state.addonIsExit;} }, data: function data() {return {};}, mixins: [_list.default, _golbalConfig.default] };exports.default = _default;
 
 /***/ }),
 

@@ -96,7 +96,7 @@ var components
 try {
   components = {
     nsAdv: function() {
-      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1526))
+      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1531))
     },
     nsEmpty: function() {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
@@ -331,7 +331,7 @@ var _list = _interopRequireDefault(__webpack_require__(/*! ../public/js/list.js 
 //
 //
 //
-var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1526));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { hour: '00', minute: '00', second: '00', ident: false, showEmpty: false };}, components: { nsAdv: nsAdv }, onLoad: function onLoad(data) {this.siteId = parseInt(data.site_id) || 0;}, onShow: function onShow() {var _this = this; // 刷新多语言
+var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1531));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { hour: '00', minute: '00', second: '00', ident: false, showEmpty: false };}, components: { nsAdv: nsAdv }, onLoad: function onLoad(data) {this.siteId = parseInt(data.site_id) || 0;}, onShow: function onShow() {var _this = this; // 刷新多语言
     this.$langConfig.refresh();this.$store.dispatch('getAddonIsexit').then(function (data) {if (!data.seckill) {_this.$util.showToast({ title: '秒杀未开启', mask: true });setTimeout(function () {_this.$util.redirectTo('/pages/index/index/index', {}, 'redirectTo');}, 1000);} else {_this.getTimeList();}});}, mixins: [_list.default, _golbalConfig.default], onReady: function onReady() {var _this2 = this;setTimeout(function () {var query = uni.createSelectorQuery().in(_this2);query.select('.time-wrap').boundingClientRect(function (data) {if (data) _this2.timeTop = data.top;}).exec();}, 500);} };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

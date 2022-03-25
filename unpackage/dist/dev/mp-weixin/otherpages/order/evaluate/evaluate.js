@@ -374,7 +374,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 //
 //
 //
-var sxRate = function sxRate() {Promise.all(/*! require.ensure | otherpages/components/sx-rate/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("otherpages/components/sx-rate/index")]).then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/sx-rate/index.vue */ 1567));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { sxRate: sxRate }, mixins: [_golbalConfig.default, _evaluate.default], data: function data() {return { isIphoneX: false //判断手机是否是iphoneX以上
+var sxRate = function sxRate() {Promise.all(/*! require.ensure | otherpages/components/sx-rate/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("otherpages/components/sx-rate/index")]).then((function () {return resolve(__webpack_require__(/*! @/otherpages/components/sx-rate/index.vue */ 1572));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { sxRate: sxRate }, mixins: [_golbalConfig.default, _evaluate.default], data: function data() {return { isIphoneX: false //判断手机是否是iphoneX以上
     };}, onLoad: function onLoad(options) {//接收订单号，订单是否是追评等信息
     options.order_id ? this.orderId = options.order_id : this.$util.redirectTo('/pages/order/list/list');this.isIphoneX = this.$util.uniappIsIPhoneX();if (!uni.getStorageSync('token')) {this.$util.redirectTo('/pages/login/login/login', { back: '/otherpages/order/evaluate/evaluate?order_id=' + this.orderId }, 'redirectTo');}this.getUserInfo();this.getOrderInfo();this.getEvaluateConfig();}, onShow: function onShow() {//初始化重复点击
     this.flag = false; // 刷新多语言

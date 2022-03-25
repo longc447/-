@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "购物车",
   "usingComponents": {
+    "sku-list": "/components/sku-list/sku-list",
     "uni-number-box": "/components/uni-number-box/uni-number-box",
     "loading-cover": "/components/loading-cover/loading-cover",
     "diy-bottom-nav": "/components/diy-bottom-nav/diy-bottom-nav",

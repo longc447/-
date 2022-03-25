@@ -98,7 +98,7 @@ var components
 try {
   components = {
     uniCountDown: function() {
-      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1435))
+      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1440))
     },
     uniPopup: function() {
       return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1211))
@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var LTime = function LTime() {Promise.all(/*! require.ensure | promotionpages/components/l-time/l-time */[__webpack_require__.e("common/vendor"), __webpack_require__.e("promotionpages/components/l-time/l-time")]).then((function () {return resolve(__webpack_require__(/*! @/promotionpages/components/l-time/l-time.vue */ 1533));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var LTime = function LTime() {Promise.all(/*! require.ensure | promotionpages/components/l-time/l-time */[__webpack_require__.e("common/vendor"), __webpack_require__.e("promotionpages/components/l-time/l-time")]).then((function () {return resolve(__webpack_require__(/*! @/promotionpages/components/l-time/l-time.vue */ 1538));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {

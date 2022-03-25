@@ -184,7 +184,7 @@
             "path" : "pages/login/register/wholesale/wholesale",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "批发商申请",
+                "navigationBarTitleText": "商户认证",
                 "enablePullDownRefresh": false
             }
             

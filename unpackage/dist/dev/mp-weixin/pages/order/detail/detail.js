@@ -95,6 +95,9 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    skuList: function() {
+      return __webpack_require__.e(/*! import() | components/sku-list/sku-list */ "components/sku-list/sku-list").then(__webpack_require__.bind(null, /*! @/components/sku-list/sku-list.vue */ 1414))
+    },
     loadingCover: function() {
       return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))
     }
@@ -124,34 +127,6 @@ var render = function() {
   var g1 = _vm.$util.img(_vm.action.icon)
   var m0 =
     _vm.orderData.is_photograph != 1 ? _vm.$lang("common.currencySymbol") : null
-
-  var l0 = _vm.__map(_vm.orderData.order_goods, function(
-    goodsItem,
-    goodsIndex
-  ) {
-    var $orig = _vm.__get_orig(goodsItem)
-
-    var f0 =
-      goodsItem.sku_spec_format &&
-      _vm.orderData.is_photograph != 1 &&
-      goodsItem.photometric != 0 &&
-      goodsItem.rimless == 0
-        ? _vm._f("doller")(goodsItem.ball_mirror)
-        : null
-    var f1 =
-      goodsItem.sku_spec_format &&
-      _vm.orderData.is_photograph != 1 &&
-      goodsItem.photometric != 0 &&
-      goodsItem.rimless == 0
-        ? _vm._f("doller")(goodsItem.cylinder_mirror)
-        : null
-    return {
-      $orig: $orig,
-      f0: f0,
-      f1: f1
-    }
-  })
-
   var g2 = _vm.$util.timeStampTurnTime(_vm.orderData.create_time)
   var g3 =
     _vm.orderData.close_time > 0
@@ -171,7 +146,7 @@ var render = function() {
       : null
   var m5 =
     _vm.orderData.adjust_money != 0 ? _vm.$lang("common.currencySymbol") : null
-  var f2 =
+  var f0 =
     _vm.orderData.adjust_money != 0
       ? _vm._f("abs")(_vm.orderData.adjust_money)
       : null
@@ -212,7 +187,6 @@ var render = function() {
         g0: g0,
         g1: g1,
         m0: m0,
-        l0: l0,
         g2: g2,
         g3: g3,
         g4: g4,
@@ -221,7 +195,7 @@ var render = function() {
         m3: m3,
         m4: m4,
         m5: m5,
-        f2: f2,
+        f0: f0,
         m6: m6,
         m7: m7,
         m8: m8,
@@ -264,57 +238,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -938,58 +861,7 @@ var _tool = _interopRequireDefault(__webpack_require__(/*! ../public/js/tool.js 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1506));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ImageBox = function ImageBox() {__webpack_require__.e(/*! require.ensure | components/imageloader/imageloader */ "components/imageloader/imageloader").then((function () {return resolve(__webpack_require__(/*! @/components/imageloader/imageloader.vue */ 1513));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { nsPayment: nsPayment, ImageBox: ImageBox }, data: function data() {return { isIphoneX: false, orderId: 0, orderData: { action: [] }, action: { icon: '' }, kefuConfig: { weapp: '', system: '', open: '', open_url: '' }, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 } };}, mixins: [_golbalConfig.default, _orderMethod.default, _tool.default], onLoad: function onLoad(option) {if (option.order_id) this.orderId = option.order_id;}, onShow: function onShow() {// 刷新多语言
+var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1511));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ImageBox = function ImageBox() {__webpack_require__.e(/*! require.ensure | components/imageloader/imageloader */ "components/imageloader/imageloader").then((function () {return resolve(__webpack_require__(/*! @/components/imageloader/imageloader.vue */ 1518));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { nsPayment: nsPayment, ImageBox: ImageBox }, data: function data() {return { isIphoneX: false, orderId: 0, orderData: { action: [] }, action: { icon: '' }, kefuConfig: { weapp: '', system: '', open: '', open_url: '' }, evaluateConfig: { evaluate_audit: 1, evaluate_show: 0, evaluate_status: 1 } };}, mixins: [_golbalConfig.default, _orderMethod.default, _tool.default], onLoad: function onLoad(option) {if (option.order_id) this.orderId = option.order_id;}, onShow: function onShow() {// 刷新多语言
     this.$langConfig.refresh();this.isIphoneX = this.$util.uniappIsIPhoneX();if (uni.getStorageSync('token')) {this.getEvaluateConfig();this.getOrderData();} else {this.$util.redirectTo('/pages/login/login/login', { back: '/pages/order/detail/detail?order_id=' + this.orderId });}this.getKekuConfig();}, methods: { //联系客服
     goConnect: function goConnect() {if (uni.getStorageSync('token')) {var data = { order_id: this.orderId, site_id: this.orderData.site_id };this.$util.redirectTo('/otherpages/chat/room/room', data);return false;} else {this.$refs.login.open('/pages/goods/detail/detail?sku_id=' + this.orderData.sku_id);return;}}, getKekuConfig: function getKekuConfig() {var _this = this;this.$api.sendRequest({ url: '/api/config/servicer', success: function success(res) {if (res.code == 0) {_this.kefuConfig = res.data;if (_this.kefuConfig.system && !_this.addonIsExit.servicer) _this.kefuConfig.system = 0;}} });}, goDetail: function goDetail(id) {this.$util.redirectTo('/pages/goods/detail/detail', { sku_id: id });}, goRefund: function goRefund(id) {this.$util.redirectTo('/otherpages/order/refund/refund', { order_goods_id: id });}, goRefundDetail: function goRefundDetail(id) {this.$util.redirectTo('/otherpages/order/refund_detail/refund_detail', { order_goods_id: id });}, getOrderData: function getOrderData() {var _this2 = this;this.$api.sendRequest({ url: '/api/order/detail', data: { order_id: this.orderId }, success: function success(res) {uni.stopPullDownRefresh();if (res.code >= 0) {_this2.orderData = res.data; // this.orderData.images=[...this.orderData.images,...this.orderData.images]
             if (_this2.orderData.images !== "") _this2.orderData.images = JSON.parse(_this2.orderData.images);if (_this2.orderData && _this2.orderData.order_goods) _this2.orderData.order_goods.forEach(function (v) {// if (v.sku_spec_format) {

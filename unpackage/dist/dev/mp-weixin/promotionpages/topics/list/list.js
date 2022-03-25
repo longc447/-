@@ -96,7 +96,7 @@ var components
 try {
   components = {
     nsAdv: function() {
-      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1526))
+      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1531))
     },
     nsEmpty: function() {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
@@ -205,7 +205,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1526));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1531));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
     nsAdv: nsAdv },

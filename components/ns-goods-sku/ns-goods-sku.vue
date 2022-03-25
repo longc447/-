@@ -572,12 +572,17 @@
 							return a - b
 						})
 						dataitem.cylinder_mirrorArray = arr
+						console.log(arr,name,"0----------")
 						this.$refs[name].list = arr
 						this.$refs[name].open()
 						return
 					}
 				}
+						console.log(list,name,"1----------")
 				this.$refs[name].list = list
+				if(name=='ball'&&this.$refs[name].list.length===0)this.$refs[name].list=this.ball_mirrorArray_bk
+				if(name=='cylinder'&&this.$refs[name].list.length===0)this.$refs[name].list=this.cylinder_mirrorArray_bk
+				
 				this.$refs[name].open()
 
 			},

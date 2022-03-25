@@ -97,6 +97,9 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    skuList: function() {
+      return __webpack_require__.e(/*! import() | components/sku-list/sku-list */ "components/sku-list/sku-list").then(__webpack_require__.bind(null, /*! @/components/sku-list/sku-list.vue */ 1414))
+    },
     uniPopup: function() {
       return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 1211))
     },
@@ -127,51 +130,28 @@ var render = function() {
   var _c = _vm._self._c || _h
   var m5 = _vm.$lang("common.currencySymbol")
 
-  var l1 = _vm.__map(_vm.orderPaymentData.shop_goods_list, function(
+  var l0 = _vm.__map(_vm.orderPaymentData.shop_goods_list, function(
     siteItem,
     siteIndex
   ) {
     var $orig = _vm.__get_orig(siteItem)
 
     var m0 = _vm.$lang("common.currencySymbol")
-
-    var l0 = _vm.__map(siteItem.goods_list, function(goodsItem, goodsIndex) {
-      var $orig = _vm.__get_orig(goodsItem)
-
-      var f0 =
-        goodsItem.sku_spec_format &&
-        goodsItem.ball_mirror !== "0.00" &&
-        goodsItem.ball_mirror !== 0
-          ? _vm._f("doller")(goodsItem.ball_mirror)
-          : null
-      var f1 =
-        goodsItem.sku_spec_format &&
-        goodsItem.ball_mirror !== "0.00" &&
-        goodsItem.ball_mirror !== 0
-          ? _vm._f("doller")(goodsItem.cylinder_mirror)
-          : null
-      return {
-        $orig: $orig,
-        f0: f0,
-        f1: f1
-      }
-    })
-
     var m1 =
       siteItem.coupon_list.length &&
       _vm.orderPaymentData.coupon[siteItem.site_id].coupon_id
         ? _vm.$lang("common.currencySymbol")
         : null
-    var f2 =
+    var f0 =
       siteItem.coupon_list.length &&
       _vm.orderPaymentData.coupon[siteItem.site_id].coupon_id
         ? _vm._f("moneyFormat")(siteItem.coupon_money)
         : null
-    var f3 = siteItem.promotionExits
+    var f1 = siteItem.promotionExits
       ? _vm._f("promotion")(siteItem.promotion)
       : null
     var g0 = Array.isArray(siteItem.invoice_config)
-    var f4 =
+    var f2 =
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_config.invoice_rate)
         : null
@@ -179,7 +159,7 @@ var render = function() {
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm.$lang("common.currencySymbol")
         : null
-    var f5 =
+    var f3 =
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_money)
         : null
@@ -188,36 +168,35 @@ var render = function() {
       siteItem.invoice_config.invoice_status == 1
         ? _vm.$lang("common.currencySymbol")
         : null
-    var f6 =
+    var f4 =
       siteItem.invoice_delivery_money > 0 &&
       siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_delivery_money)
         : null
     var m4 =
       siteItem.promotion_money > 0 ? _vm.$lang("common.currencySymbol") : null
-    var f7 =
+    var f5 =
       siteItem.promotion_money > 0
         ? _vm._f("moneyFormat")(siteItem.promotion_money)
         : null
 
-    var f8 = _vm._f("moneyFormat")(siteItem.order_money)
+    var f6 = _vm._f("moneyFormat")(siteItem.order_money)
 
     return {
       $orig: $orig,
       m0: m0,
-      l0: l0,
       m1: m1,
-      f2: f2,
-      f3: f3,
+      f0: f0,
+      f1: f1,
       g0: g0,
-      f4: f4,
+      f2: f2,
       m2: m2,
-      f5: f5,
+      f3: f3,
       m3: m3,
-      f6: f6,
+      f4: f4,
       m4: m4,
-      f7: f7,
-      f8: f8
+      f5: f5,
+      f6: f6
     }
   })
 
@@ -228,7 +207,7 @@ var render = function() {
     _vm.orderPaymentData.platform_coupon_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f9 =
+  var f7 =
     _vm.orderPaymentData &&
     _vm.orderPaymentData.platform_coupon_list &&
     _vm.orderPaymentData.platform_coupon_list.length > 0 &&
@@ -237,14 +216,14 @@ var render = function() {
       : null
   var m7 = _vm.$lang("common.currencySymbol")
 
-  var f10 = _vm._f("moneyFormat")(_vm.orderPaymentData.goods_money)
+  var f8 = _vm._f("moneyFormat")(_vm.orderPaymentData.goods_money)
 
   var m8 =
     _vm.orderPaymentData.is_virtual == 0 &&
     _vm.orderPaymentData.delivery_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f11 =
+  var f9 =
     _vm.orderPaymentData.is_virtual == 0 &&
     _vm.orderPaymentData.delivery_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.delivery_money)
@@ -253,7 +232,7 @@ var render = function() {
     _vm.orderPaymentData.invoice_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f12 =
+  var f10 =
     _vm.orderPaymentData.invoice_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.invoice_money)
       : null
@@ -261,7 +240,7 @@ var render = function() {
     _vm.orderPaymentData.invoice_delivery_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f13 =
+  var f11 =
     _vm.orderPaymentData.invoice_delivery_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.invoice_delivery_money)
       : null
@@ -269,7 +248,7 @@ var render = function() {
     _vm.orderPaymentData.promotion_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f14 =
+  var f12 =
     _vm.orderPaymentData.promotion_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.promotion_money)
       : null
@@ -277,7 +256,7 @@ var render = function() {
     _vm.orderPaymentData.coupon_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f15 =
+  var f13 =
     _vm.orderPaymentData.coupon_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.coupon_money)
       : null
@@ -285,17 +264,17 @@ var render = function() {
     _vm.orderPaymentData.platform_coupon_money > 0
       ? _vm.$lang("common.currencySymbol")
       : null
-  var f16 =
+  var f14 =
     _vm.orderPaymentData.platform_coupon_money > 0
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.platform_coupon_money)
       : null
   var m14 = _vm.$lang("common.currencySymbol")
 
-  var f17 = _vm._f("moneyFormat")(_vm.orderPaymentData.pay_money)
+  var f15 = _vm._f("moneyFormat")(_vm.orderPaymentData.pay_money)
 
   var g1 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
 
-  var l2 = _vm.__map(_vm.presentCoupon, function(couponItem, couponIndex) {
+  var l1 = _vm.__map(_vm.presentCoupon, function(couponItem, couponIndex) {
     var $orig = _vm.__get_orig(couponItem)
 
     var m15 =
@@ -317,7 +296,7 @@ var render = function() {
 
   var g3 = _vm.$util.img("/upload/uniapp/coupon/bg_lingqu.png")
 
-  var l3 = _vm.__map(_vm.siteCoupon.data, function(couponItem, couponIndex) {
+  var l2 = _vm.__map(_vm.siteCoupon.data, function(couponItem, couponIndex) {
     var $orig = _vm.__get_orig(couponItem)
 
     var m18 =
@@ -346,7 +325,7 @@ var render = function() {
       ? _vm.$lang("common.currencySymbol")
       : null
 
-  var l4 = _vm.__map(_vm.orderPaymentData.platform_coupon_list, function(
+  var l3 = _vm.__map(_vm.orderPaymentData.platform_coupon_list, function(
     couponItem,
     couponIndex
   ) {
@@ -372,32 +351,32 @@ var render = function() {
     {
       $root: {
         m5: m5,
-        l1: l1,
+        l0: l0,
         m6: m6,
-        f9: f9,
+        f7: f7,
         m7: m7,
-        f10: f10,
+        f8: f8,
         m8: m8,
-        f11: f11,
+        f9: f9,
         m9: m9,
-        f12: f12,
+        f10: f10,
         m10: m10,
-        f13: f13,
+        f11: f11,
         m11: m11,
-        f14: f14,
+        f12: f12,
         m12: m12,
-        f15: f15,
+        f13: f13,
         m13: m13,
-        f16: f16,
+        f14: f14,
         m14: m14,
-        f17: f17,
+        f15: f15,
         g1: g1,
-        l2: l2,
+        l1: l1,
         g3: g3,
-        l3: l3,
+        l2: l2,
         g5: g5,
         m21: m21,
-        l4: l4
+        l3: l3
       }
     }
   )
@@ -435,80 +414,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1857,81 +1762,7 @@ var _tool = _interopRequireDefault(__webpack_require__(/*! @/pages/order/public/
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1506));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default, _tool.default] };exports.default = _default;
+var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 1211));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var nsPayment = function nsPayment() {__webpack_require__.e(/*! require.ensure | components/payment/payment */ "components/payment/payment").then((function () {return resolve(__webpack_require__(/*! @/components/payment/payment.vue */ 1511));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniPopup: uniPopup, nsPayment: nsPayment }, mixins: [_payment.default, _golbalConfig.default, _tool.default] };exports.default = _default;
 
 /***/ }),
 

@@ -149,7 +149,7 @@
 							icon: "none"
 						})
 						setTimeout(() => {
-							this.$util.redirectTo('/pages/photo/tips');
+							this.$util.redirectTo('/promotionpages/photo/tips');
 						}, 2000)
 					},
 					fail: err => {

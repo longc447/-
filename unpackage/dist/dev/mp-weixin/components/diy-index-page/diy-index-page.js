@@ -83,7 +83,7 @@ try {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
     },
     nsLoading: function() {
-      return __webpack_require__.e(/*! import() | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then(__webpack_require__.bind(null, /*! @/components/ns-loading/ns-loading.vue */ 1690))
+      return __webpack_require__.e(/*! import() | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then(__webpack_require__.bind(null, /*! @/components/ns-loading/ns-loading.vue */ 1695))
     }
   }
 } catch (e) {
@@ -228,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var nsLoading = function nsLoading() {__webpack_require__.e(/*! require.ensure | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then((function () {return resolve(__webpack_require__(/*! @/components/ns-loading/ns-loading.vue */ 1690));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var nsLoading = function nsLoading() {__webpack_require__.e(/*! require.ensure | components/ns-loading/ns-loading */ "components/ns-loading/ns-loading").then((function () {return resolve(__webpack_require__(/*! @/components/ns-loading/ns-loading.vue */ 1695));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

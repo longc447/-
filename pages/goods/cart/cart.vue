@@ -42,68 +42,7 @@
 											</block>
 										</view>
 									</view>
-									<view class="parameter_detail" v-if="item.photometric!=0&&item.is_photograph!=1"
-											style="font-size: 3vw;font-weight: bold;line-height: 10rpx;margin-bottom: 20rpx;">
-											<view class="parameter_box" style="background: #f8f8f8;border-radius: 10rpx;">
-												<view class="" v-for="(it,itindex) in item.remarks" :key="itindex"
-													v-if="item.remarks.length">
-													<text v-if="it.eye" style="margin-right: 15rpx;">
-														{{it.eye=="左眼"?" L":" R"}}</text>
-													<text style="color: rgb(160,160,160);"
-														v-if="it.ball_mirror">{{" S：" }}</text>
-													<text v-if="it.ball_mirror">{{it.ball_mirror}}</text>
-									
-													<text style="color: rgb(160,160,160);"
-														v-if="it.cylinder_mirror">{{" C："}}</text>
-													<text v-if="it.cylinder_mirror">{{it.cylinder_mirror}}</text>
-									
-													<text style="color: rgb(160,160,160);" v-if="it.axis">
-														{{" 轴位："}}</text>
-													<text v-if="it.axis">
-														{{it.axis}}</text>
-									
-													<text style="color: rgb(160,160,160);" v-if="it.passage">
-														{{" 通道："}}</text>
-													<text v-if="it.passage">
-														{{it.passage}}</text>
-													<text style="color: rgb(160,160,160);" v-if="it.a_dd">
-														{{" ADD："}}</text>
-													<text v-if="it.a_dd">
-														{{it.a_dd}}</text>
-												</view>
-												<view class="" style="font-weight: bold;">
-													<text style="font-weight:500;margin-right: 15rpx;" v-if="item.eye">
-														{{item.eye=="左眼"?" L":" R"}}</text>
-													<text style="color: rgb(160,160,160);"
-														v-if="item.ball_mirror&&!item.remarks.length">{{" S："}}</text>
-													<text
-														v-if="item.ball_mirror&&!item.remarks.length">{{item.ball_mirror }}</text>
-									
-													<text style="color: rgb(160,160,160);"
-														v-if="item.cylinder_mirror&&!item.remarks.length">{{" C："}}</text>
-													<text
-														v-if="item.cylinder_mirror&&!item.remarks.length">{{item.cylinder_mirror}}</text>
-									
-													<text style="color: rgb(160,160,160);" v-if="item.axis">
-														{{" 轴位："}}</text>
-													<text v-if="item.axis">
-														{{item.axis}}</text>
-									
-													<text style="color: rgb(160,160,160);"
-														v-if="item.passage&&!item.remarks.length"> {{" 通道："}}</text>
-													<text v-if="item.passage&&!item.remarks.length">
-														{{item.passage}}</text>
-									
-													<text style="color: rgb(160,160,160);"
-														v-if="item.a_dd&&!item.remarks.length">{{" ADD："}}</text>
-													<text  v-if="item.a_dd&&!item.remarks.length">
-														{{item.a_dd}}</text>
-									
-												</view>
-									
-											</view>
-										</view>
-									
+									<sku-list :goodsItem="item"></sku-list>
 									<view class="sku">
 										
 									</view>
@@ -157,7 +96,7 @@
 								</view>
 								<view class="goods-info">
 									<view class="goods-name" style="font-size: 50rpx;font-weight: bold;">{{ goodsItem.sku_name }}</view>
-									<view class="sku" v-if="goodsItem.sku_spec_format">
+									<view class="sku" >
 										<view class="goods-spec">
 											<block v-for="(x, i) in goodsItem.sku_spec_format" :key="i">
 												{{ x.spec_value_name }}

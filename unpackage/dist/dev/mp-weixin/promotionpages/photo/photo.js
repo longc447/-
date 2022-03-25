@@ -307,7 +307,7 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../common/js/con
                       icon: "none" });
 
                     setTimeout(function () {
-                      _this3.$util.redirectTo('/pages/photo/tips');
+                      _this3.$util.redirectTo('/promotionpages/photo/tips');
                     }, 2000);
                   },
                   fail: function fail(err) {

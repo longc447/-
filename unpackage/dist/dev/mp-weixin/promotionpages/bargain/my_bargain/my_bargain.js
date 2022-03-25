@@ -98,7 +98,7 @@ var components
 try {
   components = {
     uniCountDown: function() {
-      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1435))
+      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1440))
     },
     nsEmpty: function() {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
@@ -281,7 +281,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var uniCountDown = function uniCountDown() {__webpack_require__.e(/*! require.ensure | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then((function () {return resolve(__webpack_require__(/*! @/components/uni-count-down/uni-count-down.vue */ 1435));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var uniCountDown = function uniCountDown() {__webpack_require__.e(/*! require.ensure | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then((function () {return resolve(__webpack_require__(/*! @/components/uni-count-down/uni-count-down.vue */ 1440));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
     uniCountDown: uniCountDown },

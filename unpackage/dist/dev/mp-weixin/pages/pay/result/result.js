@@ -96,7 +96,7 @@ var components
 try {
   components = {
     nsGoodsRecommend: function() {
-      return Promise.all(/*! import() | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then(__webpack_require__.bind(null, /*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1421))
+      return Promise.all(/*! import() | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then(__webpack_require__.bind(null, /*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1426))
     },
     loadingCover: function() {
       return __webpack_require__.e(/*! import() | components/loading-cover/loading-cover */ "components/loading-cover/loading-cover").then(__webpack_require__.bind(null, /*! @/components/loading-cover/loading-cover.vue */ 1328))

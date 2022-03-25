@@ -98,10 +98,10 @@ var components
 try {
   components = {
     nsAdv: function() {
-      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1526))
+      return __webpack_require__.e(/*! import() | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then(__webpack_require__.bind(null, /*! @/components/ns-adv/ns-adv.vue */ 1531))
     },
     uniCountDown: function() {
-      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1435))
+      return __webpack_require__.e(/*! import() | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then(__webpack_require__.bind(null, /*! @/components/uni-count-down/uni-count-down.vue */ 1440))
     },
     nsEmpty: function() {
       return __webpack_require__.e(/*! import() | components/ns-empty/ns-empty */ "components/ns-empty/ns-empty").then(__webpack_require__.bind(null, /*! @/components/ns-empty/ns-empty.vue */ 1335))
@@ -444,7 +444,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 //
 //
 //
-var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1526));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniCountDown = function uniCountDown() {__webpack_require__.e(/*! require.ensure | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then((function () {return resolve(__webpack_require__(/*! @/components/uni-count-down/uni-count-down.vue */ 1435));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniCountDown: uniCountDown, nsAdv: nsAdv }, data: function data() {return { dataList: [], siteId: 0, dataListing: [], isLoading: true, mescroll: null };}, onLoad: function onLoad(options) {if (options.site_id) {this.siteId = options.site_id;}}, onShow: function onShow() {var _this = this; // 刷新多语言
+var nsAdv = function nsAdv() {__webpack_require__.e(/*! require.ensure | components/ns-adv/ns-adv */ "components/ns-adv/ns-adv").then((function () {return resolve(__webpack_require__(/*! @/components/ns-adv/ns-adv.vue */ 1531));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniCountDown = function uniCountDown() {__webpack_require__.e(/*! require.ensure | components/uni-count-down/uni-count-down */ "components/uni-count-down/uni-count-down").then((function () {return resolve(__webpack_require__(/*! @/components/uni-count-down/uni-count-down.vue */ 1440));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { uniCountDown: uniCountDown, nsAdv: nsAdv }, data: function data() {return { dataList: [], siteId: 0, dataListing: [], isLoading: true, mescroll: null };}, onLoad: function onLoad(options) {if (options.site_id) {this.siteId = options.site_id;}}, onShow: function onShow() {var _this = this; // 刷新多语言
     this.$langConfig.refresh();this.$store.dispatch('getAddonIsexit').then(function (data) {if (!data.bargain) {_this.$util.showToast({ title: '砍价未开启', mask: true });setTimeout(function () {_this.$util.redirectTo('/pages/index/index/index', {}, 'redirectTo');}, 1000);} else {if (uni.getStorageSync('token')) {_this.getDataing();}_this.$refs.mescroll.refresh();}});}, mixins: [_golbalConfig.default], methods: { getData: function getData(mescroll) {var _this2 = this;this.mescroll = mescroll;var data = { page_size: mescroll.size, page: mescroll.num };if (this.siteId) {data.site_id = this.siteId;}this.$api.sendRequest({ url: '/bargain/api/goods/page', data: data, success: function success(res) {var newArr = [];var msg = res.message;if (res.code == 0 && res.data) {newArr = res.data.list;} else {_this2.$util.showToast({ title: msg });}if (mescroll.endSuccess) mescroll.endSuccess(newArr.length); //设置列表数据
           if (mescroll.num == 1) _this2.dataList = []; //如果是第一页需手动制空列表
           _this2.dataList = _this2.dataList.concat(newArr); //追加新数据

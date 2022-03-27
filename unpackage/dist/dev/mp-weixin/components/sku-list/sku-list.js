@@ -114,11 +114,13 @@ var render = function() {
       ? _vm._f("moneyFormat")(_vm.item.cylinder_mirror)
       : null
   var f4 =
-    _vm.goodsItem && _vm.goodsItem.rimless == 0
+    (_vm.goodsItem.photometric != 0 || _vm.goodsItem.luminosity_status == 1) &&
+    _vm.goodsItem.rimless == 0
       ? _vm._f("moneyFormat")(_vm.goodsItem.ball_mirror)
       : null
   var f5 =
-    _vm.goodsItem && _vm.goodsItem.rimless == 0
+    (_vm.goodsItem.photometric != 0 || _vm.goodsItem.luminosity_status == 1) &&
+    _vm.goodsItem.rimless == 0
       ? _vm._f("moneyFormat")(_vm.goodsItem.cylinder_mirror)
       : null
   _vm.$mp.data = Object.assign(
@@ -167,14 +169,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //

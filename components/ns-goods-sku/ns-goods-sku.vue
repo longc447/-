@@ -385,8 +385,7 @@
 			};
 		},
 		mounted() {
-			//console.error(this.goodsDetail,
-				// "111111111111this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1this.goodsDetail.rimless!=1");
+			console.log(this.goodsDetail.sku_spec_format,"多规格")
 			this.isIphoneX = this.$util.uniappIsIPhoneX();
 			this.systemInfo = uni.getSystemInfoSync();
 			this.getWholesale(this.goodsDetail);
@@ -539,8 +538,6 @@
 				this.doIndex(i)
 				dataitem = this.myValue[this.nowIndex]
 				let item = dataitem
-				debugger
-				console.error( this.goodsDetail.luminosity_status,"不等于1没法选球镜柱镜");
 				if (this.goodsDetail.luminosity_status == 1) {
 
 					// if (name == 'ball') item.cylinder_mirrorIndex = -1

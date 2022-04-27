@@ -2,8 +2,8 @@
     "name" : "云易眼镜批发城",
     "appid" : "__UNI__8AECDC0",
     "description" : "",
-    "versionName" : "1.6.6",
-    "versionCode" : 166,
+    "versionName" : "1.6.9",
+    "versionCode" : 169,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -70,14 +70,15 @@
                 "payment" : {
                     "weixin" : {
                         "__platform__" : [ "ios", "android" ],
-                        "appid" : "wx2163f4567fd1c06e",
-                        "UniversalLinks" : "https://static-09049964-7ac5-4595-b82a-ddf42b0ba1c2.bspapp.com/uni-universallinks/__UNI__40DA190/"
+                        "appid" : "wx70994c98b4946bef"
+                    },
+                    "alipay" : {
+                        "__platform__" : [ "ios" ]
                     }
                 },
                 "share" : {
                     "weixin" : {
-                        "appid" : "wx2163f4567fd1c06e",
-                        "UniversalLinks" : "https://static-09049964-7ac5-4595-b82a-ddf42b0ba1c2.bspapp.com/uni-universallinks/__UNI__40DA190/"
+                        "appid" : "wx70994c98b4946bef"
                     }
                 }
             },
@@ -116,9 +117,9 @@
             "splashscreen" : {
                 "androidStyle" : "default",
                 "android" : {
-                    "hdpi" : "C:/Users/Administrator/Desktop/打包资料/镜惠购/归档(3)/480.9.png",
-                    "xhdpi" : "C:/Users/Administrator/Desktop/打包资料/镜惠购/归档(3)/720.9.png",
-                    "xxhdpi" : "C:/Users/Administrator/Desktop/打包资料/镜惠购/归档(3)/1080.9.png"
+                    "hdpi" : "/Users/longchu/Downloads/镜惠购打包资料/480.762.png",
+                    "xhdpi" : "/Users/longchu/Downloads/镜惠购打包资料/720.1242.png",
+                    "xxhdpi" : "/Users/longchu/Downloads/镜惠购打包资料/xxdpi.png"
                 },
                 "iosStyle" : "common",
                 "ios" : {

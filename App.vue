@@ -83,7 +83,6 @@ export default {
 	},
 	onShow: function() {
 		this.$store.dispatch('init');
-
 		// 自动登录
 		if (!uni.getStorageSync('token') && !uni.getStorageSync('loginLock') && !uni.getStorageSync('unbound')) {
 			// #ifdef H5

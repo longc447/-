@@ -201,7 +201,7 @@ export default {
 				});
 				if (res.code == 0) {
 					console.log(res,res.is_wholesaler,"is_wholesaler")
-					this.is_wholesaler = res.is_wholesaler
+					if(Config.is_wholesaler===0)this.is_wholesaler = res.is_wholesaler
 				}
 			},
 	}

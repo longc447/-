@@ -12,7 +12,11 @@ const x = {
 /**
  * 价格保护 3是无保护 0是有保护
  */
-const is_wholesaler = 0
+const is_wholesaler = 3
+/**
+ * 是否强制登陆 0不强制 1强制
+ */
+const isMustLogin = 0
 
 let param = {
 	//客服地址
@@ -31,4 +35,5 @@ export default {
 	...param,
 	...x,
 	is_wholesaler,
+	isMustLogin
 }

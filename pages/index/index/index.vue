@@ -256,6 +256,12 @@ export default {
 		this.$store.commit('setDiySeckillInterval', null);
 	}, 
 	async onShow() {
+		if(Config.isMustLogin===1){
+			const a = uni.getStorageSync('token')
+			const b = uni.getStorageSync('loginLock')
+			const c = uni.getStorageSync('unbound')
+			if(!a&&!b&&!c) uni.navigateTo({url:'/pages/login/login/login'})
+		}
 		
 		await this.refresh();
 		this.getHeight();

@@ -655,7 +655,7 @@
 					}
 				}
 			})
-			if(uni.getStorageSync('token')){				var ret = await this.$api.sendRequest({					url: '/api/member/detail',					async: false				});				if (ret.code == 0) {					console.log(ret)					this.is_wholesaler = ret.is_wholesaler				}			}
+			if(uni.getStorageSync('token')){				var ret = await this.$api.sendRequest({					url: '/api/member/detail',					async: false				});				if (ret.code == 0) {					console.log(ret)					if(Config.is_wholesaler===0)this.is_wholesaler = ret.is_wholesaler				}			}
 			console.log(ret)
 		},
 		mixins: [detail, scroll, globalConfig],

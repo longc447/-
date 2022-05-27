@@ -190,6 +190,5 @@
     "mescroll-uni": "/components/mescroll/my-list-mescroll",
     "mescroll-body": "/components/mescroll/mescroll-body",
     "ns-login": "/components/ns-login/ns-login"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

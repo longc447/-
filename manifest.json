@@ -1,5 +1,5 @@
 {
-    "name" : "云易眼镜批发城",
+    "name" : "曹操眼镜",
     "appid" : "__UNI__8AECDC0",
     "description" : "",
     "versionName" : "1.6.9",
@@ -137,7 +137,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx0a2bec6faf4d4169",
+        "appid" : "wxc5c3d90655913d79",
         "setting" : {
             "urlCheck" : true,
             "postcss" : true,

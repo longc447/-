@@ -122,10 +122,11 @@
 			getUpdateInfo() {
 				//向后台发起请求，获取最新版本号
 				uni.request({
-					url: 'https://jhg.ruanjiangc.com/api/help/update', //仅为示例，并非真实接口地址。
+					url: 'https://cpdd.website/update', //仅为示例，并非真实接口地址。
 					method: 'get',
 					success: (res) => {
 						// 这里的返回的数据跟后台约定
+						console.log(res,"跟新配置")
 						console.log(res.data.data)  
 						let data =res.data.data
 

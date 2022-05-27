@@ -147,7 +147,9 @@ var render = function() {
       }
     })
 
-    var g1 = Array.isArray(siteItem.invoice_config)
+    var g1 =
+      !Array.isArray(siteItem.invoice_config) &&
+      siteItem.invoice_config.invoice_status == 1
     var f0 =
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_config.invoice_rate)

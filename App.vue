@@ -32,26 +32,25 @@ export default {
 			// 新的版本下载失败
 		});
 		// #endif
-
-		uni.getLocation({
-			type: 'gcj02',
-			success: res => {
-				let obj = uni.getStorageSync('location');
-				if (obj) {
-					let a = this.$util.getDistance(obj.latitude, obj.longitude, res.latitude, res.longitude);
-					if (a > 20) {
-						uni.removeStorageSync('store');
-					}
-				}
-				uni.setStorage({
-					key: 'location',
-					data: {
-						latitude: res.latitude,
-						longitude: res.longitude
-					}
-				});
-			}
-		});
+		// uni.getLocation({
+		// 	type: 'gcj02',
+		// 	success: res => {
+		// 		let obj = uni.getStorageSync('location');
+		// 		if (obj) {
+		// 			let a = this.$util.getDistance(obj.latitude, obj.longitude, res.latitude, res.longitude);
+		// 			if (a > 20) {
+		// 				uni.removeStorageSync('store');
+		// 			}
+		// 		}
+		// 		uni.setStorage({
+		// 			key: 'location',
+		// 			data: {
+		// 				latitude: res.latitude,
+		// 				longitude: res.longitude
+		// 			}
+		// 		});
+		// 	}
+		// });
 
 		//判断是否支持 获取本地位置
 		// #ifdef H5
@@ -85,7 +84,7 @@ export default {
 		this.$store.dispatch('init');
 		// 自动登录
 		if (!uni.getStorageSync('token') && !uni.getStorageSync('loginLock') && !uni.getStorageSync('unbound')) {
-			// #ifdef H5
+			// #ifdef H5 || MP-WEIXIN
 			if (this.$util.isWeiXin()) {
 				this.$util.getUrlCode(urlParams => {
 					if (urlParams.source_member) uni.setStorageSync('source_member', urlParams.source_member);

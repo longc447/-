@@ -450,7 +450,7 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../../common/js/
 
                 if (res.code == 0) {
                   console.log(res, res.is_wholesaler, "is_wholesaler");
-                  _this.is_wholesaler = res.is_wholesaler;
+                  if (_config.default.is_wholesaler === 0) _this.is_wholesaler = res.is_wholesaler;
                 }case 4:case "end":return _context.stop();}}}, _callee);}))();
     } } };exports.default = _default;
 

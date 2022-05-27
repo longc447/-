@@ -171,6 +171,7 @@
 	import toTop from '@/components/toTop/toTop.vue';
 	import scroll from '@/common/js/scroll-view.js';
 	import globalConfig from '@/common/js/golbalConfig.js';
+	import Config from '@/common/js/config.js'
 
 	export default {
 		components: {
@@ -196,7 +197,7 @@
 				isAction: false, // 是否操作删除
 				startX: '', // 触摸开始位置
 				endX: '', // 触摸结束位置,
-				is_wholesaler: 0,
+				is_wholesaler: Config.is_wholesaler,
 				styleIPhone12: false
 			};
 		},
@@ -225,7 +226,7 @@
 				});
 				if (ret.code == 0) {
 					console.log(ret)
-					this.is_wholesaler = ret.is_wholesaler
+					// if(Config.is_wholesaler===0)this.is_wholesaler = ret.is_wholesaler
 				}
 			}
 			if (uni.getStorageSync('token')) {

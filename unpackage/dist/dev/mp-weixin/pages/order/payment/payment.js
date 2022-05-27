@@ -150,7 +150,9 @@ var render = function() {
     var f1 = siteItem.promotionExits
       ? _vm._f("promotion")(siteItem.promotion)
       : null
-    var g0 = Array.isArray(siteItem.invoice_config)
+    var g0 =
+      !Array.isArray(siteItem.invoice_config) &&
+      siteItem.invoice_config.invoice_status == 1
     var f2 =
       siteItem.invoice_money > 0 && siteItem.invoice_config.invoice_status == 1
         ? _vm._f("moneyFormat")(siteItem.invoice_config.invoice_rate)

@@ -263,17 +263,18 @@ var _default = {
 
 
   onLoad: function onLoad() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _this, ret;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
-              _this = _this2;if (!
+              _this = _this2;
 
-              uni.getStorageSync('token')) {_context.next = 6;break;}_context.next = 4;return (
+              console.log(_this2.is_wholesaler, "is_wholesaler");if (!
+              uni.getStorageSync('token')) {_context.next = 6;break;}_context.next = 5;return (
                 _this2.$api.sendRequest({
                   url: '/api/member/detail',
-                  async: false }));case 4:ret = _context.sent;
+                  async: false }));case 5:ret = _context.sent;case 6:
 
-              if (ret.code == 0) {
-                console.log(ret);
-                _this2.is_wholesaler = ret.is_wholesaler;
-              }case 6:
+
+
+
+
 
               console.log(ret);case 7:case "end":return _context.stop();}}}, _callee);}))();
   },
@@ -284,11 +285,12 @@ var _default = {
                   url: '/api/member/detail',
                   async: false }));case 4:ret = _context2.sent;
 
-              if (ret.code == 0) {
-                console.log(ret);
-                _this3.is_wholesaler = ret.is_wholesaler;
-              }case 6:
-
+              console.log(_this3.is_wholesaler, "is_wholesaler");
+              // if (ret.code == 0) {
+              // 	console.log(ret)
+              // 	this.is_wholesaler = ret.is_wholesaler
+              // }
+            case 6:
               _this3.getLikeList();case 7:case "end":return _context2.stop();}}}, _callee2);}))();
 
   },

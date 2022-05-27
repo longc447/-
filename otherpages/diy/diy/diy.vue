@@ -415,35 +415,36 @@ export default {
 		},
 		// 获取定位城市
 		getLocation() {
-			const map = new WxMap({
-				key: this.$config.mpKey
-			});
-			uni.getLocation({
-				type: 'gcj02',
-				success: res => {
-					map.reverseGeocoder({
-						location: {
-							latitude: res.latitude,
-							longitude: res.longitude
-						},
-						success: res => {
-							this.$api.sendRequest({
-								url: '/api/address/citybyname',
-								data: {
-									city: res.result.address_component.city
-								},
-								success: res => {
-									if (res.data) {
-										this.city = res.data.title;
-										uni.setStorageSync('city', res.data);
-									}
-								}
-							});
-						},
-						fail: res => {}
-					});
-				}
-			});
+		// 	const map = new WxMap({
+		// 		key: this.$config.mpKey
+		// 	});
+		// 	uni.getLocation({
+		// 		type: 'gcj02',
+		// 		success: res => {
+		// 			map.reverseGeocoder({
+		// 				location: {
+		// 					latitude: res.latitude,
+		// 					longitude: res.longitude
+		// 				},
+		// 				success: res => {
+		// 					this.$api.sendRequest({
+		// 						url: '/api/address/citybyname',
+		// 						data: {
+		// 							city: res.result.address_component.city
+		// 						},
+		// 						success: res => {
+		// 							if (res.data) {
+		// 								this.city = res.data.title;
+		// 								uni.setStorageSync('city', res.data);
+		// 							}
+		// 						}
+		// 					});
+		// 				},
+		// 				fail: res => {}
+		// 			});
+		// 		}
+		// 	});
+		
 		},
 		// #ifdef MP-WEIXIN
 		// 分享到微信朋友圈

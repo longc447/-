@@ -444,11 +444,17 @@ var systemInfo = uni.getSystemInfoSync();var _default =
     // 清除限时秒杀定时器
     this.$store.commit('setDiySeckillInterval', null);
   },
-  onShow: function onShow() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+  onShow: function onShow() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var a, b, c;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+              if (_config.default.isMustLogin === 1) {
+                a = uni.getStorageSync('token');
+                b = uni.getStorageSync('loginLock');
+                c = uni.getStorageSync('unbound');
+                if (!a && !b && !c) uni.navigateTo({ url: '/pages/login/login/login' });
+              }_context2.next = 3;return (
 
-                _this2.refresh());case 2:
+                _this2.refresh());case 3:
               _this2.getHeight();
-              _this2.$store.commit('setDiySeckillInterval', 1);case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+              _this2.$store.commit('setDiySeckillInterval', 1);case 5:case "end":return _context2.stop();}}}, _callee2);}))();
   },
   mounted: function mounted() {
 

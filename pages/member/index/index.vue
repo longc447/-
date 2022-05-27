@@ -202,7 +202,7 @@
 	import nsCopyRight from '@/components/ns-copyright/ns-copyright.vue';
 	import fenxiaoWords from 'common/js/fenxiao-words.js';
 	import globalConfig from '@/common/js/golbalConfig.js';
-
+	import Config from "@/common/js/config.js"
 	export default {
 		components: {
 			uniGrid,
@@ -256,7 +256,7 @@
 					evaluate_show: 0,
 					evaluate_status: 1
 				},
-				is_wholesaler:0
+				is_wholesaler:Config.is_wholesaler
 			};
 		},
 		mixins: [scroll, fenxiaoWords, globalConfig],
@@ -428,9 +428,11 @@
 					url: '/api/member/info',
 					async: false
 				});
+				console.info(res,"member")
 				if (res.code >= 0 && res.data) {
 					this.token = uni.getStorageSync('token');
 					this.memberInfo = res.data;
+					console.log(this.memberInfo,"memberinfo")
 					uni.setStorageSync('userInfo', this.memberInfo);
 				} else {
 					this.token = '';

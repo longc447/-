@@ -211,46 +211,47 @@ var _mapWxJssdk = _interopRequireDefault(__webpack_require__(/*! common/js/map-w
     /**
         * 获取定位城市
         */
-    getLocation: function getLocation() {var _this3 = this;
-      var map = new _mapWxJssdk.default({
-        key: this.$config.mpKey });
-
-      uni.getLocation({
-        type: 'gcj02',
-        success: function success(res) {
-          map.reverseGeocoder({
-            location: {
-              latitude: res.latitude,
-              longitude: res.longitude },
-
-            success: function success(res) {
-              _this3.$api.sendRequest({
-                url: '/api/address/citybyname',
-                data: {
-                  city: res.result.address_component.city },
-
-                success: function success(res) {
-                  if (res.data) {
-                    _this3.locationCity = res.data;
-                  }
-                } });
-
-            },
-            fail: function fail(res) {
-              console.error('定位失败错误信息：' + res.message);
-            } });
-
-        } });
+    getLocation: function getLocation() {
+      // 	const map = new WxMap({
+      // 		key: this.$config.mpKey
+      // 	});
+      // 	uni.getLocation({
+      // 		type: 'gcj02',
+      // 		success: (res) => {
+      // 			map.reverseGeocoder({
+      // 				location: {
+      // 					latitude: res.latitude,
+      // 					longitude: res.longitude
+      // 				},
+      // 				success: res => {
+      // 					this.$api.sendRequest({
+      // 						url: '/api/address/citybyname',
+      // 						data: {
+      // 							city: res.result.address_component.city
+      // 						},
+      // 						success: res => {
+      // 							if (res.data) {
+      // 								this.locationCity = res.data;
+      // 							}
+      // 						}
+      // 					})
+      // 				},
+      // 				fail: res => {
+      // 					console.error('定位失败错误信息：' + res.message)
+      // 				}
+      // 			})
+      // 		}
+      // 	})
 
     },
-    checkAddonIsexit: function checkAddonIsexit() {var _this4 = this;
+    checkAddonIsexit: function checkAddonIsexit() {var _this3 = this;
       this.$api.sendRequest({
         url: '/api/addon/isexit',
         data: {
           name: 'city' },
 
         success: function success(res) {
-          _this4.cityAddon = res.data;
+          _this3.cityAddon = res.data;
         } });
 
     } } };exports.default = _default;

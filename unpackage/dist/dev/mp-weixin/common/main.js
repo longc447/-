@@ -127,7 +127,7 @@ var _auth = _interopRequireDefault(__webpack_require__(/*! common/js/auth.js */ 
 var _config = _interopRequireDefault(__webpack_require__(/*! common/js/config.js */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   mixins: [_auth.default],
-  onLaunch: function onLaunch(data) {var _this = this;
+  onLaunch: function onLaunch(data) {
     if (uni.getStorageSync('baseUrl') != _config.default.baseUrl) {
       uni.clearStorageSync();
     }
@@ -156,26 +156,25 @@ var _config = _interopRequireDefault(__webpack_require__(/*! common/js/config.js
       // 新的版本下载失败
     });
 
-
-    uni.getLocation({
-      type: 'gcj02',
-      success: function success(res) {
-        var obj = uni.getStorageSync('location');
-        if (obj) {
-          var a = _this.$util.getDistance(obj.latitude, obj.longitude, res.latitude, res.longitude);
-          if (a > 20) {
-            uni.removeStorageSync('store');
-          }
-        }
-        uni.setStorage({
-          key: 'location',
-          data: {
-            latitude: res.latitude,
-            longitude: res.longitude } });
-
-
-      } });
-
+    // uni.getLocation({
+    // 	type: 'gcj02',
+    // 	success: res => {
+    // 		let obj = uni.getStorageSync('location');
+    // 		if (obj) {
+    // 			let a = this.$util.getDistance(obj.latitude, obj.longitude, res.latitude, res.longitude);
+    // 			if (a > 20) {
+    // 				uni.removeStorageSync('store');
+    // 			}
+    // 		}
+    // 		uni.setStorage({
+    // 			key: 'location',
+    // 			data: {
+    // 				latitude: res.latitude,
+    // 				longitude: res.longitude
+    // 			}
+    // 		});
+    // 	}
+    // });
 
     //判断是否支持 获取本地位置
 
@@ -205,46 +204,45 @@ var _config = _interopRequireDefault(__webpack_require__(/*! common/js/config.js
       }
     });
   },
-  onShow: function onShow() {
+  onShow: function onShow() {var _this = this;
     this.$store.dispatch('init');
-
     // 自动登录
     if (!uni.getStorageSync('token') && !uni.getStorageSync('loginLock') && !uni.getStorageSync('unbound')) {
 
+      if (this.$util.isWeiXin()) {
+        this.$util.getUrlCode(function (urlParams) {
+          if (urlParams.source_member) uni.setStorageSync('source_member', urlParams.source_member);
+          if (urlParams.code == undefined) {
+            _this.$api.sendRequest({
+              url: '/wechat/api/wechat/authcode',
+              data: {
+                redirect_url: location.href },
 
+              success: function success(res) {
+                if (res.code >= 0) {
+                  location.href = res.data;
+                }
+              } });
 
+          } else {
+            _this.$api.sendRequest({
+              url: '/wechat/api/wechat/authcodetoopenid',
+              data: {
+                code: urlParams.code },
 
+              success: function success(res) {
+                if (res.code >= 0) {
+                  var data = {};
+                  if (res.data.openid) data.wx_openid = res.data.openid;
+                  if (res.data.unionid) data.wx_unionid = res.data.unionid;
+                  if (res.data.userinfo) Object.assign(data, res.data.userinfo);
+                  _this.authLogin(data);
+                }
+              } });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          }
+        });
+      }
 
     }
   },

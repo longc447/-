@@ -22,11 +22,12 @@
 							</view>
 					<!-- 		<view class="sale font-size-activity-tag color-tip">已售{{ item.sale_num }}{{ item.unit ? item.unit : '件' }}</view> -->
 						</view>
-						<view class="lineheight-clear">
+						<view class="lineheight-clear"  style="display: flex;justify-content: space-between;align-items: flex-end;">
 							<view class="discount-price">
 								<text class="unit color-base-text font-size-tag">{{ $lang('common.currencySymbol') }}</text>
 								<text v-if="is_wholesaler != 3" class="price color-base-text font-size-toolbar">请先认证</text>
 								<text v-if="is_wholesaler == 3" class="price color-base-text font-size-toolbar">{{ item.price_pf }}</text>
+								<text v-if="item.sale_num">{{item.sale_num}}</text>
 							</view>
 							<view class="member-price-tag" v-if="item.member_price && item.member_price == showPrice(item)">
 								<image :src="$util.img('upload/uniapp/index/VIP.png')" mode="widthFix"></image>
@@ -34,6 +35,7 @@
 							<view class="member-price-tag" v-else-if="item.promotion_type == 1">
 								<image :src="$util.img('upload/uniapp/index/discount.png')" mode="widthFix"></image>
 							</view>
+							<text style="color: #999999;">销量{{item.sale_num}}</text>
 						</view>
 					</view>
 				</view>
@@ -86,7 +88,8 @@ export default {
 	async onLoad() {
 			let _this = this
 			
-			if(uni.getStorageSync('token')){				var ret = await this.$api.sendRequest({					url: '/api/member/detail',					async: false				});				if (ret.code == 0) {					console.log(ret)					this.is_wholesaler = ret.is_wholesaler				}			}
+			console.log(this.is_wholesaler,"is_wholesaler")
+			if(uni.getStorageSync('token')){				var ret = await this.$api.sendRequest({					url: '/api/member/detail',					async: false				});				// if (ret.code == 0) {				// 	console.log(ret)				// 	this.is_wholesaler = ret.is_wholesaler				// }			}
 			console.log(ret)
 		},
 	async mounted() {
@@ -96,10 +99,11 @@ export default {
 					url: '/api/member/detail',
 					async: false
 				});
-				if (ret.code == 0) {
-					console.log(ret)
-					this.is_wholesaler = ret.is_wholesaler
-				}
+			console.log(this.is_wholesaler,"is_wholesaler")
+				// if (ret.code == 0) {
+				// 	console.log(ret)
+				// 	this.is_wholesaler = ret.is_wholesaler
+				// }
 			}
 			this.getLikeList();
 		}

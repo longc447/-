@@ -600,35 +600,36 @@ var systemInfo = uni.getSystemInfoSync();var _default =
 
     },
     // 获取定位城市
-    getLocation: function getLocation() {var _this8 = this;
-      var map = new _mapWxJssdk.default({
-        key: this.$config.mpKey });
-
-      uni.getLocation({
-        type: 'gcj02',
-        success: function success(res) {
-          map.reverseGeocoder({
-            location: {
-              latitude: res.latitude,
-              longitude: res.longitude },
-
-            success: function success(res) {
-              _this8.$api.sendRequest({
-                url: '/api/address/citybyname',
-                data: {
-                  city: res.result.address_component.city },
-
-                success: function success(res) {
-                  if (res.data) {
-                    _this8.city = res.data.title;
-                    uni.setStorageSync('city', res.data);
-                  }
-                } });
-
-            },
-            fail: function fail(res) {} });
-
-        } });
+    getLocation: function getLocation() {
+      // 	const map = new WxMap({
+      // 		key: this.$config.mpKey
+      // 	});
+      // 	uni.getLocation({
+      // 		type: 'gcj02',
+      // 		success: res => {
+      // 			map.reverseGeocoder({
+      // 				location: {
+      // 					latitude: res.latitude,
+      // 					longitude: res.longitude
+      // 				},
+      // 				success: res => {
+      // 					this.$api.sendRequest({
+      // 						url: '/api/address/citybyname',
+      // 						data: {
+      // 							city: res.result.address_component.city
+      // 						},
+      // 						success: res => {
+      // 							if (res.data) {
+      // 								this.city = res.data.title;
+      // 								uni.setStorageSync('city', res.data);
+      // 							}
+      // 						}
+      // 					});
+      // 				},
+      // 				fail: res => {}
+      // 			});
+      // 		}
+      // 	});
 
     },
 

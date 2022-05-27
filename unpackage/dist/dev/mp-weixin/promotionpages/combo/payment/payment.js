@@ -152,7 +152,9 @@ var render = function() {
     _vm.orderPaymentData.coupon.coupon_id
       ? _vm._f("moneyFormat")(_vm.orderPaymentData.coupon_money)
       : null
-  var g1 = Array.isArray(_vm.orderPaymentData.shop_goods_list.invoice_config)
+  var g1 =
+    !Array.isArray(_vm.orderPaymentData.shop_goods_list.invoice_config) &&
+    _vm.orderPaymentData.shop_goods_list.invoice_config.invoice_status == 1
   var m2 =
     _vm.orderPaymentData &&
     _vm.orderPaymentData.platform_coupon_list &&

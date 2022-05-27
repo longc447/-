@@ -1122,7 +1122,7 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../../../common/js/
 
               if (ret.code == 0) {
                 console.log(ret);
-                _this2.is_wholesaler = ret.is_wholesaler;
+                if (_config.default.is_wholesaler === 0) _this2.is_wholesaler = ret.is_wholesaler;
               }case 7:
 
               console.log(ret);case 8:case "end":return _context.stop();}}}, _callee);}))();

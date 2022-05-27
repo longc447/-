@@ -49,7 +49,7 @@
 								</view> -->
 <!-- 								<view class="sale font-size-activity-tag color-tip">已售{{ item.sale_num }}{{ item.unit ? item.unit : '件' }}</view>
  -->							</view>
-							<view class="lineheight-clear">
+							<view class="lineheight-clear" style="display: flex;justify-content: space-between;align-items: flex-end;">
 								<view class="discount-price">
 									<text class="unit color-base-text font-size-tag">{{ $lang('common.currencySymbol') }}</text>
 									<text class="price color-base-text font-size-toolbar">{{ is_wholesaler == 3 ? item.price_pf : "请先认证"}}</text>
@@ -60,6 +60,7 @@
 								<view class="member-price-tag" v-else-if="item.promotion_type == 1">
 									<image :src="$util.img('upload/uniapp/index/discount.png')" mode="widthFix"></image>
 								</view>
+								<text style="color: #999999;">销量{{item.sale_num}}</text>
 							</view>
 						</view>
 					</view>

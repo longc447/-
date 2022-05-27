@@ -486,21 +486,21 @@ export default {
 
 				let expressTypeVerify = true;
 
-				for (let key in this.orderPaymentData.shop_goods_list) {
-					if (this.orderPaymentData.shop_goods_list[key].express_type.length == 0) {
-						expressTypeVerify = false;
-						this.$util.showToast({
-							title: '店铺【"' + this.orderPaymentData.shop_goods_list[key].site_name + '】未设置配送方式'
-						});
-						break;
-					}
-				}
+				// for (let key in this.orderPaymentData.shop_goods_list) {
+				// 	if (this.orderPaymentData.shop_goods_list[key].express_type.length == 0) {
+				// 		expressTypeVerify = false;
+				// 		this.$util.showToast({
+				// 			title: '店铺【"' + this.orderPaymentData.shop_goods_list[key].site_name + '】未设置配送方式'
+				// 		});
+				// 		break;
+				// 	}
+				// }
 
 				if (!expressTypeVerify) return false;
 
 				if (!this.orderPaymentData.member_address) {
 					this.$util.showToast({
-						title: '请先选择您的收货地址'
+						title: '亲 请设置收货地址'
 					});
 					return false;
 				}

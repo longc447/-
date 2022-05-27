@@ -432,7 +432,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _scrollView = _interopRequireDefault(__webpack_require__(/*! @/common/js/scroll-view.js */ 188));
-var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1426));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1419));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1433));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/golbalConfig.js */ 156));
+var _config = _interopRequireDefault(__webpack_require__(/*! @/common/js/config.js */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var nsGoodsRecommend = function nsGoodsRecommend() {Promise.all(/*! require.ensure | components/ns-goods-recommend/ns-goods-recommend */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ns-goods-recommend/ns-goods-recommend")]).then((function () {return resolve(__webpack_require__(/*! @/components/ns-goods-recommend/ns-goods-recommend.vue */ 1426));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniNumberBox = function uniNumberBox() {__webpack_require__.e(/*! require.ensure | components/uni-number-box/uni-number-box */ "components/uni-number-box/uni-number-box").then((function () {return resolve(__webpack_require__(/*! @/components/uni-number-box/uni-number-box.vue */ 1419));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var diyBottomNav = function diyBottomNav() {__webpack_require__.e(/*! require.ensure | components/diy-bottom-nav/diy-bottom-nav */ "components/diy-bottom-nav/diy-bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/diy-bottom-nav/diy-bottom-nav.vue */ 1391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var toTop = function toTop() {__webpack_require__.e(/*! require.ensure | components/toTop/toTop */ "components/toTop/toTop").then((function () {return resolve(__webpack_require__(/*! @/components/toTop/toTop.vue */ 1433));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
@@ -458,7 +459,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
       isAction: false, // 是否操作删除
       startX: '', // 触摸开始位置
       endX: '', // 触摸结束位置,
-      is_wholesaler: 0,
+      is_wholesaler: _config.default.is_wholesaler,
       styleIPhone12: false };
 
   },
@@ -487,7 +488,7 @@ var _golbalConfig = _interopRequireDefault(__webpack_require__(/*! @/common/js/g
 
               if (ret.code == 0) {
                 console.log(ret);
-                _this2.is_wholesaler = ret.is_wholesaler;
+                // if(Config.is_wholesaler===0)this.is_wholesaler = ret.is_wholesaler
               }case 6:
 
               if (uni.getStorageSync('token')) {

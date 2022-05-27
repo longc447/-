@@ -85,6 +85,9 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		init() {
+			// if (uni.getStorageSync('token')) {
+			// 	this.commit("setToken",uni.getStorageSync('token'));
+			// }
 			if (uni.getStorageSync('setThemeStyle')) {
 				this.commit('setThemeStyle', uni.getStorageSync('setThemeStyle'));
 			}

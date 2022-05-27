@@ -128,8 +128,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.registerConfig.register.indexOf("username")
-  var g1 = _vm.registerConfig.register.indexOf("mobile")
+  var g0 =
+    _vm.registerMode == "mobile" &&
+    _vm.registerConfig.register.indexOf("username") != -1
+  var g1 =
+    _vm.registerMode == "account" &&
+    _vm.registerConfig.register.indexOf("mobile") != -1
   _vm.$mp.data = Object.assign(
     {},
     {

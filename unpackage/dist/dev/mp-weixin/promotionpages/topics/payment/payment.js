@@ -142,7 +142,9 @@ var render = function() {
     }
   })
 
-  var g1 = Array.isArray(_vm.orderPaymentData.shop_goods_list.invoice_config)
+  var g1 =
+    !Array.isArray(_vm.orderPaymentData.shop_goods_list.invoice_config) &&
+    _vm.orderPaymentData.shop_goods_list.invoice_config.invoice_status == 1
   var m1 = _vm.$lang("common.currencySymbol")
 
   var f0 = _vm._f("moneyFormat")(_vm.orderPaymentData.goods_money)

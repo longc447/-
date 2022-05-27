@@ -82,36 +82,37 @@
 			 * 获取定位城市
 			 */
 			getLocation() {
-				const map = new WxMap({
-					key: this.$config.mpKey
-				});
-				uni.getLocation({
-					type: 'gcj02',
-					success: (res) => {
-						map.reverseGeocoder({
-							location: {
-								latitude: res.latitude,
-								longitude: res.longitude
-							},
-							success: res => {
-								this.$api.sendRequest({
-									url: '/api/address/citybyname',
-									data: {
-										city: res.result.address_component.city
-									},
-									success: res => {
-										if (res.data) {
-											this.locationCity = res.data;
-										}
-									}
-								})
-							},
-							fail: res => {
-								console.error('定位失败错误信息：' + res.message)
-							}
-						})
-					}
-				})
+			// 	const map = new WxMap({
+			// 		key: this.$config.mpKey
+			// 	});
+			// 	uni.getLocation({
+			// 		type: 'gcj02',
+			// 		success: (res) => {
+			// 			map.reverseGeocoder({
+			// 				location: {
+			// 					latitude: res.latitude,
+			// 					longitude: res.longitude
+			// 				},
+			// 				success: res => {
+			// 					this.$api.sendRequest({
+			// 						url: '/api/address/citybyname',
+			// 						data: {
+			// 							city: res.result.address_component.city
+			// 						},
+			// 						success: res => {
+			// 							if (res.data) {
+			// 								this.locationCity = res.data;
+			// 							}
+			// 						}
+			// 					})
+			// 				},
+			// 				fail: res => {
+			// 					console.error('定位失败错误信息：' + res.message)
+			// 				}
+			// 			})
+			// 		}
+			// 	})
+			
 			},
 			checkAddonIsexit() {
 				this.$api.sendRequest({

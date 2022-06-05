@@ -80,7 +80,7 @@
 											border-radius="5"
 											:percent="progress(item)"
 										/>
-										<text class="color-base-text font-size-activity-tag txt lineheight-clear">已砍{{ item.sale_num }}件</text>
+										<text class="color-base-text font-size-activity-tag txt lineheight-clear">已砍{{ item.sale_num+item.sale_virtual }}件</text>
 									</view>
 								</view>
 								<view class="lineheight-clear">

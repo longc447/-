@@ -58,7 +58,9 @@
 				// #endif
 				"navigationBarTitleText": "",
 				"app-plus":{
+				//  #ifdef APP-PLUS
 					"softinputMode":"nothing"
+				//  #endif
 				}
 			}
 		},

@@ -318,6 +318,28 @@
 			if (this.$refs.loadingCover) this.$refs.loadingCover.hide();
 		},
 		async onShow() {
+			
+			if(Config.isMustLogin===1){
+				console.log("开始登陆")
+				const a = uni.getStorageSync('token')
+				const b = uni.getStorageSync('loginLock')
+				const c = uni.getStorageSync('unbound')
+				console.log(a,b,c,"登陆状态",!a&&!b&&!c)
+				if(!a) uni.navigateTo({url:'/pages/login/login/login'})
+			}
+			if(Config.isPfs===1) this.$api.sendRequest({
+				url: '/api/member/detail',
+				async: false
+			}).then(res=>{
+				if (res.code != 0) console.log('没有启用强制登陆code不会等于0')
+				if (res.code == 0) {
+					console.log(res,'是否是批发商')
+					const { is_wholesaler } = res;
+					if(is_wholesaler != 3){
+						uni.navigateTo({url:'/pages/login/register/wholesale/wholesale'})
+					}
+				}
+			})
 			// 刷新多语言
 			this.$langConfig.refresh();
 
@@ -359,7 +381,7 @@
 				});
 				console.log(res)
 				if (res.code == 0) {
-					this.is_wholesaler = res.is_wholesaler
+					// this.is_wholesaler = res.is_wholesaler
 					uni.setStorageSync('is_wholesaler', res.is_wholesaler);
 				}
 			},

@@ -22,9 +22,9 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": true,
     "lazyloadPlaceholderEnable": false,
-    "useMultiFrameRuntime": false,
-    "useApiHook": false,
-    "useApiHostProcess": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -37,13 +37,14 @@
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
+    "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx0a2bec6faf4d4169",
-  "projectname": "云易眼镜批发城",
+  "appid": "wxdd5a01fb40b7c770",
+  "projectname": "天铂眼镜",
   "condition": {
     "search": {
       "list": []

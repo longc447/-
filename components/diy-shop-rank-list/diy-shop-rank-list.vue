@@ -9,7 +9,7 @@
 					<view class="goods_pic"><image :src="$util.img(item.sku_image, { size: 'mid' })" @error="imgError(index)" mode="widthFix"></image></view>
 					<view class="item-content">
 						<view class="item-name">{{ item.goods_name }}</view>
-						<view class="item-com">{{ item.sale_num }}人购买</view>
+						<view class="item-com">{{ item.sale_num+item.sale_virtual || 0 }}人购买</view>
 						<view class="item-price color-base-text">￥{{ item.discount_price }}</view>
 					</view>
 				</view>

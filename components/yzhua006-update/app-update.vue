@@ -151,7 +151,10 @@
 			// 检查是否更新
 			checkUpdate() {
 				vm.need_update = vm.compareVersion(vm.version, vm.update_info.version); // 检查是否需要升级
+				
+				console.log('正在检查是否更新',vm.version, vm.update_info.version)
 				if (vm.need_update) {
+					console.log("true");
 					vm.popup_show = true; //线上版本号大于当前安装的版本号  显示升级框
 					if (vm.tabbar) {
 						//页面是否有原生tabbar组件
@@ -165,6 +168,9 @@
 						});
 						vm.viewObj.show() //显示原生遮罩
 					}
+				}else{
+					
+						console.log("false");
 				}
 			},
 

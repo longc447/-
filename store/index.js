@@ -39,6 +39,7 @@ const store = new Vuex.Store({
 		paySource: '',
 		token: '',
 		diySeckillInterval: '' ,
+		globalConfig:Config.globalConfig,
 		is_wholesaler:Config.is_wholesaler//批发商
 		
 	},

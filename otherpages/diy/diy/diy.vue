@@ -277,7 +277,7 @@ export default {
 					title: '全国'
 				});
 				this.city = '全国';
-				this.getLocation();
+				// this.getLocation();
 			}
 			await this.getDiyInfo();
 		},

@@ -416,7 +416,7 @@
 						if (res.code >= 0) {
 							this.orderData = res.data;
 							// this.orderData.images=[...this.orderData.images,...this.orderData.images]
-							if(this.orderData.images!=="")this.orderData.images = JSON.parse(this.orderData.images)
+							if(this.orderData.images!=="")this.orderData.images = typeof this.orderData === 'string' ? JSON.parse(this.orderData.images) : this.orderData.image
 						
 							if(this.orderData&&this.orderData.order_goods)this.orderData.order_goods.forEach(v => {
 								// if (v.sku_spec_format) {

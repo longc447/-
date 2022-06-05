@@ -29,14 +29,14 @@
 						<text class="unit color-base-text font-size-tag">{{ $lang('common.currencySymbol') }}</text>
 						<text v-if="is_wholesaler != 3" class="price color-base-text font-size-toolbar">请先认证</text>
 						<text v-if="is_wholesaler == 3" class="price color-base-text font-size-toolbar">{{item.price_pf}}</text>
-						<text v-if="item.sale_num">{{item.sale_num}}</text>
+						<!-- <text v-if="item.sale_num">{{item.sale_num}}</text> -->
 					</view>
 					<view class="member-price-tag" v-if="item.member_price && item.member_price == showPrice(item)">
 						<image :src="$util.img('upload/uniapp/index/VIP.png')" mode="widthFix"></image>
 					</view>
 					<view class="member-price-tag" v-else-if="item.promotion_type == 1"><image :src="$util.img('upload/uniapp/index/discount.png')" mode="widthFix"></image></view>
 					
-					<text style="color: #999999;">销量{{item.sale_num}}</text>
+					<text style="color: #999999;" v-if="isOpenVirtualSale">销量{{item.sale_num+ (item.sale_virtual)}}</text>
 				</view>
 			</view>
 		</view>
@@ -70,7 +70,8 @@ export default {
 	data() {
 		return {
 			goodsList: [],
-			is_wholesaler:Config.is_wholesaler
+			is_wholesaler:Config.is_wholesaler,
+			isOpenVirtualSale:Config.isOpenVirtualSale
 		};
 	},
 	created() {

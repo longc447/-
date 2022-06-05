@@ -1,9 +1,9 @@
 {
-    "name" : "曹操眼镜",
+    "name" : "天铂眼镜",
     "appid" : "__UNI__8AECDC0",
     "description" : "",
-    "versionName" : "1.6.9",
-    "versionCode" : 169,
+    "versionName" : "1.7.2",
+    "versionCode" : 172,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -115,9 +115,9 @@
                 }
             },
             "splashscreen" : {
-                "androidStyle" : "default",
+                "androidStyle" : "common",
                 "android" : {
-                    "hdpi" : "/Users/longchu/Downloads/镜惠购打包资料/480.762.png",
+                    "hdpi" : "",
                     "xhdpi" : "/Users/longchu/Downloads/镜惠购打包资料/720.1242.png",
                     "xxhdpi" : "/Users/longchu/Downloads/镜惠购打包资料/xxdpi.png"
                 },
@@ -137,7 +137,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxc5c3d90655913d79",
+        "appid" : "wxdd5a01fb40b7c770",
         "setting" : {
             "urlCheck" : true,
             "postcss" : true,

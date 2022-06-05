@@ -340,12 +340,12 @@ var Utils = {
      * 使用微信接口进行定位
      */
     getWXLocation(success, fail, complete) {
-        wx.getLocation({
-            type: 'gcj02',
-            success: success,
-            fail: fail,
-            complete: complete
-        });
+        // wx.getLocation({
+        //     type: 'gcj02',
+        //     success: success,
+        //     fail: fail,
+        //     complete: complete
+        // });
     },
 
     /**
@@ -644,7 +644,7 @@ var Utils = {
             }
         };
         if (!param.location) {
-            that.getWXLocation(locationsuccess, locationfail, locationcomplete);
+            // that.getWXLocation(locationsuccess, locationfail, locationcomplete);
         } else if (that.checkLocation(param)) {
             var location = Utils.getLocationParam(param.location);
             locationsuccess(location);

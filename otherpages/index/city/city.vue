@@ -51,7 +51,7 @@
 			// 刷新多语言
 			this.$langConfig.refresh();
 			this.getCityList();
-			this.getLocation();
+			// this.getLocation();
 			this.checkAddonIsexit();
 			if (uni.getStorageSync('city')) this.activeCity = uni.getStorageSync('city');
 		},

@@ -60,7 +60,7 @@
 								<view class="member-price-tag" v-else-if="item.promotion_type == 1">
 									<image :src="$util.img('upload/uniapp/index/discount.png')" mode="widthFix"></image>
 								</view>
-								<text style="color: #999999;">销量{{item.sale_num}}</text>
+								<text style="color: #999999;" v-if="isOpenVirtualSale">销量{{item.sale_num+item.sale_virtual}}</text>
 							</view>
 						</view>
 					</view>
@@ -186,7 +186,8 @@ export default {
 	},
 	data() {
 		return {
-			is_wholesaler:Config.is_wholesaler//批发商 3
+			is_wholesaler:Config.is_wholesaler,//批发商 3
+			isOpenVirtualSale:Config.isOpenVirtualSale
 		};
 	},
 	mixins: [globalConfig, list],

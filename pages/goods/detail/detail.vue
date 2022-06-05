@@ -69,7 +69,7 @@
 				</view>
 
 				<view class="group-wrap padding-top">
-					<view class="goods-module-wrap" style="display: flex;justify-content: space-between;align-items: flex-end;">
+					<view class="goods-module-wrap">
 						<text class="price-symbol color-base-text">{{ $lang('common.currencySymbol') }}</text>
 						<template v-if="showDiscount">
 							<text class="price color-base-text">{{ goodsSkuDetail.discount_price }}</text>
@@ -90,7 +90,7 @@
 								返￥{{ levelInfo.commission_money }}
 							</text> -->
 						</view>
-						<text style="color: #999999;">销量{{item.sale_num}}</text>
+						<!-- <text style="color: #999999;">销量{{item.sale_num+item.sale_virtual}}</text> -->
 					</view>
 					<view class="goods-module-wrap info">
 						<text class="sku-name-wrap">{{ goodsSkuDetail.goods_name }}</text>

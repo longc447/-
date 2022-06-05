@@ -227,6 +227,7 @@ export default {
 		uni.hideTabBar();
 		this.siteId = parseInt(data.site_id) || 0;
 		this.isIphoneX = this.$util.uniappIsIPhoneX();
+		
 
 		if (data.web_city) {
 			uni.setStorageSync('city', {
@@ -256,18 +257,36 @@ export default {
 		this.$store.commit('setDiySeckillInterval', null);
 	}, 
 	async onShow() {
+		console.log(Config.isMustLogin,"是否强制登陆")
 		if(Config.isMustLogin===1){
+			console.log("开始登陆")
 			const a = uni.getStorageSync('token')
 			const b = uni.getStorageSync('loginLock')
 			const c = uni.getStorageSync('unbound')
-			if(!a&&!b&&!c) uni.navigateTo({url:'/pages/login/login/login'})
+			console.log(a,b,c,"登陆状态",!a&&!b&&!c)
+			if(!a) uni.navigateTo({url:'/pages/login/login/login'})
 		}
 		
 		await this.refresh();
 		this.getHeight();
 		this.$store.commit('setDiySeckillInterval', 1);
+		
+		if(Config.isPfs===1) this.$api.sendRequest({
+			url: '/api/member/detail',
+			async: false
+		}).then(res=>{
+			if (res.code != 0) console.log('没有启用强制登陆code不会等于0')
+			if (res.code == 0) {
+				console.log(res,'是否是批发商')
+				const { is_wholesaler } = res;
+				if(is_wholesaler != 3){
+					uni.navigateTo({url:'/pages/login/register/wholesale/wholesale'})
+				}
+			}
+		})
 	},
 	mounted() {
+		console.log('更新')
 		// #ifdef APP-PLUS
 	                this.$refs.app_update.update();  //调用子组件 检查更新
 		// #endif		
@@ -288,8 +307,8 @@ export default {
 				async: false
 			});
 			if (res.code == 0) {
-				console.log(res)
-				this.is_wholesaler = res.is_wholesaler
+				console.log(res,'是否是批发商')
+				// this.is_wholesaler = res.is_wholesaler
 			}
 		},
 		callback() {

@@ -18,8 +18,11 @@ const setting = {
 		isPfs: 0,
 		//  是否显示销量 0关闭 1显示
 		isOpenVirtualSale: 1,
+	},
+	yunyi:{
+		
 	}
 }
 
-export const ApiServer = caocao;
-export const useSetting = setting.caocao;
+export const ApiServer = yunyi;
+export const useSetting = setting.yunyi;

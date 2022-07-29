@@ -546,7 +546,7 @@
 					})
 
 					if (name == 'ball') list = this.newballlist
-
+					if (name == 'ball') console.log(list,"球镜列表");
 					if (name == 'cylinder' && dataitem != null) {
 						let val = dataitem.ball_mirrorArray[dataitem.ball_mirrorIndex],
 							max = 0,
@@ -579,7 +579,17 @@
 				this.$refs[name].list = list
 				if(name=='ball'&&this.$refs[name].list.length===0)this.$refs[name].list=this.ball_mirrorArray_bk
 				if(name=='cylinder'&&this.$refs[name].list.length===0)this.$refs[name].list=this.cylinder_mirrorArray_bk
-				
+				console.log(name+"列表内容：",this.$refs[name].list,this.goodsDetail,"goodsDetail")
+				const {zptf} = this.goodsDetail;
+				if(zptf == 0){
+					/**
+					 * 判断删除0.25度
+					 */
+					const halfBall = this.$refs['ball'].list.indexOf('-0.25');
+					if(halfBall != -1){
+						this.$refs['ball'].list.splice(halfBall,1)
+					}
+				}
 				this.$refs[name].open()
 
 			},

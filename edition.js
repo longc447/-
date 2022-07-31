@@ -20,7 +20,8 @@ const setting = {
 		isOpenVirtualSale: 1,
 	},
 	yunyi:{
-		
+		is_wholesaler:0,
+		isPfs:1
 	}
 }
 
